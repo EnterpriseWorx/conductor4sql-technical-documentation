@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+<title>Conductor4SQL Technical Documentation - Central Client Dashboard</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/custom.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Central Client Dashboard";
+    var mkdocs_page_input_path = "central-console\\central-client-dashboard.md";
+    var mkdocs_page_url = "/central-console/central-client-dashboard/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" />
+<script src="../../js/jquery.fancybox.js"></script>
+<script src="../../js/jquery.fancybox.pack.js"></script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Conductor4SQL Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Pre-Requisites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../prerequisites/central-prerequisites/">Central Server Pre-Requisites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../prerequisites/client-prerequisites/">Client Server Pre-Requisites</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Installation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../installation/central-server-installation/">Central Server Installation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../installation/client-server-installation/">Client Server Installation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Uninstallation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../uninstallation/client-server-uninstallation/">Client Server Uninstallation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../uninstallation/central-server-uninstallation/">Central Server Uninstallation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Central Console</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../introduction/">Central Console Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Central Client Dashboard</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#central-client-dashboard-overview">Central Client Dashboard Overview</a></li>
+                
+                    <li><a class="toctree-l4" href="#dashboard-indicators">Dashboard Indicators</a></li>
+                
+                    <li><a class="toctree-l4" href="#dashboard-metrics">Dashboard Metrics</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../central-client-overview/">Central Client Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../central-client-control/">Central Client Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../manage-scripts/">Manage Scripts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../auditing/">Auditing</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Client Console</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/introduction/">Client Console Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-dashboard/">Client Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-control/">Client Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-settings/">Client Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-business-attributes/">Client Business Attributes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-comments/">Client Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-Auditing/">Client Auditing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-data-sync/">Client Data Sync</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Administration</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/introduction/">Central Administration Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/client-groups/">Client Groups</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/email/">Email</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/business-attributes/">Business Attributes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/users/">Users</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/scheduler/">Scheduler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/reports/">Reports</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/configuration/">UI And System Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/queue-management/">Queue Management</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Synchronisation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../data-synchronisation/introduction/">Data Synchronisation Overview</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Apendix</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/grid-control/">Grid Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/selection-control/">Selection Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/script-editor/">Script Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/queues-explained/">Queues Explained</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/">Release Notes</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Conductor4SQL Technical Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Documentation</a> &raquo;</li>
+    
+      
+        
+          <li>Central Console &raquo;</li>
+        
+      
+    
+    <li>Central Client Dashboard</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="central-client-dashboard-overview">Central Client Dashboard Overview</h1>
+<p>The Conductor4SQL Dashboard is an easy to read, single page of information representing real-time statistics on the user interface. It has been designed to monitor the status of message queues of all related Client Servers by tracking of all communication and messaging processes. Graphically, you will see the high-level metrics as color icons. When any anomalies are indicated, you can drill down into the detailed lower level data.</p>
+<p>The example below shows a Conductor4SQL environment where are no issues:
+<img alt="" src="../../img/central-console/central-client-dashboard/dashboard-perfect-environment.png" /></p>
+<p>We also have an example of a typical large environment with some errors:
+<img alt="" src="../../img/central-console/central-client-dashboard/dashboard-normal-environment.png" /></p>
+<p>A pre-defined <strong>Client Pulse Check</strong> is broadcast every 15 minutes to check if all clients are alive and communicating. The results of these checks are used to update the dashboard metrics.                                           <br />
+The overall state of your environment should preferably indicate 100% (all green lights). However, if there are problem indicators, scrutinize the metrics below to identify any issues.</p>
+<p>You click on any of the <strong>Red Icons</strong> and click on the <strong>View Details</strong> option to open a Detailed Report on that metrics errors. 
+<img alt="" src="../../img/central-console/central-client-dashboard/client-behind-details.png" />  </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>if you want only want the metrics for a specific client group use the <strong>Filter With Group</strong> drop down list in the top left corner of the tab.</p>
+</div>
+<h2 id="dashboard-indicators">Dashboard Indicators</h2>
+<p>The indicator icon colours and numbers represent the following statuses:</p>
+<ul>
+<li>
+<p><strong>Green</strong> <img alt="" src="../../img/central-console/central-client-dashboard/icon-green.png" />  indicates that the metric is stable and in the <strong>Good</strong> status. If there is a number in the icon, this number will always be zero.</p>
+</li>
+<li>
+<p><strong>Red</strong> <img alt="" src="../../img/central-console/central-client-dashboard/icon-red.png" /> indicates that the metric is unstable and conditions are under a <strong>Problem</strong> status and should be attended to as soon as possible. The number in the icon indicates the number of clients or message queues affected.                                     </p>
+</li>
+</ul>
+<h2 id="dashboard-metrics">Dashboard Metrics</h2>
+<p>The Conductor4SQL Dashboard metric indicators consist of colour icons showing numbers of client message queues affected.                                                                                                                               </p>
+<h3 id="general-overview-clients-communication">General Overview - Clients Communication</h3>
+<p><strong>Metric</strong></p>
+<p><img alt="" src="../../img/central-console/central-client-dashboard/metric-general-overview-client-communication.png" /></p>
+<p><strong>Description</strong></p>
+<p>This indicator tells you the number of clients installed compared to the number of clients that are currently communicating. You want to try and keep this number to as close to 100% as possible.</p>
+<h3 id="general-overview-service-running">General Overview - Service Running</h3>
+<p><strong>Metric</strong></p>
+<p><img alt="" src="../../img/central-console/central-client-dashboard/metric-service-running.png" /></p>
+<p><strong>Description</strong></p>
+<p>This metric is important because it tells us if the Conductor4SQL service is running. Its important that this service is always running as it is responsible for sending out scheduled User Commands and Queries as well as running the <em>diagnostic tool</em> for determining why clients are behind.</p>
+<h3 id="clients-behind">Clients Behind</h3>
+<p><strong>Metric</strong></p>
+<p><img alt="" src="../../img/central-console/central-client-dashboard/metric-clients-behind.png" /></p>
+<p><strong>Description</strong></p>
+<p>These metrics display the number of client message queues that have been unavailable for the time shown.  </p>
+<h3 id="central-queues">Central Queues</h3>
+<p><strong>Metric</strong></p>
+<p><img alt="" src="../../img/central-console/central-client-dashboard/metric-messages-at-central.png" /></p>
+<p><strong>Description</strong></p>
+<p>This metric indicates the number of clients with queues that are down at central. This metric should always be <strong>Green</strong>. If it is <strong>Red</strong> then one or more clients have queues that are down at central. Please contact EnterpriseWorx support at support@ewx.co.za if this problem persists</p>
+<h3 id="messages-at-client">Messages at Client</h3>
+<p><strong>Metric</strong></p>
+<p><img alt="" src="../../img/central-console/central-client-dashboard/metric-messages-at-client.png" /></p>
+<p><strong>Description</strong></p>
+<p>This metric indicates the number of clients with queues that are down at the client. This metric should usually be <strong>Green</strong> but will be <strong>Red</strong> if one or more client queues are disabled.                                </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Message queues are disabled if bad SQL statements are submitted. You always ensure that you test and correct SQL statements in the SQL Server Management Studio before re-submitting in Conductor4SQL.</p>
+</div>
+<h3 id="error-metrics">Error Metrics</h3>
+<p>All error messages for clients are divided metric icons<br />
+<img alt="" src="../../img/central-console/central-client-dashboard/metric-error-messages.png" /></p>
+<ul>
+<li><strong>User Command Errors</strong> - The number of User Commands that are in error status. </li>
+<li><strong>User Query Errors</strong> - The number of User Queries that are in error status. </li>
+<li><strong>System Query Errors</strong> - the number of System Queries in error status</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use the <a href="../../central-console/central-client-control/#remove-top-n-messages-from-client-queue">Remove Top (n) messages from Client Queue</a> feature on Central Client Control to clear these error messages</p>
+</div>
+<ul>
+<li><strong>System Command Errors</strong> - the number of System Commands in error status</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can clear up these messages by clicking on the <strong>System Command Errors</strong> Icon and then selecting the <strong>Mark All As Fixed</strong> button. </p>
+</div>
+<ul>
+<li><strong>Missing Data Sync Objects</strong> - This indicator indicates the number of clients that have missing data sync objects which affects data synchronization (this usually occurs when tables have been dropped and recreated).</li>
+<li><strong>Incorrect Version</strong> - This indicator tells us the number of clients that have not been upgraded yet after a Conductor4SQL central upgraded</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you view the details for this error you are taken to a screen for upgrading the clients that have not yet been upgraded.</p>
+</div>
+<ul>
+<li><strong>Report Data Missing</strong> - the number of clients in which the <strong>Client Report Data</strong> command has not run.</li>
+<li><strong>Enterprise Sync Errors</strong> - Provides us with incite on the number of clients with Enterprise data sync errors.                                                                                                                                                                                                                  </li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../central-client-overview/" class="btn btn-neutral float-right" title="Central Client Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../introduction/" class="btn btn-neutral" title="Central Console Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright © 2017 EnterpriseWorx, maintained by the Conductor4SQL team.</p>
+    
+  </div>
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../introduction/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../central-client-overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/custom.js"></script>
+
+</body>
+</html>

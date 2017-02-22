@@ -1,0 +1,35 @@
+.rst-versions {
+    width: 380px; /*Previous/Next textbox in the menu*/
+}
+
+.wy-menu-vertical .subnav li.current .toctree-l4 {
+    padding-left: 4.23em;
+}
+
+/*Force lightbox close button to top right*/
+.lb-close {
+  position: absolute;
+  right: 30px;
+  top: -35px;
+}
+
+.wy-nav-side {
+    width: 400px;
+}
+
+.wy-nav-content-wrap {
+      margin-left: 400px;
+}
+
+.wy-nav-content {
+    max-width: 1100px;
+}
+
+@media screen and (max-width: 768px) {
+  .wy-nav-side {
+      left: -400px;
+  }
+  .wy-nav-content-wrap {
+    margin-left: 0px;
+  }
+}

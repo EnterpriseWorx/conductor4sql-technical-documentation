@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="./img/favicon.ico">
+<title>Conductor4SQL Technical Documentation - Conductor4SQL Overview</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+  <link href="./css/custom.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Conductor4SQL Overview";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+<link rel="stylesheet" href="./css/jquery.fancybox.css" type="text/css" />
+<script src="./js/jquery.fancybox.js"></script>
+<script src="./js/jquery.fancybox.pack.js"></script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href=".">Conductor4SQL Overview</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#conductor4sql-overview">Conductor4Sql Overview</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#technical-features">Technical Features</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#getting-started">Getting Started</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Pre-Requisites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="prerequisites/central-prerequisites/">Central Server Pre-Requisites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="prerequisites/client-prerequisites/">Client Server Pre-Requisites</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Installation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="installation/central-server-installation/">Central Server Installation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="installation/client-server-installation/">Client Server Installation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Uninstallation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="uninstallation/client-server-uninstallation/">Client Server Uninstallation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="uninstallation/central-server-uninstallation/">Central Server Uninstallation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Central Console</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="central-console/introduction/">Central Console Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="central-console/central-client-dashboard/">Central Client Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="central-console/central-client-overview/">Central Client Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="central-console/central-client-control/">Central Client Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="central-console/manage-scripts/">Manage Scripts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="central-console/auditing/">Auditing</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Client Console</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="client-console/introduction/">Client Console Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="client-console/client-dashboard/">Client Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="client-console/client-control/">Client Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="client-console/client-settings/">Client Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="client-console/client-business-attributes/">Client Business Attributes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="client-console/client-comments/">Client Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="client-console/client-Auditing/">Client Auditing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="client-console/client-data-sync/">Client Data Sync</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Administration</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="administration/introduction/">Central Administration Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="administration/client-groups/">Client Groups</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="administration/email/">Email</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="administration/events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="administration/business-attributes/">Business Attributes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="administration/users/">Users</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="administration/scheduler/">Scheduler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="administration/reports/">Reports</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="administration/configuration/">UI And System Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="administration/queue-management/">Queue Management</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Synchronisation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="data-synchronisation/introduction/">Data Synchronisation Overview</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Apendix</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="appendix/grid-control/">Grid Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="appendix/selection-control/">Selection Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="appendix/script-editor/">Script Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="appendix/queues-explained/">Queues Explained</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="release-notes/">Release Notes</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Conductor4SQL Technical Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Documentation</a> &raquo;</li>
+    
+      
+    
+    <li>Conductor4SQL Overview</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><img alt="" src="./img/Introduction/welcome.png" /></p>
+<h1 id="conductor4sql-overview">Conductor4Sql Overview</h1>
+<p>Conductor4SQL is an advanced database management solution which permits organisations to effectively manage and synchronise a large number of Microsoft SQL instances with an unlimited number of databases, especially those which are dispersed over a large geographic area. A key advantage of this solution is that it can greatly reduce a lot of the frustration when managing multiple databases over erratic networks because of its automation capabilities.</p>
+<p>You will encounter two terms that are used throughout this document and also when using Conductor4SQL. These terms are:</p>
+<ul>
+<li>
+<p><strong>Client</strong> - A Client is a remote instance of SQL server that is controlled by Conductor4SQL.</p>
+</li>
+<li>
+<p><strong>Central server</strong> - A Central server is a standalone instance of SQL Server on which Conductor4SQL is installed. Typically, a Central server would be installed at a Head Office or Data Centre location     that has the required network connectivity to all client servers. Details of the connectivity requirement is discussed in the <a href="./prerequisites/client-prerequisites"><strong>Client pre-requisites</strong></a> topic.</p>
+</li>
+</ul>
+<h1 id="technical-features">Technical Features</h1>
+<p>Using Conductor4SQL offers considerable technical features that you can perform from a single point, including:</p>
+<ul>
+<li>
+<p><strong>Centralised Query Capabilities</strong> - You can retrieve data simultaneously from an unlimited number of dispersed SQL instances and consolidate, view or export the results.</p>
+</li>
+<li>
+<p><strong>Centralised Command Capabilities</strong> - You can conduct database version control and make simultaneous metadata changes to an unlimited number of dispersed SQL instances, such as using DDL, DML.</p>
+</li>
+<li>
+<p><strong>Centralised File Distribution Capabilities</strong> - You can send files of any type to an unlimited number of dispersed SQL instances simultaneously, such as DLL's, batch files and others. A concise record of files sent is maintained.</p>
+</li>
+<li>
+<p><strong>Centralised Data Synchronisation</strong> - You can consolidate and synchronise data simultaneously on an unlimited number of dispersed SQL instances. This can also be used for central reporting purposes.</p>
+</li>
+<li>
+<p><strong>Schema Comparison</strong> - You can obtain a concise and searchable list of differences between database structures (which includes tables, stored procedures, functions, views and constraints) — across all client servers.</p>
+</li>
+<li>
+<p><strong>Centralised Auditing</strong> - You can audit all the above features plus DDL and security events that occur on an unlimited number of dispersed SQL instances. This is key to enforcing database version control including complete visibility of all activity occurring in your SQL environment.</p>
+</li>
+<li>
+<p><strong>Data Recovery</strong> - Provides Disaster Recovery Management ensuring data is recoverable, even if no MS-SQL backups are available.</p>
+</li>
+</ul>
+<h1 id="getting-started">Getting Started</h1>
+<!-- 
+You can download an offline copy of this document by right clicking the following [link](Conductor4SQL-Technical-Documentation.html) and clicking on the 'Save As' button
+-->
+
+<p>The content of this manual is intended to provide the user with the following information:</p>
+<ul>
+<li>
+<p>What is required to install the Conductor4SQL system? — See the <a href="./prerequisites/central-prerequisites"><strong>central server pre-requisites</strong></a> and the <a href="./prerequisites/client-prerequisites"><strong>client server pre-requisites</strong></a> </p>
+</li>
+<li>
+<p>How do I install the Conductor4SQL system? - See the <a href="./installation/central-server-installation"><strong>central server installation</strong></a> and <a href="./installation/client-server-installation"><strong>client server installation</strong></a> guide</p>
+</li>
+<li>
+<p>How do I administer the Conductor4SQL system and edit settings? — See <a href="./administration/introduction"><strong>administration overview</strong></a>.</p>
+</li>
+<li>
+<p>How do manage, control and audit my installed clients? - See <a href="./central-console/introduction"><strong>central console overview</strong></a>.</p>
+</li>
+<li>
+<p>How do I sync data from all my clients? - See <a href="./data-synchronisation/introduction"><strong>data sync overview</strong></a></p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="prerequisites/central-prerequisites/" class="btn btn-neutral float-right" title="Central Server Pre-Requisites">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright © 2017 EnterpriseWorx, maintained by the Conductor4SQL team.</p>
+    
+  </div>
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="prerequisites/central-prerequisites/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="./js/theme.js"></script>
+      <script src="./js/custom.js"></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.16.1
+Build Date UTC : 2017-02-22 04:31:46
+-->

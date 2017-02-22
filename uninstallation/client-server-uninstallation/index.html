@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+<title>Conductor4SQL Technical Documentation - Client Server Uninstallation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/custom.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Client Server Uninstallation";
+    var mkdocs_page_input_path = "uninstallation\\client-server-uninstallation.md";
+    var mkdocs_page_url = "/uninstallation/client-server-uninstallation/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" />
+<script src="../../js/jquery.fancybox.js"></script>
+<script src="../../js/jquery.fancybox.pack.js"></script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Conductor4SQL Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Pre-Requisites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../prerequisites/central-prerequisites/">Central Server Pre-Requisites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../prerequisites/client-prerequisites/">Client Server Pre-Requisites</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Installation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../installation/central-server-installation/">Central Server Installation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../installation/client-server-installation/">Client Server Installation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Uninstallation</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Client Server Uninstallation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#client-uninstallation-overview">Client Uninstallation Overview</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#client-uninstallation-one-at-a-time">Client Uninstallation (one-at-a-time)</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#client-uninstallation-using-bulk-uninstaller">Client Uninstallation (using bulk uninstaller)</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#bulk-client-uninstallation-progress">Bulk Client Uninstallation Progress</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../central-server-uninstallation/">Central Server Uninstallation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Central Console</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/introduction/">Central Console Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/central-client-dashboard/">Central Client Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/central-client-overview/">Central Client Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/central-client-control/">Central Client Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/manage-scripts/">Manage Scripts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/auditing/">Auditing</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Client Console</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/introduction/">Client Console Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-dashboard/">Client Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-control/">Client Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-settings/">Client Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-business-attributes/">Client Business Attributes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-comments/">Client Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-Auditing/">Client Auditing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-data-sync/">Client Data Sync</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Administration</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/introduction/">Central Administration Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/client-groups/">Client Groups</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/email/">Email</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/business-attributes/">Business Attributes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/users/">Users</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/scheduler/">Scheduler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/reports/">Reports</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/configuration/">UI And System Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/queue-management/">Queue Management</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Synchronisation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../data-synchronisation/introduction/">Data Synchronisation Overview</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Apendix</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/grid-control/">Grid Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/selection-control/">Selection Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/script-editor/">Script Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/queues-explained/">Queues Explained</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/">Release Notes</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Conductor4SQL Technical Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Documentation</a> &raquo;</li>
+    
+      
+        
+          <li>Uninstallation &raquo;</li>
+        
+      
+    
+    <li>Client Server Uninstallation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="client-uninstallation-overview">Client Uninstallation Overview</h1>
+<p>At times you will need to uninstall clients.</p>
+<p>Some reasons to uninstall clients are:<br />
+<em> The client instance is no longer needed. e.g. you using Conductor4SQL to sync Pos data some stores close and hence need to be uninstalled to clean up the Conductor4SQL dashboard.
+</em> A natural disaster has occurred and the client server is destroyed</p>
+<h1 id="client-uninstallation-one-at-a-time">Client Uninstallation (one-at-a-time)</h1>
+<p>You can add a client by selecting <strong>File</strong> &gt;&gt; <strong>Remove Client</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option is only visible if one or more clients are installed</p>
+</div>
+<p>Fill in the <strong>Client Uninstaller</strong> dialog:</p>
+<p><img alt="" src="../../img/uninstallation/client-uninstall-screen.png" /></p>
+<p>There are 3 options for <strong>Uninstall Type</strong>:</p>
+<ul>
+<li>
+<p><strong>1. Standard uninstall</strong> - It is always advisable to go with this option, which then requires that the client is accessible both on central and at the client. This option will ensure that the  Conductor4SQL application is uninstalled both on client side and central</p>
+</li>
+<li>
+<p><strong>2. Uninstall Client at client side only</strong> - This option allows you clean up the installation from the client side only, this is useful if the client was removed using the <strong>Uninstall client at central side only</strong> in the past and the server is now online again and you wish to re-install.</p>
+</li>
+<li>
+<p><strong>3. Uninstall client at central side only</strong> - This option one will only remove the client on the central side if the client is no longer accessible on the client side. This option is useful if <strong>Standard uninstall</strong> is not possible as when a disaster happens, such as the physical server having hardware damage or stolen.</p>
+</li>
+</ul>
+<p><strong>Uninstall Reason</strong> - You will need to put in a reason for removing the client. For instance if the store is closed, you can put reason as "Store closed"</p>
+<p><strong>Is this client going to be re-installed:</strong></p>
+<ul>
+<li><strong>Yes:</strong> if you say yes then all the data synced data will be removed from central for that specific client, however, all client settings will also be stored so that on re-install you can have the previous settings you need be.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An example of the settings that are stored would be the business attributes, the data sync mappings and the list of tables that the client was syncing. To simplify the client's re-install in the future.</p>
+</div>
+<ul>
+<li><strong>No</strong> if you select no, then the data will be kept on central, for future references.</li>
+</ul>
+<p>When all fields are filled, you can then click on <strong>Test Connection</strong> button and </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This <strong>Test Connection</strong> button is not visible when the <strong>Uninstall client at central side only</strong> option is selected.</p>
+</div>
+<p>If the connectivity test passes then you will be able to click on the <strong>Uninstall</strong> button.</p>
+<h1 id="client-uninstallation-using-bulk-uninstaller">Client Uninstallation (using bulk uninstaller)</h1>
+<p>You can add a client by selecting <strong>File</strong> &gt;&gt; <strong>Bulk Remove Clients</strong></p>
+<p><img alt="" src="../../img/uninstallation/bulk-client-uninstall-screen.png" /></p>
+<p>On the bulk client uninstall screen, you are presented with a grid, which then has a list of all clients installed. You are then able to select those clients you want to remove or uninstall, by checking the check-box on the selected column. </p>
+<p>You will then be required to fill in remainder of the form on the right.</p>
+<p>To initiate the uninstall click on the <strong>Uninstaller</strong> button.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can just save the list of clients you wish to uninstall by using the <strong>Save</strong> button and uninstall them at a later date</p>
+</div>
+<h1 id="bulk-client-uninstallation-progress">Bulk Client Uninstallation Progress</h1>
+<p>After selecting the <strong>Uninstaller</strong> button you are taken to the screen below.</p>
+<p><img alt="" src="../../img/uninstallation/bulk-client-uninstall-start-process-screen.png" /></p>
+<p>If you click on the <strong>Start</strong> button the uninstall will initiate the uninstalls</p>
+<p>If you change your mind you can always click on the <strong>Back</strong> button and return to the previous screen.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can adjust the number of clients that can be uninstalled at once by adjusting the <strong>Number of Bulk Uninstaller Threads</strong> in the <a href="../../administration/configuration">Administration - UI and System Configuration</a> screen </p>
+</div>
+<p>Once the uninstallation of clients has started. you judge the progress as follows:</p>
+<ul>
+<li>A <strong>green circle</strong> indicates a favorable result and the client is uninstalled.</li>
+<li>A <strong>red circle</strong> indicates that the uninstall failed and the <strong>Issue</strong> column will be filled in to attempt to diagnose the issue.</li>
+<li>A <strong>grey circle</strong> indicates that uninstallation has not yet started.</li>
+<li>A <strong>orange arrow</strong> indicates that this client is currently being uninstalled.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../central-server-uninstallation/" class="btn btn-neutral float-right" title="Central Server Uninstallation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../installation/client-server-installation/" class="btn btn-neutral" title="Client Server Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright © 2017 EnterpriseWorx, maintained by the Conductor4SQL team.</p>
+    
+  </div>
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../installation/client-server-installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../central-server-uninstallation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/custom.js"></script>
+
+</body>
+</html>

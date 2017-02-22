@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+<title>Conductor4SQL Technical Documentation - Client Server Installation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/custom.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Client Server Installation";
+    var mkdocs_page_input_path = "installation\\client-server-installation.md";
+    var mkdocs_page_url = "/installation/client-server-installation/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" />
+<script src="../../js/jquery.fancybox.js"></script>
+<script src="../../js/jquery.fancybox.pack.js"></script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Conductor4SQL Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Pre-Requisites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../prerequisites/central-prerequisites/">Central Server Pre-Requisites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../prerequisites/client-prerequisites/">Client Server Pre-Requisites</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Installation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../central-server-installation/">Central Server Installation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Client Server Installation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#installing-the-client-one-at-a-time">Installing the Client (one-at-a-time)</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#the-client-server-pre-checker">The Client Server Pre-Checker</a></li>
+                
+                    <li><a class="toctree-l4" href="#pre-checker-issues">Pre-Checker Issues</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#client-installation-progress">Client Installation Progress</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#installing-the-client-using-the-bulk-installer">Installing the Client (using the bulk installer)</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#bulk-pre-install-checker">Bulk Pre-Install Checker</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#bulk-client-installer">Bulk Client Installer</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Uninstallation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../uninstallation/client-server-uninstallation/">Client Server Uninstallation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../uninstallation/central-server-uninstallation/">Central Server Uninstallation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Central Console</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/introduction/">Central Console Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/central-client-dashboard/">Central Client Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/central-client-overview/">Central Client Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/central-client-control/">Central Client Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/manage-scripts/">Manage Scripts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../central-console/auditing/">Auditing</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Client Console</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/introduction/">Client Console Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-dashboard/">Client Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-control/">Client Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-settings/">Client Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-business-attributes/">Client Business Attributes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-comments/">Client Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-Auditing/">Client Auditing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-data-sync/">Client Data Sync</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Administration</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/introduction/">Central Administration Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/client-groups/">Client Groups</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/email/">Email</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/business-attributes/">Business Attributes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/users/">Users</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/scheduler/">Scheduler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/reports/">Reports</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/configuration/">UI And System Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/queue-management/">Queue Management</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Synchronisation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../data-synchronisation/introduction/">Data Synchronisation Overview</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Apendix</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/grid-control/">Grid Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/selection-control/">Selection Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/script-editor/">Script Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/queues-explained/">Queues Explained</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/">Release Notes</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Conductor4SQL Technical Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Documentation</a> &raquo;</li>
+    
+      
+        
+          <li>Installation &raquo;</li>
+        
+      
+    
+    <li>Client Server Installation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installing-the-client-one-at-a-time">Installing the Client (one-at-a-time)</h1>
+<p>Using this option you can install clients one-at-a-time</p>
+<p>You can add a client by selecting <strong>File</strong> &gt;&gt; <strong>Add Client</strong></p>
+<p><img alt="" src="../../img/installation/client-install1.png" /></p>
+<p>Next fill in all the information for the <strong>Install Client</strong> dialog box:</p>
+<p><img alt="" src="../../img/installation/client-install2.png" /></p>
+<ul>
+<li><strong>Server Name/IP</strong> - The DNS name or ip address for the client Server</li>
+<li><strong>This is a re-install?</strong> - If the client was previously installed you will get a drop-down list showing the previous installation(s) for this client</li>
+<li><strong>Authentication</strong> - is SQL Server authentication where your options are "Windows Authentication" or "SQL Server Authentication"</li>
+<li>If you are using "SQL Server Authentication" fill in the <strong>User name</strong> and <strong>Password</strong> fields.</li>
+<li><strong>Port</strong> - The TCP port in which central will connect to the client.</li>
+<li><strong>Group</strong> - the client group in which to add the Client Server to (these are defined in the Administration section).</li>
+<li>
+<p><strong>Business</strong> - Custom fields for the client that are defined in the Administration Section.</p>
+</li>
+<li>
+<p>Finally select the <strong>Text Connection</strong> button </p>
+</li>
+<li>
+<p>If the test is successful the <strong>Install</strong> button will be enabled. Click the <strong>Install</strong> button to continue.</p>
+</li>
+</ul>
+<h1 id="the-client-server-pre-checker">The Client Server Pre-Checker</h1>
+<p><img alt="" src="../../img/installation/client-prechecker.png" /></p>
+<ul>
+<li>A <strong>green circle</strong> indicates a favorable result.</li>
+<li>An <strong>amber circle</strong> indicates a warning.</li>
+<li>A <strong>blue circle</strong> indicates that a step could not be run due to error in a previous step.</li>
+<li>A <strong>red circle</strong> indicates that the Pre-Checker discovered an issue and will not proceed.</li>
+<li>A <strong>grey circle</strong> indicates that this step hasn't run yet.</li>
+<li>A <strong>orange arrow</strong> indicates that this step is currently running.</li>
+</ul>
+<h2 id="pre-checker-issues">Pre-Checker Issues</h2>
+<ul>
+<li><strong>Step 1: Ensure that client server isn't already installed</strong> - Check that client server isn't already in the list of installed clients</li>
+<li><strong>Step 2: Ensure that we can ping the client server</strong> - If this fails run a manual ping. If this also fails contact your network administrator.</li>
+<li><strong>Step 3: Ensure that we can access MS SQL server</strong>   - If this fails run <em>SQL Server Management Studio</em> and check if you can connect to the server manually.</li>
+<li><strong>Step 4: Ensure that mixed mode authentication is enabled</strong> - If this fails switch the server to use Mixed-Mode authentication and restart the server.</li>
+<li><strong>Step 5: Ensure that SQL version is MS SQL 2005 sp3 or higher is installed</strong> - If this fails you will need to upgrade your server to minimum requirements as per the central requirements document.</li>
+<li><strong>Step 6: Ensure that the current SQL user is in the sysadmin user group</strong> - You require a user with sys-admin rights to install Conductor4SQL</li>
+<li><strong>Step 7: Ensure that service broker is enabled</strong> - Service broker must be enabled on the SQL Server.</li>
+<li><strong>Step 8: Ensure that Conductor4SQL database does not exist</strong> - We run this step to ensure that Conductor4SQL isn't already installed on this server.</li>
+<li><strong>Step 9: Ensure that Conductor4SQL login does not exist</strong> - Same as above.</li>
+</ul>
+<h1 id="client-installation-progress">Client Installation Progress</h1>
+<p>After all steps in the pre-checker are successful we are ready to install Conductor4SQL onto the client server.</p>
+<p>To start the install process click on the <strong>Start</strong> button.</p>
+<p><img alt="" src="../../img/installation/client-install-progress.png" /></p>
+<p>If the install is successful you should get a <strong>Client successfully installed</strong> notification.</p>
+<p><img alt="" src="../../img/installation/client-install-success.png" /></p>
+<h1 id="installing-the-client-using-the-bulk-installer">Installing the Client (using the bulk installer)</h1>
+<p>Using this option you can install a very large number of clients at once.</p>
+<p>You can add the clients by selecting <strong>File</strong> &gt;&gt; <strong>Bulk Add Client</strong></p>
+<p><img alt="" src="../../img/installation/client-bulk-install1.png" /></p>
+<p>Next fill in the list of clients in the <strong>Bulk Client Installer</strong> screen</p>
+<p><img alt="" src="../../img/installation/client-bulk-installer-client-list.png" /></p>
+<p>Bulk Client Capture columns:  </p>
+<ul>
+<li><strong>Client Instance Name</strong> - this column needs to be the name of the SQL Server   </li>
+<li><strong>DNS Name or IP</strong> - this column is the DNS Name of IP address of the server   </li>
+<li><strong>Port</strong> - the port used for central to communicate with the client (default is 4321)  </li>
+<li><strong>Groups</strong> - A comma separated list of groups that you would like to assign the client to.  </li>
+<li><strong>Business Attributes</strong> - All defined business attributes are situated between the port and groups columns.  </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>this grid acts like a spreadsheet grid and it is in fact recommended that you copy/paste the client information from a spreadsheet.</p>
+</div>
+<p>Clients Information options:</p>
+<ul>
+<li><strong>Authentication</strong> - the SQL Server authentication method used where the options are "Windows Authentication" and "SQL Server Authentication"</li>
+<li><strong>Username</strong> and <strong>Password</strong> fields are only visible if you select "SQL Server Authentication" </li>
+<li><strong>Port</strong> - the port to use for central to communicate with the clients if no port is defined in the client grid.</li>
+<li><strong>Groups</strong> - select what groups to assign all bulk install clients to.</li>
+</ul>
+<p>Click on the <strong>Save</strong> button to save your list of clients to install at a later date.</p>
+<h1 id="bulk-pre-install-checker">Bulk Pre-Install Checker</h1>
+<p>Click on the <strong>Checker</strong> button to run the "Bulk Pre-Install Checker".</p>
+<p>Click on the <strong>Start</strong> button to start the "Bulk Pre-Install Checker"</p>
+<p><img alt="" src="../../img/installation/client-bulk-preinstall-checker.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have any errors you can use the same <a href="#pre-checker-issues">Pre-Checker Issues Diagnostics</a> as the one-at-a-time client installation</p>
+</div>
+<p>Once the pre-checker has completed. The clients that were successful (green circles) are ready for installation.</p>
+<p>To install clients first click on the <strong>Back</strong> button.</p>
+<h1 id="bulk-client-installer">Bulk Client Installer</h1>
+<p>Now the <strong>Installer</strong> button will be enabled. Click on the <strong>Installer</strong> button.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>only the clients where the "Bulk Pre-Install Checker" was successful are included in this list.</p>
+</div>
+<p>Now click on the <strong>Start</strong> button and the clients will start installing and you can follow which step each client is on.</p>
+<p><img alt="" src="../../img/installation/client-bulk-installer-progress.png" /></p>
+<p>When the installer is complete, click on the <strong>Back</strong> button and here you can repeat the bulk installation process.</p>
+<p><img alt="" src="../../img/installation/client-bulk-installer-complete.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../uninstallation/client-server-uninstallation/" class="btn btn-neutral float-right" title="Client Server Uninstallation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../central-server-installation/" class="btn btn-neutral" title="Central Server Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright © 2017 EnterpriseWorx, maintained by the Conductor4SQL team.</p>
+    
+  </div>
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../central-server-installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../uninstallation/client-server-uninstallation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/custom.js"></script>
+
+</body>
+</html>

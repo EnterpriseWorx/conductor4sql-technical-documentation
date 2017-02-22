@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+<title>Conductor4SQL Technical Documentation - Central Client Control</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/custom.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Central Client Control";
+    var mkdocs_page_input_path = "central-console\\central-client-control.md";
+    var mkdocs_page_url = "/central-console/central-client-control/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" />
+<script src="../../js/jquery.fancybox.js"></script>
+<script src="../../js/jquery.fancybox.pack.js"></script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Conductor4SQL Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Pre-Requisites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../prerequisites/central-prerequisites/">Central Server Pre-Requisites</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../prerequisites/client-prerequisites/">Client Server Pre-Requisites</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Installation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../installation/central-server-installation/">Central Server Installation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../installation/client-server-installation/">Client Server Installation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Uninstallation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../uninstallation/client-server-uninstallation/">Client Server Uninstallation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../uninstallation/central-server-uninstallation/">Central Server Uninstallation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Central Console</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../introduction/">Central Console Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../central-client-dashboard/">Central Client Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../central-client-overview/">Central Client Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Central Client Control</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#central-client-control-overview">Central Client Control Overview</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#send-user-commands-and-queries">Send user Commands and Queries</a></li>
+                
+                    <li><a class="toctree-l4" href="#send-user-command">Send User Command</a></li>
+                
+                    <li><a class="toctree-l4" href="#send-user-query">Send User Query</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#send-system-commands-and-queries">Send system Commands and Queries</a></li>
+                
+                    <li><a class="toctree-l4" href="#send-system-command">Send System Command</a></li>
+                
+                    <li><a class="toctree-l4" href="#send-system-query">Send System Query</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#file-management">File Management</a></li>
+                
+                    <li><a class="toctree-l4" href="#send-file">Send File</a></li>
+                
+                    <li><a class="toctree-l4" href="#pull-file">Pull File</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#central-client-control-history">Central Client Control History</a></li>
+                
+                    <li><a class="toctree-l4" href="#history-type-tabs">History Type Tabs</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-status-grid">The Status Grid</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-details-grid">The Details Grid</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../manage-scripts/">Manage Scripts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../auditing/">Auditing</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Client Console</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/introduction/">Client Console Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-dashboard/">Client Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-control/">Client Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-settings/">Client Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-business-attributes/">Client Business Attributes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-comments/">Client Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-Auditing/">Client Auditing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../client-console/client-data-sync/">Client Data Sync</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Administration</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/introduction/">Central Administration Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/client-groups/">Client Groups</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/email/">Email</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/events/">Events</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/business-attributes/">Business Attributes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/users/">Users</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/scheduler/">Scheduler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/reports/">Reports</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/configuration/">UI And System Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/queue-management/">Queue Management</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Synchronisation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../data-synchronisation/introduction/">Data Synchronisation Overview</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Apendix</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/grid-control/">Grid Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/selection-control/">Selection Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/script-editor/">Script Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../appendix/queues-explained/">Queues Explained</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../release-notes/">Release Notes</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Conductor4SQL Technical Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Documentation</a> &raquo;</li>
+    
+      
+        
+          <li>Central Console &raquo;</li>
+        
+      
+    
+    <li>Central Client Control</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="central-client-control-overview">Central Client Control Overview</h1>
+<p>The Conductor4SQL <strong>Central Client Control</strong> tab on the <strong>Central Console</strong>
+provides you with a number of options to manage and control any of your installed Client Servers.</p>
+<p><strong>Here are some examples of what you might want to do here:</strong></p>
+<ul>
+<li>You want to run a query to check the status of all your client side databases. - See <a href="#send-user-query"><strong>Send User Query</strong></a> section</li>
+<li>You want to alter a table at all your in-country stores. - See <a href="#send-user-command"><strong>Send User Command</strong></a> section</li>
+<li>You want to ensure that all your table meta-data and stored procedures are identical across your entire environment. - See <a href="#send-system-query"><strong>Send System Query</strong></a> section</li>
+<li>You want to enable DDL Event Auditing at all your in-country stores as a core stored procedure keeps changing and you want to find the culprit. - See <a href="#send-system-command"><strong>Send System Command</strong></a> section</li>
+<li>You have Word document you want to send to all your clients stores updating all the store operators on the latest corporate policy. - See <a href="#send-file"><strong>Send File</strong></a> section.</li>
+<li>You have a day end Excel extract at 1000+ stores that you would like to pull to the Central server rather connecting to each server individually. - See <a href="#pull-file"><strong>File Pull</strong></a> section</li>
+<li>You sent out a User Query to all of in country stores and you want to see everywhere where that query failed. - See <a href="#central-client-control-history"><strong>Central Client Control History</strong></a></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Ensure that the list of status results on display are updated by clicking the <strong>Refresh</strong> button.</p>
+</div>
+<h1 id="send-user-commands-and-queries">Send user Commands and Queries</h1>
+<ul>
+<li><strong>User Commands</strong> are used for DDL (data definition language) which is used for manipulating data structures within the databases at the clients.</li>
+<li><strong>User Queries</strong> are used for querying information from the clients.</li>
+</ul>
+<h2 id="send-user-command">Send User Command</h2>
+<p>To send a <strong>User Command</strong> click on the <strong>Send Command</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some)</p>
+<p><img alt="" src="../../img/central-client-control/send-command-button.png" /></p>
+<p>Enter your script in the <strong>Script Editor</strong> form</p>
+<p><img alt="" src="../../img/central-client-control/send-to-all-command-window.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Please view our <a href="../../appendix/script-editor">Script Editor Guide</a> for more information on the Script Editor</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If your query has multiple result sets only the first result set is returned from each client </p>
+</div>
+<p>Click of the <strong>Submit</strong> button to send the command.</p>
+<p>The <strong>Monitor Request</strong> screen will give you a status update on the sent message.
+  <img alt="" src="../../img/central-client-control/monitor-request.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can close this window at any time by clicking on the close button and your message will still be sent to the client and processed in the background.</p>
+<p>The Status and colors work the same way as <a href="#the-status-grid">The Status Grid</a> below.</p>
+</div>
+<h2 id="send-user-query">Send User Query</h2>
+<p>To send a <strong>User Query</strong> click on the <strong>Send Query</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some)</p>
+<p><img alt="" src="../../img/central-client-control/send-query-button.png" /></p>
+<p>Enter your script in the <strong>Script Editor</strong> form</p>
+<p><img alt="" src="../../img/central-client-control/user-query-script-editor.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Please view our <a href="../../appendix/script-editor">Script Editor Guide</a> for more information on the Script Editor</p>
+</div>
+<p>Click of the <strong>Submit</strong> button to send the command.</p>
+<p>The <strong>Monitor Request</strong> screen will give you a status update on the sent message.
+  <img alt="" src="../../img/central-client-control/monitor-request.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can close this window at any time by clicking on the close button and your message will still be sent to the client and processed in the background.</p>
+<p>The Status and colors work the same way as <a href="#the-status-grid">The Status Grid</a> above.</p>
+</div>
+<h3 id="user-query-results">User Query Results</h3>
+<p>The <strong>User Query Results</strong> view is simply all the results from each client's query combined into a single view. </p>
+<p>To get the <strong>Query Results</strong> you need to either:
+<em> Click on the <strong>View All</strong> button 
+</em> or right click on the selected clients in the <strong>Details Grid</strong> and select the <strong>View Results</strong> option</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Query results</em> are only available on the <strong>User Query Status</strong> and <strong>System Query Status</strong> tabs.</p>
+</div>
+<p><img alt="" src="../../img/central-client-control/user-query-results-screen.png" /></p>
+<p>The <strong>Client Name</strong> and <strong>Business Attribute</strong> columns are prefixed onto the existing result columns. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can filter and group the results however you wish. For more information on the grid control capabilities view the <a href="../../appendix/grid-control">Grid Control Guide</a>.</p>
+</div>
+<p>If you right click on the grid you will get a context menu:</p>
+<ul>
+<li><strong>Add To Group</strong> - Add the selected client to a <strong>Client Group</strong></li>
+<li><strong>Open Client</strong> - Open the <a href="../../client-console/introduction">Client Console</a> for the selected client</li>
+</ul>
+<p>You also have two export options:
+<em> <strong>Export to File</strong> - will export the results to a Xlsx, Pdf or Html file
+</em> <strong>Export to Table</strong> - export the results to a physical sql table (useful for advanced queries).</p>
+<h1 id="send-system-commands-and-queries">Send system Commands and Queries</h1>
+<ul>
+<li><strong>System Commands</strong> - are pre-configured commands for controlling and checking Conductor4SQL clients. E.g. <strong>Client Pulse Check</strong> and <strong>Remove top (N) messages from Client Queue</strong></li>
+<li><strong>System Queries</strong> - pre-defined queries mostly used for metadata compare. E.g. <strong>Client Differences - Procedures</strong></li>
+</ul>
+<h2 id="send-system-command">Send System Command</h2>
+<p>To send a <strong>System Command</strong> select the command from the <strong>System Commands</strong> drop down list, </p>
+<p><img alt="" src="../../img/central-client-control/system-command-dropdownlist.png" /></p>
+<p>Click on the <strong>Execute Command</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some).</p>
+<p><img alt="" src="../../img/central-client-control/execute-command-button.png" /></p>
+<p>The available system commands are:</p>
+<ul>
+<li><strong>Client Pulse Check</strong> - Pulse checks are used to check if a client is alive and accessible </li>
+<li><strong>Remove Top (N) Messages From Client Queue</strong> - Remove error messages from the queue</li>
+<li><strong>Enable Client Queue</strong> - Enable the selected queue at the client</li>
+<li><strong>Disable Client Queue</strong> - Disable the selected queue at the client</li>
+<li><strong>Get Client Report Data</strong> - Get report data for all of the activated reports</li>
+<li><strong>Get Enterprise Sync Data</strong> - Get Enterprise Sync data sync data</li>
+<li><strong>Enable Client Event Notifications</strong> - Enable client event auditing for the selected clients</li>
+<li><strong>Disable Client Event Notifications</strong> - Disable client event auditing for the selected clients</li>
+</ul>
+<h3 id="client-pulse-check">Client Pulse Check</h3>
+<p>This command's prime objective is to check if a client is active and
+return a status condition. This condition will display the operational
+status of the Client on the Dashboard.</p>
+<h3 id="remove-top-n-messages-from-client-queue">Remove Top (n) messages from Client Queue</h3>
+<p>This command is used to clean up a Client Queue if there are problematic
+messages that still exist. You may choose the number of messages you
+want to remove from the top end of the list.</p>
+<p><img alt="" src="../../img/central-client-control/remove-poison-message-form.png" /></p>
+<p>This command requests that you enter some relevant information about the
+removal such as the:
+<em> <strong>Number of message to remove</strong> - Number of messages to remove from the queue
+</em> <strong>Re-enable the client queue</strong> - Toggle to enable or disable re-enabling the queue after removing the messages
+* <strong>Reason</strong> - The reason for removing the messages</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use a descriptive reason when removing messages</p>
+</div>
+<ul>
+<li><strong>Queue Name</strong> - the queue to remove the messages from </li>
+</ul>
+<h3 id="enable-client-queue">Enable Client Queue</h3>
+<p>This command enables any Client which may be in a disabled condition.
+Clients are normally disabled when a bad SQL command is submitted.</p>
+<h3 id="disable-client-queue">Disable Client Queue</h3>
+<p>This command disables the Client queue which is useful if you want to send messages to a client but you do not want the client to process the messages at this point in time.</p>
+<h3 id="enable-client-event-notification">Enable Client Event Notification</h3>
+<p>This command enables client DDL auditing events, then there will be a trace on any event happening at the client. - See <a href="../auditing"><strong>Auditing</strong></a> page for more information </p>
+<h3 id="disable-client-event-notification">Disable Client Event Notification</h3>
+<p>This command's prime objective is to disable the client DDL events, meaning once disabled then there will
+not be any client events recorded for that client the command is send to.</p>
+<h3 id="get-enterprise-sync-data">Get Enterprise Sync Data</h3>
+<p>This command retrieves any outstanding Enterprise sync data from the client to the central.</p>
+<h3 id="get-client-report-data">Get Client Report Data</h3>
+<p>If reports are enabled then this command will then fetch report data to the central in order to update the client reporting.</p>
+<h2 id="send-system-query">Send System Query</h2>
+<p>To send a <strong>System Query</strong> select the query from the <strong>System Queries</strong> drop down list, </p>
+<p><img alt="" src="../../img/central-client-control/system-query-dropdownlist.png" /></p>
+<p>Click on the <strong>Execute Command</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some).</p>
+<p><img alt="" src="../../img/central-client-control/execute-query-button.png" /></p>
+<p>The following system queries are available:
+<em> <strong>Client differences - Tables</strong> 
+</em> <strong>Client differences - Views</strong> 
+<em> <strong>Client differences - Constraints</strong>
+</em> <strong>Client differences - Procedures</strong> 
+* <strong>Client differences - Functions</strong>  </p>
+<h3 id="system-query-results">System Query Results</h3>
+<p>The <strong>System Query Results</strong> view is used for viewing differences between a local database on central's SQL Server Objects and the clients' SQL Server Objects. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Supported SQL Server objects are <em>Tables</em>, <em>Views</em>, <em>Constraints</em>, <em>Stored Procedures</em> and <em>Functions</em></p>
+<p>Only items that are different are listed. Items that match are not included.</p>
+</div>
+<p>To get the <strong>Query Results</strong> you need to either:
+<em> Click on the <strong>View All</strong> button 
+</em> or right click on the selected clients in the <strong>Details Grid</strong> and select the <strong>View Results</strong> option</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Query results</em> are only available on the <strong>User Query Status</strong> and <strong>System Query Status</strong> tabs.</p>
+</div>
+<p>The <strong>System Query Results Grid</strong> has the following columns:</p>
+<p><img alt="" src="../../img/central-client-control/system-query-view-all-differences-screen.png" /></p>
+<ul>
+<li><strong>Client Name</strong> - the name of the client that is getting compared (for filtering results)</li>
+<li><strong>Business Attributes</strong> - All business attributes are included in the results for filtering purposes</li>
+<li><strong>Central Object Name</strong> - the name of the object at central that is getting compared</li>
+<li><strong>Client Object Name</strong> - the name of the object at client that is getting compared</li>
+<li><strong>Status</strong> - The type of difference e.g. <em>Missing</em>, <em>Different Definition</em>, <em>Missing Database/Schema</em></li>
+<li><strong>Hash Bytes</strong> - A hash of the text object used for determining if one or more clients are different in the same way or not</li>
+<li><strong>View Difference</strong> - View the differences between the object at central and the object at the client</li>
+</ul>
+<p><img alt="" src="../../img/central-client-control/metadata-sql-compare.png" /></p>
+<ul>
+<li><strong>Fix Differences</strong> - Creates a script for altering the object at the client to match what is at central.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is only available when comparing <em>Stored Procedures</em>, <em>Functions</em> or <em>Views</em>.</p>
+</div>
+<p>If you right click on the grid you will get a context menu:</p>
+<ul>
+<li><strong>Add To Group</strong> - Add the selected client to a <strong>Client Group</strong></li>
+<li><strong>Open Client</strong> - Open the <a href="../../client-console/introduction">Client Console</a> for the selected client    </li>
+</ul>
+<p>You also have three buttons at the bottom left of the window:</p>
+<ul>
+<li><strong>Export to File</strong> - will export the results to a Xlsx, Pdf or Html file</li>
+<li><strong>Export to Table</strong> - export the results to a physical SQL table (useful for advanced queries).</li>
+<li><strong>Fix All</strong> - find all differences between client and central and create a script for making a script to fix these differences.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is only available when comparing <em>Stored Procedures</em>, <em>Functions</em> or <em>Views</em>.</p>
+</div>
+<h1 id="file-management">File Management</h1>
+<p>Conductor4SQL has the ability to <strong>Send Files</strong> from central and to <strong>Pull Files</strong> from the client servers onto the central server.</p>
+<h2 id="send-file">Send File</h2>
+<p>To send a <strong>File</strong> click on the <strong>Send File</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some)</p>
+<p><img alt="" src="../../img/central-client-control/send-file-button.png" /></p>
+<p>Select the file(s) that you would like to send to the client followed by the <strong>Open</strong> button</p>
+<p><img alt="" src="../../img/central-client-control/central-send-file-open-specific.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can only send files that are on the central server.</p>
+</div>
+<p>You then need to fill in some information of where you would like the files to go on the client side:
+  <img alt="" src="../../img/central-client-control/send-file-screen.png" />
+  * <strong>Enter the path to send files to on client</strong> - Fill in the path where you would like the files to be saved to on the client</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The client SQL Server needs to have read and write access to the path you specify</p>
+</div>
+<ul>
+<li><strong>Enter File Description</strong> - Use a descriptive name </li>
+</ul>
+<p>Click the <strong>Send File</strong> button to send the files.</p>
+<h2 id="pull-file">Pull File</h2>
+<p>To <strong>Pull Files</strong> from your clients select the <strong>Pull Files</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some)
+<img alt="" src="../../img/central-client-control/pull-file-button.png" /></p>
+<p>You will be presented with the <strong>Pull Files</strong> form:  </p>
+<p><img alt="" src="../../img/central-client-control/pull-files-screen.png" /></p>
+<ul>
+<li><strong>Source</strong> - The source folder of the files at the clients</li>
+<li><strong>Pattern</strong> - Pull files that match a specific file Pattern (e.g.: *.xlsx will pull all excel files) </li>
+<li><strong>Destination</strong> - The path at central where you want to save the files</li>
+<li><strong>Description</strong> - Use a descriptive description for filtering results</li>
+</ul>
+<p>As soon as you click on <strong>OK</strong> button the <em>Monitor Request screen</em> for <strong>Pull File</strong> will show</p>
+<h1 id="central-client-control-history">Central Client Control History</h1>
+<p>Every User Command &amp; Query, System Command &amp; Query or Data File Push &amp; Pull is logged in Conductor4SQL and placed in easily filterable grids</p>
+<p><img alt="" src="../../img/central-client-control/central-client-control.png" /></p>
+<ul>
+<li><strong>1. History Type Tabs</strong> - Select the tab for the history type you would like to see.</li>
+<li><strong>2. Status Grid</strong> - This displays a summary for each message that you sent to the clients.</li>
+<li><strong>3. Details Grid</strong> - This displays detail for the selected message .</li>
+</ul>
+<h2 id="history-type-tabs">History Type Tabs</h2>
+<p>The available history tabs are:</p>
+<ul>
+<li>User Command Status</li>
+<li>User Query Status</li>
+<li>System Command Status</li>
+<li>System Query Status</li>
+<li>Data File Status</li>
+<li>Data File Pull Status</li>
+</ul>
+<h2 id="the-status-grid">The Status Grid</h2>
+<p>Each line item on the <strong>Status Grid</strong> represents a summary for each message that you sent to the clients for the selected history tab.</p>
+<p>The <strong>Status Grid</strong> has the following columns:</p>
+<p><img alt="" src="../../img/central-client-control/status-grid.png" />
+  * <strong>Status</strong> - The overall status of the sent message. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The statuses and colors are defined as follows:</p>
+<ul>
+<li><strong>Y (Green)</strong> - message executed successfully at all clients</li>
+<li><strong>X (Red)</strong> - message failed at one or more clients</li>
+<li><strong>N (Yellow)</strong> - message has one or more clients that have not processed the message </li>
+<li><strong>F (Blue)</strong> - messages have been processed at clients are one or more are marked as fixed (previous errors are marked as fixed)</li>
+</ul>
+</div>
+<ul>
+<li><strong>Description</strong> - the description for the message</li>
+<li><strong>Sent Date</strong> - the date and time in which the message was sent to the clients</li>
+<li><strong>Client Sent Count</strong> - The total number of clients the message was sent to</li>
+<li><strong>Client Outstanding Count</strong> - The total number of clients in pending or error state for the message</li>
+<li><strong>Latency</strong> - the amount of time in minutes that it took to get a response from all the clients</li>
+<li><strong>SQL Text</strong> - the actual sql statement sent to the clients</li>
+<li><strong>Username</strong> - the name of the user that sent the message to the clients</li>
+<li><strong>Use Database</strong> - The database name in which the message was executed against (only )</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Use Database column is only available for the <strong>User Command Status</strong> and <strong>User Query Status</strong> tabs</p>
+</div>
+<p>If you right click on any row in the grid you will get a context menu with the following options:</p>
+<ul>
+<li><strong>View SQL</strong> - open a new tab with the full SQL script that was sent. </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The View SQL option is only available for the <strong>User Command Status</strong> and <strong>User Query Status</strong> tabs</p>
+</div>
+<ul>
+<li><strong>Resend User Query/Command</strong> - Open a new window with the script editor ready to resend the selected user command/query. </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Resend User Query/Command option is only available for the <strong>User Command Status</strong> and <strong>User Query Status</strong> tabs</p>
+</div>
+<ul>
+<li><strong>Reset Filters</strong> - clear all the grid filters for this grid.</li>
+</ul>
+<h2 id="the-details-grid">The Details Grid</h2>
+<p>To view the <strong>Details Grid</strong> left click on any row in the <strong>Status Grid</strong>.</p>
+<p>Every line on the <strong>Details Grid</strong> shows the message sent to every client for the currently selected item in the <strong>Status Grid</strong></p>
+<p>The <strong>Details Grid</strong> has the following columns:
+  <img alt="" src="../../img/central-client-control/details-grid.png" />
+  * <strong>Status</strong> - The status of the sent message for the individual client. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Status and colors work the same way as <a href="#the-status-grid">The Status Grid</a> above.</p>
+</div>
+<ul>
+<li><strong>Client</strong> - the name of the client in which the message was sent to.</li>
+<li><strong>Sent Date</strong> - the date and time in which the message was sent to the client</li>
+<li><strong>Processed Date</strong> - the date and time in which the message was processed at the client</li>
+<li><strong>User Fixed</strong> - the date, user and comment for when the message was marked as fixed (only applicable for messages that are of Status F)</li>
+<li><strong>Error Message</strong> - the last error that occurred when executing the message at the client</li>
+<li><strong>SQL Result Size KB</strong> - The size of the resulting returned message </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>SQL Result Size KB</em> column is only applicable for User Queries and System Queries</p>
+</div>
+<p>If you right click on any row in the grid you will get a context menu with the following options:</p>
+<ul>
+<li><strong>Send a System Command</strong> - send a system command to the selected clients. See the <a href="#Send-System-Command">Send System Command</a> section for more information</li>
+<li><strong>Export To File</strong> - Export the results in the grid to Xlsx, Pdf or Html</li>
+<li><strong>Add To Group</strong> - Add the selected clients to a <strong>Client Group</strong></li>
+<li><strong>Remove From Group</strong> - Removed the selected clients from a <strong>Client Group</strong></li>
+<li><strong>Open Client</strong> - Open the <a href="../../client-console/introduction">Client Console</a> for the selected client</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option is only available when a single client is selected</p>
+</div>
+<ul>
+<li><strong>View Results</strong> - View the query results for the selected clients</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use the <strong>View All</strong> button to view all results for all clients</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>View Results</em> option is only available for the <strong>User Query Status</strong> and <strong>System Query Status</strong> tabs</p>
+</div>
+<ul>
+<li><strong>Reset Filters</strong> - clear all the grid filters for this grid.</li>
+<li><strong>Mark As User Fixed</strong> - used for marking System Commands and System Queries that are in <em>Error</em> state to <em>Fixed</em> state or alternatively changing the <em>user fixed message</em></li>
+<li><strong>Change User Fixed Detail</strong> - used for changing the <em>user fixed message</em> for a User Commands or User Queries</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../manage-scripts/" class="btn btn-neutral float-right" title="Manage Scripts">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../central-client-overview/" class="btn btn-neutral" title="Central Client Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright © 2017 EnterpriseWorx, maintained by the Conductor4SQL team.</p>
+    
+  </div>
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../central-client-overview/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../manage-scripts/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/custom.js"></script>
+
+</body>
+</html>
