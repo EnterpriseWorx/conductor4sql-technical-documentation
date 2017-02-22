@@ -221,6 +221,18 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>/data-synchronisation/data-sync-monitoring/</loc>
+     <lastmod>2017-02-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/data-synchronisation/manage-data-sync-tables/</loc>
+     <lastmod>2017-02-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
@@ -245,6 +257,12 @@
         
     <url>
      <loc>/appendix/queues-explained/</loc>
+     <lastmod>2017-02-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/appendix/checksum-blacklist/</loc>
      <lastmod>2017-02-22</lastmod>
      <changefreq>daily</changefreq>
     </url>

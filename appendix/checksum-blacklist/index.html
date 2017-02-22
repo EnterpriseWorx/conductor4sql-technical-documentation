@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-<title>Conductor4SQL Technical Documentation - UI And System Configuration</title>
+<title>Conductor4SQL Technical Documentation - Checksum Blacklist</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "UI And System Configuration";
-    var mkdocs_page_input_path = "administration\\configuration.md";
-    var mkdocs_page_url = "/administration/configuration/";
+    var mkdocs_page_name = "Checksum Blacklist";
+    var mkdocs_page_input_path = "appendix\\checksum-blacklist.md";
+    var mkdocs_page_url = "/appendix/checksum-blacklist/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -244,77 +244,70 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../introduction/">Central Administration Overview</a>
+        <a class="" href="../../administration/introduction/">Central Administration Overview</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../client-groups/">Client Groups</a>
+        <a class="" href="../../administration/client-groups/">Client Groups</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../email/">Email</a>
+        <a class="" href="../../administration/email/">Email</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../events/">Events</a>
+        <a class="" href="../../administration/events/">Events</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../business-attributes/">Business Attributes</a>
+        <a class="" href="../../administration/business-attributes/">Business Attributes</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../users/">Users</a>
+        <a class="" href="../../administration/users/">Users</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../scheduler/">Scheduler</a>
+        <a class="" href="../../administration/scheduler/">Scheduler</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../reports/">Reports</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">UI And System Configuration</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#configuration-administration-overview">Configuration Administration Overview</a></li>
-                
-            
-            </ul>
+        <a class="" href="../../administration/reports/">Reports</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../queue-management/">Queue Management</a>
+        <a class="" href="../../administration/configuration/">UI And System Configuration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../administration/queue-management/">Queue Management</a>
         
     </li>
 
@@ -358,35 +351,42 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../appendix/grid-control/">Grid Control</a>
+        <a class="" href="../grid-control/">Grid Control</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../appendix/selection-control/">Selection Control</a>
+        <a class="" href="../selection-control/">Selection Control</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../appendix/script-editor/">Script Editor</a>
+        <a class="" href="../script-editor/">Script Editor</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../appendix/queues-explained/">Queues Explained</a>
+        <a class="" href="../queues-explained/">Queues Explained</a>
         
     </li>
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../appendix/checksum-blacklist/">Checksum Blacklist</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Checksum Blacklist</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#checksum-blacklist">Checksum Blacklist</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -423,14 +423,14 @@
     
       
         
-          <li>Administration &raquo;</li>
+          <li>Apendix &raquo;</li>
         
       
     
-    <li>UI And System Configuration</li>
+    <li>Checksum Blacklist</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/administration\configuration.md"
+        <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/appendix\checksum-blacklist.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -440,30 +440,86 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="configuration-administration-overview">Configuration Administration Overview</h1>
-<p>The <strong>C4SQL Configuration</strong> Administration screen is used to tweak various Conductor4SQL Settings</p>
-<p>To adjust Conductor4SQL settings select the <strong>C4SQL Configuration</strong> tab from the <a href="../introduction">Central Administration</a> screen.</p>
-<p>Click on the <strong>Edit Configuration</strong> button to adjust any settings you wish to edit</p>
-<p><img alt="" src="../../img/administration/configuration/configuration-editor.png" /></p>
+                <h1 id="checksum-blacklist">Checksum Blacklist</h1>
+<p>Conductor4SQL has the ability to do checksums on all syncing tables to monitor data consistency. These checksums are performed during the Conductor4SQL Daily Job, that runs at 1:00 AM by default. While the checksum is running on a specific table, that table will be locked. Therefor there might be the need to exlude specific tables from the checksum process. </p>
+<p>The latest version of Conductor4SQL does not have a UI control for configuring the blacklist. To add or remove a table or client from the blacklist, you would need to interact with the underlying table where the list is configured.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The table name is <strong>[SyncWorx].[dbo].[CM_Client_Data_Sync_Tables_CheckSum_Blacklist]</strong> which is found on your central server.</p>
+</div>
+<p>This is the example of the table:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th align="center">ClientID</th>
+<th align="right">TableID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td align="center">-1</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>2</td>
+<td align="center">1</td>
+<td align="right">-1</td>
+</tr>
+<tr>
+<td>3</td>
+<td align="center">2</td>
+<td align="right">2</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Reporting Services Url</strong> - the url where the Conductor4SQL Reporting services reports are deployed</li>
-<li><strong>Maximum Group Size</strong> - the maximum number of clients allowed in a single client group <em>(default 2000)</em>.</li>
-<li><strong>Send To All Enabled</strong> - Enable or disable the <strong>All</strong> option in central client control <em>(default true)</em>.</li>
-<li><strong>Event Notification Enabled On Client Install</strong> - Enable event auditing when client is installed <em>(default true)</em>.</li>
-<li><strong>Number of Bulk Pre-Checker Threads</strong> - The number of clients to test at once when running the Bulk Client Pre-Checker <em>(default 5)</em>.</li>
-<li><strong>Number of Bulk Installer Threads</strong> - The number of clients to install at once when running the Bulk Client Installer <em>(default 5)</em>.</li>
-<li><strong>Number of Bulk Uninstaller Threads</strong> - The number of clients to uninstall at once when running the Bulk Client Uninstaller <em>(default 5)</em>.</li>
-<li><strong>Number of Hours Behind Needed Before Checking Client</strong> - The amount of hours that the client hasn't communicated for before the <strong>Client behind diagnostic tool</strong> will run <em>(default 60)</em>.</li>
-<li><strong>Number of Checker Service Threads</strong> - The number of clients that are behind to run the <strong>Client behind diagnostic tool</strong> <em>(default 5)</em>.</li>
-<li><strong>Number of Client Upgrade Threads</strong> - The number of clients to upgrade at once when upgrading clients to a newer version of Conductor4SQL <em>(default 5)</em>.</li>
-<li><strong>Message Audit Retention In Days</strong> - Every message that Conductor4SQL central receives is stored for the number of days defined before they are archived. This data is kept for debugging purposes <em>(default 7)</em> </li>
-<li><strong>Message Audit Archive Retention In Days</strong> - Every message that Conductor4SQL archives is further stored for the defined number of days before they are deleted. This data is also kept for debugging purposes <em>(default 60)</em> </li>
-<li><strong>Client Event Log Retention In Days</strong> - The number of days that the Client Event Audit data is kept for <em>(default 7)</em> </li>
-<li><strong>Message Audit Archive Retention In Days</strong> - Every message that Conductor4SQL archives is further stored for the defined number of days before they are deleted. This data is also kept for debugging purposes <em>(default 7)</em> </li>
-<li><strong>Message Audit Cleanup Time Limit In Minutes</strong> - Set the length of time (in minutes) that the daily job clears old message audit and data sync audit messages <em>(default 60)</em></li>
-<li><strong>Enterprise Sync Initial Sync Skip</strong> - Used for when you are using Enterprise Sync and restoring database backups at central rather than performing initial sync <em>(default false)</em> </li>
+<li>
+<p><strong><em>ID</em></strong> - This is an auto-generated column</p>
+</li>
+<li>
+<p><strong><em>ClientID</em></strong> - This is where you specify the client for which a specific table is excluded. The <strong>ClientID</strong> can be found on <a href="../../central-console/central-client-overview">Central Client Overview</a> tab. This can be set to <strong>-1</strong>, which will indicate this table will be excluded for all clients. </p>
+</li>
+<li>
+<p><strong><em>TableID</em></strong> - This is where you specify the table to be excluded. The <strong>TableID</strong> can be found on <a href="../../data-synchronisation/manage-data-sync-tables">Manage Data Sync Tables</a> tab. This can be set to <strong>-1</strong>, which will indicate all tables will be excluded for this client. </p>
+</li>
 </ul>
-<p>Click on the <strong>Save Configuration</strong> button when you have completed tweaking the Conductor4SQL settings.</p>
+<p>You can confirm that the correct table is exluded in the following tabs:</p>
+<ul>
+<li><a href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a></li>
+</ul>
+<p><img alt="" src="../..\img\appendix\checksum-blacklist\manage-data-sync-tables.png" /></p>
+<ul>
+<li><a href="../../data-synchronisation/manage-data-sync-tables">Data Sync Monitoring</a></li>
+</ul>
+<p><img alt="" src="../..\img\appendix\checksum-blacklist\data-sync-monitor.png" /></p>
+<ul>
+<li><a href="../../central-console/central-client-overview/">Central Client Overview</a></li>
+</ul>
+<p><img alt="" src="../..\img\appendix\checksum-blacklist\central-client-overview.png" /></p>
+<ul>
+<li><a href="../../client-console/client-data-sync/">Client Overview</a></li>
+</ul>
+<p><img alt="" src="../..\img\appendix\checksum-blacklist\client-overview.png" /></p>
+<p>When Conductor4SQL is installed, all tables are excluded for all clients by default. This is to ensure active decisions are made on which tables the checksum is performed. This is achieved by a record that is automatically inserted with values:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th align="center">ClientID</th>
+<th align="right">TableID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td align="center">-1</td>
+<td align="right">-1</td>
+</tr>
+</tbody>
+</table>
+<p>If you want to start running checksums on clients, this record needs to be deleted first.</p>
               
             </div>
           </div>
@@ -471,10 +527,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../queue-management/" class="btn btn-neutral float-right" title="Queue Management">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../release-notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../reports/" class="btn btn-neutral" title="Reports"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../queues-explained/" class="btn btn-neutral" title="Queues Explained"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -502,10 +558,10 @@
           <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../reports/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../queues-explained/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../queue-management/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../release-notes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
