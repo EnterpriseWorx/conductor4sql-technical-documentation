@@ -393,6 +393,21 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#version-3504-changes">Version 3.5.0.4 Changes</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#version-3503-changes">Version 3.5.0.3 Changes</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#version-3502-changes">Version 3.5.0.2 Changes</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#version-3501-changes">Version 3.5.0.1 Changes</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#version-34122-changes">Version 3.4.12.2 Changes</a></li>
+                
+            
                 <li class="toctree-l3"><a href="#version-34111-changes">Version 3.4.11.1 Changes</a></li>
                 
             
@@ -472,13 +487,85 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="version-34111-changes">Version 3.4.11.1 Changes</h1>
+                <h1 id="version-3504-changes">Version 3.5.0.4 Changes</h1>
+<ul>
+<li>
+<p>CONSQL-1479 Improvement: When recreating the data sync primary keys move C4SqlClientDatabaseName and ClientID to the end of the primary key to improve update and delete performance</p>
+</li>
+<li>
+<p>Improvement: Change default timeout for all upgrade scripts to be 20 minutes</p>
+</li>
+</ul>
+<h1 id="version-3503-changes">Version 3.5.0.3 Changes</h1>
+<ul>
+<li>
+<p>Bug Fix: getting 'C4SQL Scheduled Sync Errors' even when no errors</p>
+</li>
+<li>
+<p>CONSQL-1447 Bug Fix: Missing Triggers email needs to be renamed to Missing data sync objects</p>
+</li>
+<li>
+<p>CONSQL-1446 Bug Fix: When disabling scheduled sync previous scheduled sync errors for the table need to be cleared</p>
+</li>
+<li>
+<p>CONSQL-1459 Bug Fix: Cannot disable scheduled sync if the staging database has been dropped</p>
+</li>
+</ul>
+<h1 id="version-3502-changes">Version 3.5.0.2 Changes</h1>
+<ul>
+<li>
+<p>Bug Fix: Added missing data types into scheduled sync</p>
+</li>
+<li>
+<p>Bug Fix: Error when sending email for 'C4SQL Data Sync Errors' and 'C4SQL Scheduled Sync Errors'</p>
+</li>
+</ul>
+<h1 id="version-3501-changes">Version 3.5.0.1 Changes</h1>
+<ul>
+<li>
+<p>CONSQL-1431 Improvement: added new column C4SqlClientDatabaseName to all data sync tables to cater for more data sync strategies</p>
+</li>
+<li>
+<p>CONSQL-1430 Feature: Added Enterprise Scheduled sync data sync solution to the product</p>
+</li>
+<li>
+<p>CONSQL-1426 Feature: Added Scheduled sync data sync solution to the product</p>
+</li>
+<li>
+<p>CONSQL-1404 Improvement: Simplify stored procedures at client for disabling and enabling datasync</p>
+</li>
+</ul>
+<h1 id="version-34122-changes">Version 3.4.12.2 Changes</h1>
+<ul>
+<li>
+<p>CONSQL-1429 Bug Fix: Real-Time data sync triggers getting dropped on client upgrade</p>
+</li>
+<li>
+<p>CONSQL-1409 Improvement: Add 'DataSyncChecksumEnabled' column to screens 'Manage Tables', 'Central Client Overview', 'Datasync Monitoring' and 'Client Data Sync Monitoring' screen</p>
+</li>
+<li>
+<p>CONSQL-1428 Bug Fix: Central server now installs correctly on Sql Server 2012 Standard</p>
+</li>
+<li>
+<p>CONSQL-1425 Improvement: All clients/tables have are blacklisted for checksum calculation in initial installation and upgrades</p>
+</li>
+<li>
+<p>CONSQL-1111 Improvement: out of transaction messages now remain on the queue when the queue goes into error state</p>
+</li>
+<li>
+<p>CONSQL-1423 Bug Fix: Missing "Queue Name" column on the "C4SQL Data Sync Behind Notification" email report</p>
+</li>
+<li>
+<p>CONSQL-1414 Improvement: Add email monitoring for tables that have failed getting activated for datasync</p>
+</li>
+</ul>
+<h1 id="version-34111-changes">Version 3.4.11.1 Changes</h1>
 <ul>
 <li>
 <p>CONSQL-1417 Bug Fix: Save To Table not working with UniqueIdentifier columns with nulls</p>
 </li>
 <li>
-<p>CONSQL-1411 Improvment: Add step in daily job that does data sync table checksums</p>
+<p>CONSQL-1411 Improvement: Add step in daily job that does data sync table checksums</p>
 </li>
 <li>
 <p>CONSQL-1413 Improvement: Skip tables when enabling data sync that do not exist or do not have primary keys</p>
@@ -487,7 +574,7 @@
 <p>CONSQL-1416 Bug Fix: read error on 'create certificate' step in bulk client installer</p>
 </li>
 <li>
-<p>CONSQL-1407 Improvment: Add 'Check Data Consistency' context menu option to client data monitoring screen</p>
+<p>CONSQL-1407 Improvement: Add 'Check Data Consistency' context menu option to client data monitoring screen</p>
 </li>
 <li>
 <p>CONSQL-1412 Improvement: Add 'Get Enterprise Sync Data' context menu option to client data monitoring screen</p>
@@ -496,7 +583,7 @@
 <p>CONSQL-1390 Bug Fix: Incorrect error message when attempting to sync a table that doesn't exist </p>
 </li>
 <li>
-<p>CONSQL-1410 Improvment: Add 'Checksum Matching' column to central datasync monitoring screen, hidden by default</p>
+<p>CONSQL-1410 Improvement: Add 'Checksum Matching' column to central datasync monitoring screen, hidden by default</p>
 </li>
 <li>
 <p>CONSQL-1402 Bug Fix: Cannot select tickbox on Data Sync Config Overview Screen</p>
