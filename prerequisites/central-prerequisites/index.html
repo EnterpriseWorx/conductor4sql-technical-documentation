@@ -68,7 +68,10 @@
     <li class="toctree-l3"><a href="#central-server-pre-requisites-overview">Central Server Pre-Requisites Overview</a></li>
     
 
-    <li class="toctree-l3"><a href="#system-requirements">System Requirements</a></li>
+    <li class="toctree-l3"><a href="#minimum-hardware-requirements">Minimum Hardware Requirements</a></li>
+    
+
+    <li class="toctree-l3"><a href="#minimum-system-requirements">Minimum System Requirements</a></li>
     
 
     <li class="toctree-l3"><a href="#mandatory-tcp-ports">Mandatory TCP Ports</a></li>
@@ -332,18 +335,25 @@
 <p class="admonition-title">Tip</p>
 <p>It is strongly recommended that the SQL Server installed for the Central Server is a clean instance.</p>
 </div>
-<h1 id="system-requirements">System Requirements</h1>
+<h1 id="minimum-hardware-requirements">Minimum Hardware Requirements</h1>
+<ul>
+<li>4 CPUs</li>
+<li>8GB RAM</li>
+</ul>
+<h1 id="minimum-system-requirements">Minimum System Requirements</h1>
 <ul>
 <li>The minimum operating systems supported is: Windows server 2012 64 bit.</li>
 <li>SQL Server 2012 Standard Edition or higher.</li>
+<li>Microsoft .NET Framework 3.5</li>
 <li>Microsoft .NET Framework 4.5 or higher is required.</li>
 <li>The central server must have network service connectivity to communicate with all potential clients.</li>
 <li>The user performing the installation must have full System Administrator rights to both Windows and SQL Server</li>
+<li>Separate disk drives for Operating System, SQL Data, SQL Log and SQL Tempdb <em>(this setup is not required but highly recommended for any large SQL Server environment)</em></li>
 </ul>
 <h1 id="mandatory-tcp-ports">Mandatory TCP Ports</h1>
 <p>The following ports are mandatory for the successful installation and operation of Conductor4SQL. Use the <em>Windows Firewall Advanced Security tool</em> and activate the inbound rules for the following ports:</p>
 <ul>
-<li>C4SQL port 4321 See troubleshooting information for this item</li>
+<li>Conductor4SQL port 4321 See troubleshooting information for this item</li>
 <li>SQL Server Administration – TCP port 1433</li>
 </ul>
 <h1 id="sql-authentication">SQL authentication</h1>

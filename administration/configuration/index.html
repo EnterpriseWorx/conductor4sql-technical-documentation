@@ -214,6 +214,18 @@
             
     <li class="toctree-l3"><a href="#configuration-administration-overview">Configuration Administration Overview</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#client-settings">Client Settings</a></li>
+        
+            <li><a class="toctree-l4" href="#installation-settings">Installation Settings</a></li>
+        
+            <li><a class="toctree-l4" href="#auditing-settings">Auditing Settings</a></li>
+        
+            <li><a class="toctree-l4" href="#data-sync-settings">Data Sync Settings</a></li>
+        
+        </ul>
+    
 
     </ul>
                 </li>
@@ -319,23 +331,33 @@
 <p>To adjust Conductor4SQL settings select the <strong>C4SQL Configuration</strong> tab from the <a href="../introduction">Central Administration</a> screen.</p>
 <p>Click on the <strong>Edit Configuration</strong> button to adjust any settings you wish to edit</p>
 <p><img alt="" src="../../img/administration/configuration/configuration-editor.png" /></p>
+<h2 id="client-settings">Client Settings</h2>
 <ul>
-<li><strong>Reporting Services Url</strong> - the url where the Conductor4SQL Reporting services reports are deployed</li>
 <li><strong>Maximum Group Size</strong> - the maximum number of clients allowed in a single client group <em>(default 2000)</em>.</li>
 <li><strong>Send To All Enabled</strong> - Enable or disable the <strong>All</strong> option in central client control <em>(default true)</em>.</li>
-<li><strong>Event Notification Enabled On Client Install</strong> - Enable event auditing when client is installed <em>(default true)</em>.</li>
+<li><strong>Number of Client Upgrader Threads</strong> - The number of clients to upgrade at once when upgrading clients to a newer version of Conductor4SQL <em>(default 5)</em>.</li>
+<li><strong>Number of Checker Service Threads</strong> - The number of clients that are behind to run the <strong>Client behind diagnostic tool</strong> <em>(default 5)</em>.</li>
+<li><strong>Number of Hours Behind Needed Before Checking Client</strong> - The amount of hours that the client hasn't communicated for before the <strong>Client behind diagnostic tool</strong> will run <em>(default 60)</em>.</li>
+</ul>
+<h2 id="installation-settings">Installation Settings</h2>
+<ul>
 <li><strong>Number of Bulk Pre-Checker Threads</strong> - The number of clients to test at once when running the Bulk Client Pre-Checker <em>(default 5)</em>.</li>
 <li><strong>Number of Bulk Installer Threads</strong> - The number of clients to install at once when running the Bulk Client Installer <em>(default 5)</em>.</li>
+<li><strong>PreChecker Check For Existing Install</strong> - Check for if the SyncWorx Database and SyncWorxAdmin login user exists at the client <em>(default true)</em></li>
+<li><strong>PreChecker Ping Check</strong> - Run a ping check as part of the PreChecker.</li>
 <li><strong>Number of Bulk Uninstaller Threads</strong> - The number of clients to uninstall at once when running the Bulk Client Uninstaller <em>(default 5)</em>.</li>
-<li><strong>Number of Hours Behind Needed Before Checking Client</strong> - The amount of hours that the client hasn't communicated for before the <strong>Client behind diagnostic tool</strong> will run <em>(default 60)</em>.</li>
-<li><strong>Number of Checker Service Threads</strong> - The number of clients that are behind to run the <strong>Client behind diagnostic tool</strong> <em>(default 5)</em>.</li>
-<li><strong>Number of Client Upgrade Threads</strong> - The number of clients to upgrade at once when upgrading clients to a newer version of Conductor4SQL <em>(default 5)</em>.</li>
-<li><strong>Message Audit Retention In Days</strong> - Every message that Conductor4SQL central receives is stored for the number of days defined before they are archived. This data is kept for debugging purposes <em>(default 7)</em> </li>
-<li><strong>Message Audit Archive Retention In Days</strong> - Every message that Conductor4SQL archives is further stored for the defined number of days before they are deleted. This data is also kept for debugging purposes <em>(default 60)</em> </li>
-<li><strong>Client Event Log Retention In Days</strong> - The number of days that the Client Event Audit data is kept for <em>(default 7)</em> </li>
-<li><strong>Message Audit Archive Retention In Days</strong> - Every message that Conductor4SQL archives is further stored for the defined number of days before they are deleted. This data is also kept for debugging purposes <em>(default 7)</em> </li>
+<li><strong>Event Notification Enabled On Client Install</strong> - Enable event auditing when client is installed <em>(default true)</em>.</li>
+</ul>
+<h2 id="auditing-settings">Auditing Settings</h2>
+<ul>
+<li><strong>Message Audit Retention In Days</strong> - Every message that Conductor4SQL central receives is stored for the number of days defined before they are deleted. This data is kept for debugging purposes <em>(default 7)</em> </li>
 <li><strong>Message Audit Cleanup Time Limit In Minutes</strong> - Set the length of time (in minutes) that the daily job clears old message audit and data sync audit messages <em>(default 60)</em></li>
+<li><strong>Client Event Log Retention In Days</strong> - The number of days that the Client Event Audit data is kept for <em>(default 7)</em> </li>
+</ul>
+<h2 id="data-sync-settings">Data Sync Settings</h2>
+<ul>
 <li><strong>Enterprise Sync Initial Sync Skip</strong> - Used for when you are using Enterprise Sync and restoring database backups at central rather than performing initial sync <em>(default false)</em> </li>
+<li><strong>Checksum Time-to-live (Minutes)</strong> - the length of time before a checksum message expires </li>
 </ul>
 <p>Click on the <strong>Save Configuration</strong> button when you have completed tweaking the Conductor4SQL settings.</p>
               

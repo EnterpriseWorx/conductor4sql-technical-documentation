@@ -353,11 +353,21 @@ The overall state of your environment should preferably indicate 100% (all green
 <p><img alt="" src="../../img/central-console/central-client-dashboard/metric-general-overview-client-communication.png" /></p>
 <p><strong>Description</strong></p>
 <p>This indicator tells you the number of clients installed compared to the number of clients that are currently communicating. You want to try and keep this number to as close to 100% as possible.</p>
-<h3 id="general-overview-service-running">General Overview - Service Running</h3>
+<h3 id="central-health-service-running">Central Health - Service Running</h3>
 <p><strong>Metric</strong></p>
 <p><img alt="" src="../../img/central-console/central-client-dashboard/metric-service-running.png" /></p>
 <p><strong>Description</strong></p>
-<p>This metric is important because it tells us if the Conductor4SQL service is running. Its important that this service is always running as it is responsible for sending out scheduled User Commands and Queries as well as running the <em>diagnostic tool</em> for determining why clients are behind.</p>
+<p>This metric is important because it tells us if the <strong>Conductor4SQL Service</strong> is running. Its important that this service is always running as it is responsible for sending out scheduled User Commands and Queries as well as running the <em>diagnostic tool</em> for determining why clients are behind.</p>
+<h3 id="central-health-report-queue-enabled">Central Health - Report Queue Enabled</h3>
+<p><strong>Metric</strong></p>
+<p><img alt="" src="../../img/central-console/central-client-dashboard/metric-report-queue-enabled-running.png" /></p>
+<p><strong>Description</strong></p>
+<p>It is important that the report queue is enabled at all times otherwise no report data will be populated for any of the clients.</p>
+<h3 id="central-health-report-email-configured">Central Health - Report Email Configured</h3>
+<p><strong>Metric</strong></p>
+<p><img alt="" src="../../img/central-console/central-client-dashboard/metric-report-email-configured.png" /></p>
+<p><strong>Description</strong></p>
+<p>The report emails go out daily and hourly will not be sent out unless the report email has been configured. </p>
 <h3 id="clients-behind">Clients Behind</h3>
 <p><strong>Metric</strong></p>
 <p><img alt="" src="../../img/central-console/central-client-dashboard/metric-clients-behind.png" /></p>
