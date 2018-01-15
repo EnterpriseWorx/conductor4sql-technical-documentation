@@ -273,6 +273,15 @@
     <a class="current" href="./">Release Notes</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#version-3613-2018-01-15-changes">Version 3.6.1.3 (2018-01-15) Changes</a></li>
+    
+
+    <li class="toctree-l2"><a href="#version-3612-2017-12-13-changes">Version 3.6.1.2 (2017-12-13) Changes</a></li>
+    
+
+    <li class="toctree-l2"><a href="#version-3611-2017-11-15-changes">Version 3.6.1.1 (2017-11-15) Changes</a></li>
+    
+
     <li class="toctree-l2"><a href="#version-3610-2017-11-01-changes">Version 3.6.1.0 (2017-11-01) Changes</a></li>
     
 
@@ -398,7 +407,53 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="version-3610-2017-11-01-changes">Version 3.6.1.0 (2017-11-01) Changes</h1>
+                <h1 id="version-3613-2018-01-15-changes">Version 3.6.1.3 (2018-01-15) Changes</h1>
+<ul>
+<li>CONSQL-1721 Improvement: Space Monitoring email should only be sent with the daily email and not the hourly email</li>
+<li>CONSQL-1462 Improvement: User Query save to table needs to support adding additional columns and widening existing columns</li>
+<li>CONSQL-1534 Improvement: Added new column "Is Scheduled" to User Command Log and User Query Log tabs in Central Client Control</li>
+<li>CONSQL-1724 Improvement: Failed Job Monitoring email has two new sections: "SQL Server Agent Not Running" and "Failed Job Summary"</li>
+<li>CONSQL-1710 Improvement: Exclude telemetry_xevents when sending audit events to central to prevent client event spam</li>
+<li>CONSQL-1711 Improvement: Added "Max File Size MB" column to "Space Monitoring" email</li>
+<li>CONSQL-1353 Improvement: Added Client Side Enterprise Sync Job to process cdc changes if message has not been received from central in 3 hours</li>
+<li>CONSQL-1713 Improvement: Central Server File Space Usage should only send in case of low space</li>
+<li>CONSQL-1712 Bug Fix: Get report data message is not getting to clients when the client has an outstanding pulse check.</li>
+<li>CONSQL-1715 Bug Fix: Central dashboard indicator details displays details for clients that have been disabled for a group</li>
+<li>CONSQL-1709 Bug Fix: We are missing indexes on many of the Tracker tables</li>
+<li>CONSQL-1708 Bug Fix: We should not be able to deactivate an email list that is assigned to one or more scheduled emails or audit alerts</li>
+</ul>
+<h1 id="version-3612-2017-12-13-changes">Version 3.6.1.2 (2017-12-13) Changes</h1>
+<ul>
+<li>CONSQL-1688 Improvement: Optimize the speed of the Database Table report data gathering client stored procedure</li>
+<li>CONSQL-1686 Improvement: Move the report data gathering step in the daily job to its own job</li>
+<li>CONSQL-1691 Bug Fix: Only attempt to backup the database master key if we created the database master key on client install in the first place</li>
+<li>CONSQL-1693 Bug Fix: Central Client Control has inconsistencies on display order for select clients, send script etc</li>
+<li>CONSQL-1685 Bug Fix: Duplicate insert issue with client event data</li>
+<li>CONSQL-1707 Bug Fix: Client install fails on Set Up Certificate step when installing on Windows Embedded.</li>
+<li>CONSQL-1690 Bug Fix: Convert windows version number in "MS SQL Instance Dashboard" report to human readable form</li>
+<li>CONSQL-1689 Bug Fix: If i have multiple email addresses in an email list the emails do not get sent out</li>
+<li>CONSQL-1687 Bug Fix: We not getting Enterprise sync changes if we have more than one client syncing with Enterprise Sync</li>
+</ul>
+<h1 id="version-3611-2017-11-15-changes">Version 3.6.1.1 (2017-11-15) Changes</h1>
+<ul>
+<li>CONSQL-1650 Improvement: Change central client queue to process 1 message at a time</li>
+<li>CONSQL-1684 Bug Fix: Added summary and fixed invalid data in "Backup Monitoring" Email report</li>
+<li>CONSQL-1680 Bug Fix: Fix non descriptive datasync Error 'The current transaction cannot be committed and cannot support operations that write to the log file. Roll back the transaction.'</li>
+<li>CONSQL-1679 Bug Fix: Send file feature does not handling failures correctly</li>
+<li>CONSQL-1647 Bug Fix: Job history report doesn't report on jobs that is currently running</li>
+<li>CONSQL-1674 Bug Fix: We should be able to schedule the same user command/query under 2 or more schedules</li>
+<li>CONSQL-1673 Bug Fix: System information report not working on SQL Version 2008 R2 RTM</li>
+<li>CONSQL-1134 Bug Fix: Many Message Audit table messages do not have accurate sent time</li>
+<li>CONSQL-1671 Bug Fix: Errors on central report queue must be logged and the queue must be re-enabled</li>
+<li>CONSQL-1475 Bug Fix: Bulk installer does not update group list on refresh</li>
+<li>CONSQL-1474 Bug Fix: Can change Authentication method AFTER test connectivity for central</li>
+<li>CONSQL-1646 Bug Fix: When comparing procs, if the database/schema is missing, we get an "Out of range" error</li>
+<li>CONSQL-977  Bug Fix: Only apply error message to first message that is removed</li>
+<li>CONSQL-1595 Bug Fix: SQL Editor screen header is "Send Query to All" when opening from Manage Scripts, should say "User Command/Query Script Editor"</li>
+<li>CONSQL-1608 Bug Fix: Send User Command/Query to group has incorrect confirmation message</li>
+<li>CONSQL-1672 Bug Fix: "Resend Script" option resends to ALL clients for user command and query and not just the clients that were initially selected</li>
+</ul>
+<h1 id="version-3610-2017-11-01-changes">Version 3.6.1.0 (2017-11-01) Changes</h1>
 <ul>
 <li>CONSQL-1603 Improvement: Add configuration settings to skip ping test in client pre-checker</li>
 <li>CONSQL-1633 Improvement: Remove requirement of Mixed Mode Authentication when installing clients</li>
