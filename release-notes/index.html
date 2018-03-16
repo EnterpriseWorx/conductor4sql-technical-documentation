@@ -83,6 +83,10 @@
                     
     <a class="" href="../installation/client-server-installation/">Client Server Installation</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../installation/licensing/">Licensing</a>
+                </li>
     </ul>
 	    </li>
           
@@ -265,6 +269,10 @@
                     
     <a class="" href="../appendix/audit-events/">Audit Events</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../appendix/report-emails/">Report Emails</a>
+                </li>
     </ul>
 	    </li>
           
@@ -409,6 +417,7 @@
               
                 <h1 id="version-3613-2018-01-15-changes">Version 3.6.1.3 (2018-01-15) Changes</h1>
 <ul>
+<li>CONSQL-1728 Improvement: Space Summary email does not include summary of databases above max file size threshold</li>
 <li>CONSQL-1721 Improvement: Space Monitoring email should only be sent with the daily email and not the hourly email</li>
 <li>CONSQL-1462 Improvement: User Query save to table needs to support adding additional columns and widening existing columns</li>
 <li>CONSQL-1534 Improvement: Added new column "Is Scheduled" to User Command Log and User Query Log tabs in Central Client Control</li>
@@ -417,6 +426,7 @@
 <li>CONSQL-1711 Improvement: Added "Max File Size MB" column to "Space Monitoring" email</li>
 <li>CONSQL-1353 Improvement: Added Client Side Enterprise Sync Job to process cdc changes if message has not been received from central in 3 hours</li>
 <li>CONSQL-1713 Improvement: Central Server File Space Usage should only send in case of low space</li>
+<li>CONSQL-1727 Bug Fix: Save to table fails if the number of rows of the result set is divisible by 1000</li>
 <li>CONSQL-1712 Bug Fix: Get report data message is not getting to clients when the client has an outstanding pulse check.</li>
 <li>CONSQL-1715 Bug Fix: Central dashboard indicator details displays details for clients that have been disabled for a group</li>
 <li>CONSQL-1709 Bug Fix: We are missing indexes on many of the Tracker tables</li>
@@ -947,7 +957,6 @@
 </li>
 </ul>
 <h1 id="version-3460-2016-09-13-changes">Version 3.4.6.0 (2016-09-13) Changes</h1>
-<p>======================================================= </p>
 <ul>
 <li>
 <p>CONSQL-1277 Improvement: Persist columns and filters for Client Overview screen </p>
@@ -1297,7 +1306,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../appendix/audit-events/" class="btn btn-neutral" title="Audit Events"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../appendix/report-emails/" class="btn btn-neutral" title="Report Emails"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1325,7 +1334,7 @@
           <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../appendix/audit-events/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../appendix/report-emails/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>

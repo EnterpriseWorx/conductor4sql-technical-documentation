@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-<title>Conductor4SQL Technical Documentation - Checksum Blacklist</title>
+<title>Conductor4SQL Technical Documentation - Report Emails</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Checksum Blacklist";
-    var mkdocs_page_input_path = "appendix\\checksum-blacklist.md";
-    var mkdocs_page_url = "/appendix/checksum-blacklist/";
+    var mkdocs_page_name = "Report Emails";
+    var mkdocs_page_input_path = "appendix\\report-emails.md";
+    var mkdocs_page_url = "/appendix/report-emails/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -261,23 +261,72 @@
                     
     <a class="" href="../queues-explained/">Queues Explained</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Checksum Blacklist</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#checksum-blacklist">Checksum Blacklist</a></li>
-    
-
-    </ul>
+    <a class="" href="../checksum-blacklist/">Checksum Blacklist</a>
                 </li>
                 <li class="">
                     
     <a class="" href="../audit-events/">Audit Events</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../report-emails/">Report Emails</a>
+    <a class="current" href="./">Report Emails</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#retrieving-all-conductor4sql-report-configurations">Retrieving all Conductor4SQL report configurations</a></li>
+    
+
+    <li class="toctree-l3"><a href="#reports-configuration-table-columns">Reports configuration table columns</a></li>
+    
+
+    <li class="toctree-l3"><a href="#sending-reports">Sending reports</a></li>
+    
+
+    <li class="toctree-l3"><a href="#report-explanation">Report explanation</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-clients-over-3-days-behind">Conductor4SQL - Clients Over 3 Days Behind</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-admin-queue-errors">Conductor4SQL - Admin Queue Errors</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-central-queues-notification">Conductor4SQL - Central Queues Notification</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-clients-queues-notification">Conductor4SQL - Clients Queues Notification</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-data-sync-differences">Conductor4SQL - Data Sync Differences</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-central-server-file-space-usage">Conductor4SQL - Central Server File Space Usage</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-missing-data-sync-objects-notification">Conductor4SQL - Missing Data Sync Objects Notification</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-enterprise-sync-errors">Conductor4SQL - Enterprise Sync Errors</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-data-sync-behind">Conductor4SQL - Data Sync Behind</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-service-notification">Conductor4SQL - Service Notification</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-data-sync-errors">Conductor4SQL - Data Sync Errors</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-skipped-data-sync-tables">Conductor4SQL - Skipped Data Sync Tables</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-scheduled-sync-errors">Conductor4SQL - Scheduled Sync Errors</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-report-queue-disabled">Conductor4SQL - Report Queue Disabled</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-space-monitoring">Conductor4SQL - Space Monitoring</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-failed-job-monitoring">Conductor4SQL - Failed Job Monitoring</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-backup-monitoring">Conductor4SQL - Backup Monitoring</a></li>
+        
+            <li><a class="toctree-l4" href="#conductor4sql-space-summary">Conductor4SQL - Space Summary</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -313,10 +362,10 @@
         
       
     
-    <li>Checksum Blacklist</li>
+    <li>Report Emails</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/appendix/checksum-blacklist.md"
+        <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/appendix/report-emails.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -326,86 +375,66 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="checksum-blacklist">Checksum Blacklist</h1>
-<p>Conductor4SQL has the ability to do checksums on all syncing tables to monitor data consistency. These checksums are performed during the Conductor4SQL Daily Job, that runs at 1:00 AM by default. While the checksum is running on a specific table, that table will be locked. Therefor there might be the need to exlude specific tables from the checksum process. </p>
-<p>The latest version of Conductor4SQL does not have a UI control for configuring the blacklist. To add or remove a table or client from the blacklist, you would need to interact with the underlying table where the list is configured.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The table name is <strong>[SyncWorx].[dbo].[CM_Client_Data_Sync_Tables_CheckSum_Blacklist]</strong> which is found on your central server.</p>
-</div>
-<p>This is the example of the table:</p>
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th align="center">ClientID</th>
-<th align="right">TableID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td align="center">-1</td>
-<td align="right">1</td>
-</tr>
-<tr>
-<td>2</td>
-<td align="center">1</td>
-<td align="right">-1</td>
-</tr>
-<tr>
-<td>3</td>
-<td align="center">2</td>
-<td align="right">2</td>
-</tr>
-</tbody>
-</table>
+                <h2 id="retrieving-all-conductor4sql-report-configurations">Retrieving all Conductor4SQL report configurations</h2>
+<p>You can see all the built-in reports in Conductor4SQL by running the following query on the central server</p>
+<pre><code class="tsql">SELECT * FROM [SyncWorx].[C4SqlConfig].[Email_Report_Config]
+</code></pre>
+
+<h2 id="reports-configuration-table-columns">Reports configuration table columns</h2>
 <ul>
-<li>
-<p><strong><em>ID</em></strong> - This is an auto-generated column</p>
-</li>
-<li>
-<p><strong><em>ClientID</em></strong> - This is where you specify the client for which a specific table is excluded. The <strong>ClientID</strong> can be found on <a href="../../central-console/central-client-overview">Central Client Overview</a> tab. This can be set to <strong>-1</strong>, which will indicate this table will be excluded for all clients. </p>
-</li>
-<li>
-<p><strong><em>TableID</em></strong> - This is where you specify the table to be excluded. The <strong>TableID</strong> can be found on <a href="../../data-synchronisation/manage-data-sync-tables">Manage Data Sync Tables</a> tab. This can be set to <strong>-1</strong>, which will indicate all tables will be excluded for this client. </p>
-</li>
+<li><strong>ReportID</strong> - ID used for looking up reports</li>
+<li><strong>ReportName</strong> - Report name that will appear in the alert emails</li>
+<li><strong>ReportCommand</strong> - T-SQL to execute to send report</li>
+<li><strong>ParameterName</strong> - Parameters that determine sending and filtering information displayed in report</li>
+<li><strong>Parameter</strong> - Parameter value</li>
+<li><strong>Recipients</strong> - Comma separated list of emails to send report to (Will use Conductor4SQL default email settings if <code>NULL</code>)</li>
+<li><strong>CCRecipients</strong> - Comma separated list of emails to cc on report email (Will use Conductor4SQL default email setting if <code>NULL</code>)</li>
+<li><strong>EmailSubject</strong> - Text to appear in email report (Should we same as report name, unless modified)</li>
+<li><strong>isHourlySchedule</strong> - Determines whether report is sent every hour (<code>[SyncWorx].[dbo.CM_Reports_EMails]</code> takes a bit parameter <code>@isHourly</code>)</li>
+<li><strong>isEnabled</strong> - Determines whether this report should be sent</li>
 </ul>
-<p>You can confirm that the correct table is exluded in the following tabs:</p>
-<ul>
-<li><a href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a></li>
-</ul>
-<p><img alt="" src="../..\img\appendix\checksum-blacklist\manage-data-sync-tables.png" /></p>
-<ul>
-<li><a href="../../data-synchronisation/manage-data-sync-tables">Data Sync Monitoring</a></li>
-</ul>
-<p><img alt="" src="../..\img\appendix\checksum-blacklist\data-sync-monitor.png" /></p>
-<ul>
-<li><a href="../../central-console/central-client-overview/">Central Client Overview</a></li>
-</ul>
-<p><img alt="" src="../..\img\appendix\checksum-blacklist\central-client-overview.png" /></p>
-<ul>
-<li><a href="../../client-console/client-data-sync/">Client Overview</a></li>
-</ul>
-<p><img alt="" src="../..\img\appendix\checksum-blacklist\client-overview.png" /></p>
-<p>When Conductor4SQL is installed, all tables are excluded for all clients by default. This is to ensure active decisions are made on which tables the checksum is performed. This is achieved by a record that is automatically inserted with values:</p>
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th align="center">ClientID</th>
-<th align="right">TableID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td align="center">-1</td>
-<td align="right">-1</td>
-</tr>
-</tbody>
-</table>
-<p>If you want to start running checksums on clients, this record needs to be deleted first.</p>
+<h2 id="sending-reports">Sending reports</h2>
+<p>The reports are sent during the <strong>C4SQL Daily</strong> and <strong>C4SQL Hourly</strong> jobs. They are processed using the <strong>[SyncWorx].[dbo.CM_Reports_EMails]</strong> stored procedure. You can define whether all reports should be run, or only the reports that are set to run hourly, by setting the parameter <strong>@isHourly</strong> to <strong>0</strong> or <strong>1</strong></p>
+<h2 id="report-explanation">Report explanation</h2>
+<h3 id="conductor4sql-clients-over-3-days-behind">Conductor4SQL - Clients Over 3 Days Behind</h3>
+<p>Sent when a client has been unavailable for 3 days or more. The C4SQL investigation process will provide as much detail as possible on why the clients are unavailable</p>
+<h3 id="conductor4sql-admin-queue-errors">Conductor4SQL - Admin Queue Errors</h3>
+<p>Sent when the pulse check message has failed at a client (Usually when a database is in startup or recovery, or a sync database has been dropped)</p>
+<h3 id="conductor4sql-central-queues-notification">Conductor4SQL - Central Queues Notification</h3>
+<p>Sent when a message has failed to process at central (Usually data sync errors related to DDL changes, or save to table errors)</p>
+<h3 id="conductor4sql-clients-queues-notification">Conductor4SQL - Clients Queues Notification</h3>
+<p>Sent when the client queue (excluding data sync queues) are down at the client due to invalid message</p>
+<h3 id="conductor4sql-data-sync-differences">Conductor4SQL - Data Sync Differences</h3>
+<p>Sent when the checksum between central and the client differ when syncing data</p>
+<h3 id="conductor4sql-central-server-file-space-usage">Conductor4SQL - Central Server File Space Usage</h3>
+<p>Sent every day showing the details of all central databases</p>
+<h3 id="conductor4sql-missing-data-sync-objects-notification">Conductor4SQL - Missing Data Sync Objects Notification</h3>
+<p>Sent when a trigger or staging object has been dropped</p>
+<h3 id="conductor4sql-enterprise-sync-errors">Conductor4SQL - Enterprise Sync Errors</h3>
+<p>Sent when there is an error when processing the CDC changes</p>
+<h3 id="conductor4sql-data-sync-behind">Conductor4SQL - Data Sync Behind</h3>
+<p>Sent when the most recent change for a database for client is older that the threshold defined in the C4SQL configuration</p>
+<h3 id="conductor4sql-service-notification">Conductor4SQL - Service Notification</h3>
+<p>Sent when the central service is not running</p>
+<h3 id="conductor4sql-data-sync-errors">Conductor4SQL - Data Sync Errors</h3>
+<p>Sent when there is a data sync issue at the client not related to SQL objects being missing or not function correctly (e.g. insufficient space or memory)</p>
+<h3 id="conductor4sql-skipped-data-sync-tables">Conductor4SQL - Skipped Data Sync Tables</h3>
+<p>Sent only once after data sync was enabled for a table, but was skipped because it was not valid due to being missing or SQL not supporting specific type of sync</p>
+<h3 id="conductor4sql-scheduled-sync-errors">Conductor4SQL - Scheduled Sync Errors</h3>
+<p>Sent when an error has occurred while processing the scheduled sync changes</p>
+<h3 id="conductor4sql-report-queue-disabled">Conductor4SQL - Report Queue Disabled</h3>
+<p>Sent when the reporting queue is down on the central server when reporting has been enabled for a group of or all clients. Corresponds with the indicator on the Conductor4SQL Central Dashboard.</p>
+<h3 id="conductor4sql-space-monitoring">Conductor4SQL - Space Monitoring</h3>
+<p>Sent if any client database has exceeded the defined threshold of the maximum file size. Also sent if the free space on any of the client disks with databases on is less than the define threshold (This only applies to SQL Server 2012+ clients)</p>
+<p>Provides full details of the databases that exceed the thresholds</p>
+<h3 id="conductor4sql-failed-job-monitoring">Conductor4SQL - Failed Job Monitoring</h3>
+<p>Sent if a the last run result for a job on a client is "Failed"</p>
+<h3 id="conductor4sql-backup-monitoring">Conductor4SQL - Backup Monitoring</h3>
+<p>Sent if a client has a database where the last backup date exceeds the threshold for old backups, as well as databases with no backups.</p>
+<p>Databases can be excluded in this report by adding them to the <strong>C4SqlConfig.Backup_Report_Exlusions</strong> table at central. The SyncWorx database, Scheduled Sync staging databases and system databases are excluded from this email report by default.</p>
+<h3 id="conductor4sql-space-summary">Conductor4SQL - Space Summary</h3>
+<p>Sent if any client database has exceeded the defined threshold of the maximum file size. Also sent if the free space on any of the client disks with databases on is less than the define threshold (This only applies to SQL Server 2012+ clients)</p>
+<p>Provides only the summary of the databases that exceed the thresholds. Full details can be found in the <strong>Conductor4SQL - Space Monitoring</strong> report email</p>
               
             </div>
           </div>
@@ -413,10 +442,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../audit-events/" class="btn btn-neutral float-right" title="Audit Events">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../release-notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../queues-explained/" class="btn btn-neutral" title="Queues Explained"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../audit-events/" class="btn btn-neutral" title="Audit Events"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -444,10 +473,10 @@
           <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../queues-explained/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../audit-events/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../audit-events/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../release-notes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
