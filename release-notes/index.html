@@ -281,6 +281,9 @@
     <a class="current" href="./">Release Notes</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#version-3711-2018-04-24-changes">Version 3.7.1.1 (2018-04-24) Changes</a></li>
+    
+
     <li class="toctree-l2"><a href="#version-3701-2018-03-13-changes">Version 3.7.0.1 (2018-03-13) Changes</a></li>
     
 
@@ -418,7 +421,43 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="version-3701-2018-03-13-changes">Version 3.7.0.1 (2018-03-13) Changes</h1>
+                <h1 id="version-3711-2018-04-24-changes">Version 3.7.1.1 (2018-04-24) Changes</h1>
+<ul>
+<li>CONSQL-1765 Feature: Add wizard for one-to-one push data sync</li>
+<li>CONSQL-1766 Feature: Add wizard for consolidation push data sync</li>
+<li>CONSQL-1771 Improvement: Change central data deleting to use batch deletes outside of a transaction</li>
+<li>CONSQL-1722 Improvement: Failed job email needs to only send if the job recently Failed_Job_Monitoring</li>
+<li>CONSQL-1751 Bug Fix: Get "Database File Details" report gathering failing</li>
+<li>CONSQL-1772 Bug Fix: Central progress column is getting updates for all tables for a client during Enterprise Sync initial sync</li>
+<li>CONSQL-1762 Bug Fix: User query no result set results a .net error</li>
+<li>CONSQL-1775 Bug Fix: Conductor4SQL Service logging not working</li>
+<li>CONSQL-1779 Bug Fix: Getting deadlocks on the internal queue when enabling or disabling Push data sync on multiple queues concurrently</li>
+<li>CONSQL-1780 Bug Fix: Deadlocks on client side when simultaneous data sync queues are processing</li>
+<li>CONSQL-1781 Bug Fix: Checksum issues in push data sync</li>
+<li>CONSQL-1784 Bug Fix: Daily Job Re-Index script not matching primary keys to tables correctly</li>
+<li>CONSQL-1792 Bug Fix: Not processing changes when skipping initial sync was used</li>
+<li>CONSQL-1778 Bug Fix: Conductor4SQL Windows Service not being created as "Delayed" when using stand-alone installer</li>
+<li>CONSQL-1783 Bug Fix: Date data type not supported in scheduled sync</li>
+<li>CONSQL-1803 Bug Fix: Initial sync fails on table with 16 columns or more in primary keys</li>
+<li>CONSQL-1808 Bug Fix: Data Sync Monitoring screen showing the incorrect information</li>
+<li>CONSQL-1791 Bug Fix: Nulls in Failed Job Report resulting in a blank report</li>
+<li>CONSQL-1782 Bug Fix: Query result and DDL alert emails not using updated format</li>
+<li>CONSQL-1801 Bug Fix: Client installed using windows authentication not working in client dashboard</li>
+<li>CONSQL-1800 Bug Fix: Change user query email subject format to default template format</li>
+<li>CONSQL-1675 Bug Fix: Routing gets used for default and named instance if both are installed as client</li>
+<li>CONSQL-1798 Bug Fix: User query CSV attachment missing decimals for numeric and decimal data type</li>
+<li>CONSQL-1789 Bug Fix: Initial push sync fails because database already exists when enabling for the first time on multiple queues at once</li>
+<li>CONSQL-1790 Bug Fix: Calculated column definitions not always populating for push data sync</li>
+<li>CONSQL-1784 Bug Fix: Daily Job Re-Index script not matching primary keys to tables correctly</li>
+<li>CONSQL-1781 Bug Fix: Checksum encoding issues in push data sync</li>
+<li>CONSQL-1780 Bug Fix: Deadlocks on client side when simultaneous data sync queues are processing</li>
+<li>CONSQL-1787 Improvement: Reduced probability of deadlock when saving query results to table</li>
+<li>CONSQL-1802 Improvement: Improvements to Conductor4SQL Windows Service Logging</li>
+<li>CONSQL-1794 Improvement: Changing installation credentials back to SyncWorxAdmin auto-completes password</li>
+<li>CONSQL-1665 Improvement: Client Checker Service should enable service broker at client if it is disabled</li>
+<li>CONSQL-1786 Improvement: Optimize Enterprise Sync Get Changes Message logic</li>
+</ul>
+<h1 id="version-3701-2018-03-13-changes">Version 3.7.0.1 (2018-03-13) Changes</h1>
 <ul>
 <li>Feature: New data sync type called "Push" data sync to push data from central to clients</li>
 <li>CONSQL-1731 CONSQL-1732 Improvement: Eliminated a number of deadlock issues and performance issues in Enterprise Sync</li>
