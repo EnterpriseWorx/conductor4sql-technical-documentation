@@ -281,6 +281,9 @@
     <a class="current" href="./">Release Notes</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#version-3712-2018-07-19-changes">Version 3.7.1.2 (2018-07-19) Changes</a></li>
+    
+
     <li class="toctree-l2"><a href="#version-3711-2018-04-24-changes">Version 3.7.1.1 (2018-04-24) Changes</a></li>
     
 
@@ -421,7 +424,33 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="version-3711-2018-04-24-changes">Version 3.7.1.1 (2018-04-24) Changes</h1>
+                <h1 id="version-3712-2018-07-19-changes">Version 3.7.1.2 (2018-07-19) Changes</h1>
+<ul>
+<li>Improvement: Improved system information retrieval and reporting</li>
+<li>Improvement: Push sync uses a single capture instance</li>
+<li>Improvement: Enterprise Sync DDL changes audited for better change related inconsistencies</li>
+<li>Improvement: Power BI report data inserted into persistent tables to speed up the PowerBI reloads</li>
+<li>Improvement: Various Power BI dashboard new features and improvements</li>
+<li>Improvement: Monitoring of CDC and SQL Replication processes when push sync enabled</li>
+<li>Improvement: Various Push Sync performance improvements</li>
+<li>Improvement: Database Mapping Name selection enhanced in Data Sync Table Management tab</li>
+<li>Improvement: Improved auditing of initial sync start and end times</li>
+<li>Improvement: Truncate used instead of delete where possible when deleting sync data on central server</li>
+<li>
+<p>Improvement: ALTER_SERVER_CONFIGURATION included in standard auditing</p>
+</li>
+<li>
+<p>Bug Fix: Improved handling of dropping and recreating calculated columns in push data sync</p>
+</li>
+<li>Bug Fix: Push sync partial initial sync table to complete before getting changes</li>
+<li>Bug Fix: Information updating correctly in Data Sync Monitoring screen</li>
+<li>Bug Fix: Database mappings case sensitivity resolved</li>
+<li>Bug Fix: Bulk Installer error message length issue</li>
+<li>Bug Fix: Duplicate sync messages handled</li>
+<li>Bug Fix: Checksums failed when push sync enabled</li>
+<li>Bug Fix: Real-time and scheduled sync fails when default collation is different from sync database</li>
+</ul>
+<h1 id="version-3711-2018-04-24-changes">Version 3.7.1.1 (2018-04-24) Changes</h1>
 <ul>
 <li>CONSQL-1765 Feature: Add wizard for one-to-one push data sync</li>
 <li>CONSQL-1766 Feature: Add wizard for consolidation push data sync</li>
