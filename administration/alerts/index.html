@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-<title>Conductor4SQL Technical Documentation - Data Synchronisation Overview</title>
+<title>Conductor4SQL Technical Documentation - Alerts</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Data Synchronisation Overview";
-    var mkdocs_page_input_path = "data-synchronisation\\introduction.md";
+    var mkdocs_page_name = "Alerts";
+    var mkdocs_page_input_path = "administration\\alerts.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -182,47 +182,76 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../administration/introduction/">Central Administration Overview</a>
+    <a class="" href="../introduction/">Central Administration Overview</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../administration/client-groups/">Client Groups</a>
+    <a class="" href="../client-groups/">Client Groups</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../administration/email/">Email</a>
+    <a class="" href="../email/">Email</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../administration/events/">Events</a>
+    <a class="" href="../events/">Events</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../administration/business-attributes/">Business Attributes</a>
+    <a class="" href="../business-attributes/">Business Attributes</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../administration/users/">Users</a>
+    <a class="" href="../users/">Users</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../administration/scheduler/">Scheduler</a>
+    <a class="" href="../scheduler/">Scheduler</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../administration/reports/">Reports</a>
+    <a class="" href="../reports/">Reports</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Alerts</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#alerts-administration-overview">Alerts Administration Overview</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#enabling-alerts">Enabling Alerts</a></li>
+        
+            <li><a class="toctree-l4" href="#make-an-alert-an-hourly-job">Make an Alert an Hourly Job</a></li>
+        
+            <li><a class="toctree-l4" href="#email-report-definitions">Email Report Definitions</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#additional-information">Additional Information</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#retrieving-all-conductor4sql-report-configurations">Retrieving all Conductor4SQL report configurations</a></li>
+        
+            <li><a class="toctree-l4" href="#reports-configuration-table-columns">Reports configuration table columns</a></li>
+        
+            <li><a class="toctree-l4" href="#sending-reports">Sending reports</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../administration/alerts/">Alerts</a>
+    <a class="" href="../configuration/">UI And System Configuration</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../administration/configuration/">UI And System Configuration</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/queue-management/">Queue Management</a>
+    <a class="" href="../queue-management/">Queue Management</a>
                 </li>
     </ul>
 	    </li>
@@ -231,20 +260,17 @@
 		
     <span class="caption-text">Data Synchronisation</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Data Synchronisation Overview</a>
-    <ul class="subnav">
-            
-    </ul>
+    <a class="" href="../../data-synchronisation/introduction/">Data Synchronisation Overview</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../data-sync-monitoring/">Data Sync Monitoring</a>
+    <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../manage-data-sync-tables/">Manage Data Sync Tables</a>
+    <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
                 </li>
     </ul>
 	    </li>
@@ -307,14 +333,14 @@
     
       
         
-          <li>Data Synchronisation &raquo;</li>
+          <li>Administration &raquo;</li>
         
       
     
-    <li>Data Synchronisation Overview</li>
+    <li>Alerts</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/data-synchronisation/introduction.md"
+        <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/administration/alerts.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -324,7 +350,124 @@
           <div role="main">
             <div class="section">
               
-                <p><img alt="" src="../../img/under-construction.png" /></p>
+                <h1 id="alerts-administration-overview">Alerts Administration Overview</h1>
+<p>The <strong>Alerts</strong> Administration screen is used for configuring the Conductor4SQL email alerts.</p>
+<p><img alt="" src="../../img/administration/alerts/alerts.png" /></p>
+<h2 id="enabling-alerts">Enabling Alerts</h2>
+<p>Tick any of the checkboxes under the <strong>Enabled</strong> column to enable an email alert.</p>
+<p><img alt="" src="../../img/administration/alerts/admin-alerts-enable-alert.png" /></p>
+<h2 id="make-an-alert-an-hourly-job">Make an Alert an Hourly Job</h2>
+<p>Tick any of the checkboxes under the <strong>Hourly</strong> column to make an email alert an hourly job.</p>
+<p><img alt="" src="../../img/administration/alerts/admin-alerts-hourly-alert.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember to click on the <strong>Save Changes</strong> button to save your Email Alert configuration to the database, or, click <strong>Discard Changes</strong> to discard your changes.</p>
+<p><img alt="" src="../../img/administration/alerts/admin-alerts-update-alert.png" /></p>
+</div>
+<h2 id="email-report-definitions">Email Report Definitions</h2>
+<table>
+<thead>
+<tr>
+<th>Email Report Name</th>
+<th>Email Report Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Admin Queue Errors</strong></td>
+<td>Sent when the pulse check message has failed at a client (Usually when a database is in startup or recovery, or a sync database has been dropped)</td>
+</tr>
+<tr>
+<td><strong>Backup Monitoring</strong></td>
+<td>Sent if a client has a database where the last backup date exceeds the threshold for old backups, as well as databases with no backups.  Databases can be excluded in this report by adding them to the <strong>C4SqlConfig.Backup_Report_Exlusions</strong> table at central. The SyncWorx database, Scheduled Sync staging databases and system databases are excluded from this email report by default.</td>
+</tr>
+<tr>
+<td><strong>Central Queues Notification</strong></td>
+<td>Sent when a message has failed to process at central (Usually data sync errors related to DDL changes, or save to table errors)</td>
+</tr>
+<tr>
+<td><strong>Central Server File Space Usage</strong></td>
+<td>Sent every day showing the details of all central databases</td>
+</tr>
+<tr>
+<td><strong>Clients Over 3 Days Behind</strong></td>
+<td>Sent when a client has been unavailable for 3 days or more. The C4SQL investigation process will provide as much detail as possible on why the clients are unavailable</td>
+</tr>
+<tr>
+<td><strong>Clients Queues Notification</strong></td>
+<td>Sent when the client queue (excluding data sync queues) are down at the client due to invalid message</td>
+</tr>
+<tr>
+<td><strong>Data Sync Behind</strong></td>
+<td>Sent when the most recent change for a database for client is older that the threshold defined in the C4SQL configuration</td>
+</tr>
+<tr>
+<td><strong>Data Sync Differences</strong></td>
+<td>Sent when the checksum between central and the client differ when syncing data</td>
+</tr>
+<tr>
+<td><strong>Data Sync Errors</strong></td>
+<td>Sent when there is a data sync issue at the client not related to SQL objects being missing or not function correctly (e.g. insufficient space or memory)</td>
+</tr>
+<tr>
+<td><strong>Enterprise Sync Errors</strong></td>
+<td>Sent when there is an error when processing the CDC changes</td>
+</tr>
+<tr>
+<td><strong>Failed Job Monitoring</strong></td>
+<td>Sent if a the last run result for a job on a client is "Failed"</td>
+</tr>
+<tr>
+<td><strong>Missing Data Sync Objects Notification</strong></td>
+<td>Sent when a trigger or staging object has been dropped</td>
+</tr>
+<tr>
+<td><strong>Report Queue Disabled</strong></td>
+<td>Sent when the reporting queue is down on the central server when reporting has been enabled for a group of or all clients. Corresponds with the indicator on the Conductor4SQL Central Dashboard.</td>
+</tr>
+<tr>
+<td><strong>Scheduled Sync Errors</strong></td>
+<td>Sent when an error has occurred while processing the scheduled sync changes</td>
+</tr>
+<tr>
+<td><strong>Service Notification</strong></td>
+<td>Sent when the central service is not running</td>
+</tr>
+<tr>
+<td><strong>Skipped Data Sync Tables</strong></td>
+<td>Sent only once after data sync was enabled for a table, but was skipped because it was not valid due to being missing or SQL not supporting specific type of sync</td>
+</tr>
+<tr>
+<td><strong>Space Monitoring</strong></td>
+<td>Sent if any client database has exceeded the defined threshold of the maximum file size. Also sent if the free space on any of the client disks with databases on is less than the define threshold (This only applies to SQL Server 2012+ clients)  Provides full details of the databases that exceed the thresholds</td>
+</tr>
+<tr>
+<td><strong>Space Summary</strong></td>
+<td>Sent if any client database has exceeded the defined threshold of the maximum file size. Also sent if the free space on any of the client disks with databases on is less than the define threshold (This only applies to SQL Server 2012+ clients)  Provides only the summary of the databases that exceed the thresholds. Full details can be found in the <strong>Conductor4SQL - Space Monitoring</strong> report email</td>
+</tr>
+</tbody>
+</table>
+<h1 id="additional-information">Additional Information</h1>
+<h2 id="retrieving-all-conductor4sql-report-configurations">Retrieving all Conductor4SQL report configurations</h2>
+<p>You can see all the built-in reports in Conductor4SQL by running the following query on the central server</p>
+<pre><code class="tsql">SELECT * FROM [SyncWorx].[C4SqlConfig].[Email_Report_Config]
+</code></pre>
+
+<h2 id="reports-configuration-table-columns">Reports configuration table columns</h2>
+<ul>
+<li><strong>ReportID</strong> - ID used for looking up reports</li>
+<li><strong>ReportName</strong> - Report name that will appear in the alert emails</li>
+<li><strong>ReportCommand</strong> - T-SQL to execute to send report</li>
+<li><strong>ParameterName</strong> - Parameters that determine sending and filtering information displayed in report</li>
+<li><strong>Parameter</strong> - Parameter value</li>
+<li><strong>Recipients</strong> - Comma separated list of emails to send report to (Will use Conductor4SQL default email settings if <code>NULL</code>)</li>
+<li><strong>CCRecipients</strong> - Comma separated list of emails to cc on report email (Will use Conductor4SQL default email setting if <code>NULL</code>)</li>
+<li><strong>EmailSubject</strong> - Text to appear in email report (Should we same as report name, unless modified)</li>
+<li><strong>isHourlySchedule</strong> - Determines whether report is sent every hour (<code>[SyncWorx].[dbo.CM_Reports_EMails]</code> takes a bit parameter <code>@isHourly</code>)</li>
+<li><strong>isEnabled</strong> - Determines whether this report should be sent</li>
+</ul>
+<h2 id="sending-reports">Sending reports</h2>
+<p>The reports are sent during the <strong>C4SQL Daily</strong> and <strong>C4SQL Hourly</strong> jobs. They are processed using the <strong>[SyncWorx].[dbo.CM_Reports_EMails] @isHourly</strong> stored procedure. You can define whether all reports should be run, or only the reports that are set to run hourly, by setting the parameter <strong>@isHourly</strong> to <strong>0</strong> or <strong>1</strong>.</p>
               
             </div>
           </div>
@@ -332,10 +475,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../data-sync-monitoring/" class="btn btn-neutral float-right" title="Data Sync Monitoring">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../configuration/" class="btn btn-neutral float-right" title="UI And System Configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../administration/queue-management/" class="btn btn-neutral" title="Queue Management"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../reports/" class="btn btn-neutral" title="Reports"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -363,10 +506,10 @@
           <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../administration/queue-management/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../reports/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../data-sync-monitoring/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

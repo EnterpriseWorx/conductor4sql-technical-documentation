@@ -13,22 +13,23 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../../css/custom.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Checksum Blacklist";
     var mkdocs_page_input_path = "appendix\\checksum-blacklist.md";
-    var mkdocs_page_url = "/appendix/checksum-blacklist/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
-<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" />
-<script src="../../js/jquery.fancybox.js"></script>
-<script src="../../js/jquery.fancybox.pack.js"></script>
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" defer />
+<script src="../../js/jquery.fancybox.js" defer></script>
+<script src="../../js/jquery.fancybox.pack.js" defer></script>
   
 </head>
 
@@ -42,7 +43,7 @@
         <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -166,7 +167,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../client-console/client-Auditing/">Client Auditing</a>
+    <a class="" href="../../client-console/client-auditing/">Client Auditing</a>
                 </li>
                 <li class="">
                     
@@ -210,6 +211,10 @@
                 <li class="">
                     
     <a class="" href="../../administration/reports/">Reports</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../administration/alerts/">Alerts</a>
                 </li>
                 <li class="">
                     
@@ -275,10 +280,6 @@
                     
     <a class="" href="../audit-events/">Audit Events</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../report-emails/">Report Emails</a>
-                </li>
     </ul>
 	    </li>
           
@@ -305,7 +306,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Documentation</a> &raquo;</li>
+    <li><a href="">Documentation</a> &raquo;</li>
     
       
         
@@ -365,29 +366,29 @@
 <p><strong><em>ID</em></strong> - This is an auto-generated column</p>
 </li>
 <li>
-<p><strong><em>ClientID</em></strong> - This is where you specify the client for which a specific table is excluded. The <strong>ClientID</strong> can be found on <a href="../../central-console/central-client-overview">Central Client Overview</a> tab. This can be set to <strong>-1</strong>, which will indicate this table will be excluded for all clients. </p>
+<p><strong><em>ClientID</em></strong> - This is where you specify the client for which a specific table is excluded. The <strong>ClientID</strong> can be found on <a href="../../central-console/central-client-overview/">Central Client Overview</a> tab. This can be set to <strong>-1</strong>, which will indicate this table will be excluded for all clients. </p>
 </li>
 <li>
-<p><strong><em>TableID</em></strong> - This is where you specify the table to be excluded. The <strong>TableID</strong> can be found on <a href="../../data-synchronisation/manage-data-sync-tables">Manage Data Sync Tables</a> tab. This can be set to <strong>-1</strong>, which will indicate all tables will be excluded for this client. </p>
+<p><strong><em>TableID</em></strong> - This is where you specify the table to be excluded. The <strong>TableID</strong> can be found on <a href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a> tab. This can be set to <strong>-1</strong>, which will indicate all tables will be excluded for this client. </p>
 </li>
 </ul>
 <p>You can confirm that the correct table is exluded in the following tabs:</p>
 <ul>
 <li><a href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a></li>
 </ul>
-<p><img alt="" src="../..\img\appendix\checksum-blacklist\manage-data-sync-tables.png" /></p>
+<p><img alt="" src="../../img/appendix/checksum-blacklist/manage-data-sync-tables.png" /></p>
 <ul>
-<li><a href="../../data-synchronisation/manage-data-sync-tables">Data Sync Monitoring</a></li>
+<li><a href="../../data-synchronisation/manage-data-sync-tables/">Data Sync Monitoring</a></li>
 </ul>
-<p><img alt="" src="../..\img\appendix\checksum-blacklist\data-sync-monitor.png" /></p>
+<p><img alt="" src="../../img/appendix/checksum-blacklist/data-sync-monitor.png" /></p>
 <ul>
 <li><a href="../../central-console/central-client-overview/">Central Client Overview</a></li>
 </ul>
-<p><img alt="" src="../..\img\appendix\checksum-blacklist\central-client-overview.png" /></p>
+<p><img alt="" src="../../img/appendix/checksum-blacklist/central-client-overview.png" /></p>
 <ul>
 <li><a href="../../client-console/client-data-sync/">Client Overview</a></li>
 </ul>
-<p><img alt="" src="../..\img\appendix\checksum-blacklist\client-overview.png" /></p>
+<p><img alt="" src="../../img/appendix/checksum-blacklist/client-overview.png" /></p>
 <p>When Conductor4SQL is installed, all tables are excluded for all clients by default. This is to ensure active decisions are made on which tables the checksum is performed. This is achieved by a record that is automatically inserted with values:</p>
 <table>
 <thead>
@@ -452,10 +453,9 @@
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../js/custom.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../js/custom.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

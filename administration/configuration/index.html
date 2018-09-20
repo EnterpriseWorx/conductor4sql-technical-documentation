@@ -13,22 +13,23 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../../css/custom.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "UI And System Configuration";
     var mkdocs_page_input_path = "administration\\configuration.md";
-    var mkdocs_page_url = "/administration/configuration/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
-<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" />
-<script src="../../js/jquery.fancybox.js"></script>
-<script src="../../js/jquery.fancybox.pack.js"></script>
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" defer />
+<script src="../../js/jquery.fancybox.js" defer></script>
+<script src="../../js/jquery.fancybox.pack.js" defer></script>
   
 </head>
 
@@ -42,7 +43,7 @@
         <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -166,7 +167,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../client-console/client-Auditing/">Client Auditing</a>
+    <a class="" href="../../client-console/client-auditing/">Client Auditing</a>
                 </li>
                 <li class="">
                     
@@ -210,6 +211,10 @@
                 <li class="">
                     
     <a class="" href="../reports/">Reports</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../alerts/">Alerts</a>
                 </li>
                 <li class=" current">
                     
@@ -287,10 +292,6 @@
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/report-emails/">Report Emails</a>
-                </li>
     </ul>
 	    </li>
           
@@ -317,7 +318,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Documentation</a> &raquo;</li>
+    <li><a href="">Documentation</a> &raquo;</li>
     
       
         
@@ -340,7 +341,7 @@
               
                 <h1 id="configuration-administration-overview">Configuration Administration Overview</h1>
 <p>The <strong>C4SQL Configuration</strong> Administration screen is used to tweak various Conductor4SQL Settings</p>
-<p>To adjust Conductor4SQL settings select the <strong>C4SQL Configuration</strong> tab from the <a href="../introduction">Central Administration</a> screen.</p>
+<p>To adjust Conductor4SQL settings select the <strong>C4SQL Configuration</strong> tab from the <a href="../introduction/">Central Administration</a> screen.</p>
 <p>Click on the <strong>Edit Configuration</strong> button to adjust any settings you wish to edit</p>
 <p><img alt="" src="../../img/administration/configuration/configuration-editor.png" /></p>
 <h2 id="client-settings">Client Settings</h2>
@@ -382,7 +383,7 @@
         <a href="../queue-management/" class="btn btn-neutral float-right" title="Queue Management">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../reports/" class="btn btn-neutral" title="Reports"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../alerts/" class="btn btn-neutral" title="Alerts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -410,7 +411,7 @@
           <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../reports/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../alerts/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../queue-management/" style="color: #fcfcfc">Next &raquo;</a></span>
@@ -418,10 +419,9 @@
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../js/custom.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../js/custom.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

@@ -13,22 +13,23 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../../css/custom.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Events";
     var mkdocs_page_input_path = "administration\\events.md";
-    var mkdocs_page_url = "/administration/events/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
-<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" />
-<script src="../../js/jquery.fancybox.js"></script>
-<script src="../../js/jquery.fancybox.pack.js"></script>
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" defer />
+<script src="../../js/jquery.fancybox.js" defer></script>
+<script src="../../js/jquery.fancybox.pack.js" defer></script>
   
 </head>
 
@@ -42,7 +43,7 @@
         <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -166,7 +167,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../client-console/client-Auditing/">Client Auditing</a>
+    <a class="" href="../../client-console/client-auditing/">Client Auditing</a>
                 </li>
                 <li class="">
                     
@@ -222,6 +223,10 @@
                 <li class="">
                     
     <a class="" href="../reports/">Reports</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../alerts/">Alerts</a>
                 </li>
                 <li class="">
                     
@@ -281,10 +286,6 @@
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/report-emails/">Report Emails</a>
-                </li>
     </ul>
 	    </li>
           
@@ -311,7 +312,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Documentation</a> &raquo;</li>
+    <li><a href="">Documentation</a> &raquo;</li>
     
       
         
@@ -334,7 +335,7 @@
               
                 <h1 id="events-administration-overview">Events Administration Overview</h1>
 <p>The <strong>Events</strong> Administration screen is split into two tabs: <a href="#event-alerts">Event Alerts</a> and <a href="#event-exclusions">Event Exclusions</a></p>
-<p>To work with events select the <strong>Events</strong> tab from the <a href="../introduction">Central Administration</a> screen.</p>
+<p>To work with events select the <strong>Events</strong> tab from the <a href="../introduction/">Central Administration</a> screen.</p>
 <h1 id="event-alerts">Event Alerts</h1>
 <p><strong>Event Alerts</strong> are used for configuring Conductor4SQL alerts on DDL events which occur at the clients (e.g. Create Table, Drop Database etc), which means you will get an email for the events which has been configured which then you can pro-actively respond to. </p>
 <p>To create an event alert click on the <strong>Add Event Alert</strong> button under the <strong>Event Alerts</strong> tab.</p>
@@ -367,7 +368,7 @@
 <p>Event alerts are only sent on the hour and not immediately to prevent email spamming.</p>
 </div>
 <h1 id="event-exclusions">Event Exclusions</h1>
-<p><strong>Event Exclusions</strong> are used to exclude logging of specific events altogether. Excluded events will not appear in the <a href="../../central-console/auditing">Central Console Auditing Tab</a></p>
+<p><strong>Event Exclusions</strong> are used to exclude logging of specific events altogether. Excluded events will not appear in the <a href="../../central-console/auditing/">Central Console Auditing Tab</a></p>
 <p>To create an event exclusion click on the <strong>Add Event Exclusion</strong> button under the <strong>Event Exclusions</strong> tab.</p>
 <p><img alt="" src="../../img/administration/events/settings-administration-add-event-exclusion-button.png" /></p>
 <p>Fill in the <strong>Edit Event Exclusion</strong> form:</p>
@@ -436,10 +437,9 @@
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../js/custom.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../js/custom.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

@@ -13,22 +13,23 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../../css/custom.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Central Client Overview";
     var mkdocs_page_input_path = "central-console\\central-client-overview.md";
-    var mkdocs_page_url = "/central-console/central-client-overview/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
-<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" />
-<script src="../../js/jquery.fancybox.js"></script>
-<script src="../../js/jquery.fancybox.pack.js"></script>
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" defer />
+<script src="../../js/jquery.fancybox.js" defer></script>
+<script src="../../js/jquery.fancybox.pack.js" defer></script>
   
 </head>
 
@@ -42,7 +43,7 @@
         <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -178,7 +179,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../client-console/client-Auditing/">Client Auditing</a>
+    <a class="" href="../../client-console/client-auditing/">Client Auditing</a>
                 </li>
                 <li class="">
                     
@@ -222,6 +223,10 @@
                 <li class="">
                     
     <a class="" href="../../administration/reports/">Reports</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../administration/alerts/">Alerts</a>
                 </li>
                 <li class="">
                     
@@ -281,10 +286,6 @@
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/report-emails/">Report Emails</a>
-                </li>
     </ul>
 	    </li>
           
@@ -311,7 +312,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Documentation</a> &raquo;</li>
+    <li><a href="">Documentation</a> &raquo;</li>
     
       
         
@@ -387,8 +388,8 @@ provides you a detailed overview of all installed clients, the groups they are i
 <ul>
 <li><strong>Add To Group</strong> - this will let you add the selected client(s) to a <strong>Client Group</strong></li>
 <li><strong>Remove From Group</strong> - this will let you remove selected client(s) from a <strong>Client Group</strong> </li>
-<li><strong>Remove Client</strong> - this will let you remove the selected client from the Conductor4SQL. For more information please view the <a href="../../uninstallation/client-server-uninstallation">uninstalling clients</a> section.</li>
-<li><strong>Open Client</strong> - this will open up the <a href="../../client-console/introduction">client console</a> for this client.</li>
+<li><strong>Remove Client</strong> - this will let you remove the selected client from the Conductor4SQL. For more information please view the <a href="../../uninstallation/client-server-uninstallation/">uninstalling clients</a> section.</li>
+<li><strong>Open Client</strong> - this will open up the <a href="../../client-console/introduction/">client console</a> for this client.</li>
 </ul>
               
             </div>
@@ -436,10 +437,9 @@ provides you a detailed overview of all installed clients, the groups they are i
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../js/custom.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../js/custom.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

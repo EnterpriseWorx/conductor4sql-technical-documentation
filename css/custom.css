@@ -33,3 +33,8 @@
     margin-left: 0px;
   }
 }
+
+h1 {
+    font-size: 190%;
+    text-decoration: underline;
+}

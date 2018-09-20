@@ -13,22 +13,23 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../../css/custom.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Client Console Overview";
     var mkdocs_page_input_path = "client-console\\introduction.md";
-    var mkdocs_page_url = "/client-console/introduction/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
-<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" />
-<script src="../../js/jquery.fancybox.js"></script>
-<script src="../../js/jquery.fancybox.pack.js"></script>
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" defer />
+<script src="../../js/jquery.fancybox.js" defer></script>
+<script src="../../js/jquery.fancybox.pack.js" defer></script>
   
 </head>
 
@@ -42,7 +43,7 @@
         <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -172,7 +173,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../client-Auditing/">Client Auditing</a>
+    <a class="" href="../client-auditing/">Client Auditing</a>
                 </li>
                 <li class="">
                     
@@ -216,6 +217,10 @@
                 <li class="">
                     
     <a class="" href="../../administration/reports/">Reports</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../administration/alerts/">Alerts</a>
                 </li>
                 <li class="">
                     
@@ -275,10 +280,6 @@
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/report-emails/">Report Emails</a>
-                </li>
     </ul>
 	    </li>
           
@@ -305,7 +306,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Documentation</a> &raquo;</li>
+    <li><a href="">Documentation</a> &raquo;</li>
     
       
         
@@ -336,25 +337,25 @@
 <p><img alt="" src="../../img/client-console/client-overview/client-overview-screen.png" /></p>
 <ul>
 <li>
-<p><a href="../client-dashboard"><strong>Client Dashboard</strong></a> - Client Queue overview screen</p>
+<p><a href="../client-dashboard/"><strong>Client Dashboard</strong></a> - Client Queue overview screen</p>
 </li>
 <li>
-<p><a href="../client-control"><strong>Client Control</strong></a> - Send commands, send queries, send file, system commands and queries, see history and status of all happening on the client.</p>
+<p><a href="../client-control/"><strong>Client Control</strong></a> - Send commands, send queries, send file, system commands and queries, see history and status of all happening on the client.</p>
 </li>
 <li>
-<p><a href="../client-settings"><strong>Client Settings</strong></a> - Adjust TCP routing address for a client</p>
+<p><a href="../client-settings/"><strong>Client Settings</strong></a> - Adjust TCP routing address for a client</p>
 </li>
 <li>
-<p><a href="../client-business-attributes"><strong>Client Settings</strong></a> - Adjust business attribute values for given client</p>
+<p><a href="../client-business-attributes/"><strong>Client Settings</strong></a> - Adjust business attribute values for given client</p>
 </li>
 <li>
-<p><a href="../client-comments"><strong>Client Comments</strong></a> - Can add comments on the status of an installed client</p>
+<p><a href="../client-comments/"><strong>Client Comments</strong></a> - Can add comments on the status of an installed client</p>
 </li>
 <li>
-<p><a href="../client-auditing"><strong>Client Auditing</strong></a> - Same as central auditing but at a client level</p>
+<p><a href="../client-auditing/"><strong>Client Auditing</strong></a> - Same as central auditing but at a client level</p>
 </li>
 <li>
-<p><a href="../client-data-sync"><strong>Client Data Sync</strong></a> - Can monitor all tables enabled for data sync and their statuses</p>
+<p><a href="../client-data-sync/"><strong>Client Data Sync</strong></a> - Can monitor all tables enabled for data sync and their statuses</p>
 </li>
 </ul>
               
@@ -403,10 +404,9 @@
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../js/custom.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../js/custom.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

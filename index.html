@@ -7,28 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="None">
   
-  <link rel="shortcut icon" href="./img/favicon.ico">
+  <link rel="shortcut icon" href="img/favicon.ico">
 <title>Conductor4SQL Technical Documentation - Conductor4SQL Overview</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="./css/highlight.css">
-  <link href="./css/custom.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="css/custom.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Conductor4SQL Overview";
     var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = "/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="./js/jquery-2.1.1.min.js"></script>
-  <script src="./js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
-<link rel="stylesheet" href="./css/jquery.fancybox.css" type="text/css" />
-<script src="./js/jquery.fancybox.js"></script>
-<script src="./js/jquery.fancybox.pack.js"></script>
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+<link rel="stylesheet" href="./css/jquery.fancybox.css" type="text/css" defer />
+<script src="./js/jquery.fancybox.js" defer></script>
+<script src="./js/jquery.fancybox.pack.js" defer></script>
   
 </head>
 
@@ -42,7 +43,7 @@
         <a href="." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -178,7 +179,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="client-console/client-Auditing/">Client Auditing</a>
+    <a class="" href="client-console/client-auditing/">Client Auditing</a>
                 </li>
                 <li class="">
                     
@@ -222,6 +223,10 @@
                 <li class="">
                     
     <a class="" href="administration/reports/">Reports</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="administration/alerts/">Alerts</a>
                 </li>
                 <li class="">
                     
@@ -281,10 +286,6 @@
                     
     <a class="" href="appendix/audit-events/">Audit Events</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="appendix/report-emails/">Report Emails</a>
-                </li>
     </ul>
 	    </li>
           
@@ -311,7 +312,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".">Documentation</a> &raquo;</li>
+    <li><a href="">Documentation</a> &raquo;</li>
     
       
     
@@ -328,7 +329,7 @@
           <div role="main">
             <div class="section">
               
-                <p><img alt="" src="./img/Introduction/welcome.png" /></p>
+                <p><img alt="" src="img/Introduction/welcome.png" /></p>
 <h1 id="conductor4sql-overview">Conductor4Sql Overview</h1>
 <p>Conductor4SQL is an advanced database management solution which permits organisations to effectively manage and synchronise a large number of Microsoft SQL instances with an unlimited number of databases, especially those which are dispersed over a large geographic area. A key advantage of this solution is that it can greatly reduce a lot of the frustration when managing multiple databases over erratic networks because of its automation capabilities.</p>
 <p>You will encounter two terms that are used throughout this document and also when using Conductor4SQL. These terms are:</p>
@@ -337,7 +338,7 @@
 <p><strong>Client</strong> - A Client is a remote instance of SQL server that is controlled by Conductor4SQL.</p>
 </li>
 <li>
-<p><strong>Central server</strong> - A Central server is a standalone instance of SQL Server on which Conductor4SQL is installed. Typically, a Central server would be installed at a Head Office or Data Centre location     that has the required network connectivity to all client servers. Details of the connectivity requirement is discussed in the <a href="./prerequisites/client-prerequisites"><strong>Client pre-requisites</strong></a> topic.</p>
+<p><strong>Central server</strong> - A Central server is a standalone instance of SQL Server on which Conductor4SQL is installed. Typically, a Central server would be installed at a Head Office or Data Centre location     that has the required network connectivity to all client servers. Details of the connectivity requirement is discussed in the <a href="prerequisites/client-prerequisites"><strong>Client pre-requisites</strong></a> topic.</p>
 </li>
 </ul>
 <h1 id="technical-features">Technical Features</h1>
@@ -373,19 +374,19 @@ You can download an offline copy of this document by right clicking the followin
 <p>The content of this manual is intended to provide the user with the following information:</p>
 <ul>
 <li>
-<p>What is required to install the Conductor4SQL system? — See the <a href="./prerequisites/central-prerequisites"><strong>central server pre-requisites</strong></a> and the <a href="./prerequisites/client-prerequisites"><strong>client server pre-requisites</strong></a> </p>
+<p>What is required to install the Conductor4SQL system? — See the <a href="prerequisites/central-prerequisites"><strong>central server pre-requisites</strong></a> and the <a href="prerequisites/client-prerequisites"><strong>client server pre-requisites</strong></a> </p>
 </li>
 <li>
-<p>How do I install the Conductor4SQL system? - See the <a href="./installation/central-server-installation"><strong>central server installation</strong></a> and <a href="./installation/client-server-installation"><strong>client server installation</strong></a> guide</p>
+<p>How do I install the Conductor4SQL system? - See the <a href="installation/central-server-installation"><strong>central server installation</strong></a> and <a href="installation/client-server-installation"><strong>client server installation</strong></a> guide</p>
 </li>
 <li>
-<p>How do I administer the Conductor4SQL system and edit settings? — See <a href="./administration/introduction"><strong>administration overview</strong></a>.</p>
+<p>How do I administer the Conductor4SQL system and edit settings? — See <a href="administration/introduction"><strong>administration overview</strong></a>.</p>
 </li>
 <li>
-<p>How do manage, control and audit my installed clients? - See <a href="./central-console/introduction"><strong>central console overview</strong></a>.</p>
+<p>How do manage, control and audit my installed clients? - See <a href="central-console/introduction"><strong>central console overview</strong></a>.</p>
 </li>
 <li>
-<p>How do I sync data from all my clients? - See <a href="./data-synchronisation/introduction"><strong>data sync overview</strong></a></p>
+<p>How do I sync data from all my clients? - See <a href="data-synchronisation/introduction"><strong>data sync overview</strong></a></p>
 </li>
 </ul>
               
@@ -430,15 +431,14 @@ You can download an offline copy of this document by right clicking the followin
     </span>
 </div>
     <script>var base_url = '.';</script>
-    <script src="./js/theme.js"></script>
-      <script src="./js/custom.js"></script>
-      <script src="./search/require.js"></script>
-      <script src="./search/search.js"></script>
+    <script src="js/theme.js" defer></script>
+      <script src="js/custom.js" defer></script>
+      <script src="search/main.js" defer></script>
 
 </body>
 </html>
 
 <!--
-MkDocs version : 0.17.5
-Build Date UTC : 2018-08-27 12:42:59
+MkDocs version : 1.0.2
+Build Date UTC : 2018-09-20 09:07:43
 -->

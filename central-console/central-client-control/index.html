@@ -13,22 +13,23 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../../css/custom.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Central Client Control";
     var mkdocs_page_input_path = "central-console\\central-client-control.md";
-    var mkdocs_page_url = "/central-console/central-client-control/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
-<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" />
-<script src="../../js/jquery.fancybox.js"></script>
-<script src="../../js/jquery.fancybox.pack.js"></script>
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+<link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" defer />
+<script src="../../js/jquery.fancybox.js" defer></script>
+<script src="../../js/jquery.fancybox.pack.js" defer></script>
   
 </head>
 
@@ -42,7 +43,7 @@
         <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -218,7 +219,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../client-console/client-Auditing/">Client Auditing</a>
+    <a class="" href="../../client-console/client-auditing/">Client Auditing</a>
                 </li>
                 <li class="">
                     
@@ -262,6 +263,10 @@
                 <li class="">
                     
     <a class="" href="../../administration/reports/">Reports</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../administration/alerts/">Alerts</a>
                 </li>
                 <li class="">
                     
@@ -321,10 +326,6 @@
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/report-emails/">Report Emails</a>
-                </li>
     </ul>
 	    </li>
           
@@ -351,7 +352,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Documentation</a> &raquo;</li>
+    <li><a href="">Documentation</a> &raquo;</li>
     
       
         
@@ -401,7 +402,7 @@ provides you with a number of options to manage and control any of your installe
 <p><img alt="" src="../../img/central-client-control/send-to-all-command-window.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Please view our <a href="../../appendix/script-editor">Script Editor Guide</a> for more information on the Script Editor</p>
+<p>Please view our <a href="../../appendix/script-editor/">Script Editor Guide</a> for more information on the Script Editor</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -422,7 +423,7 @@ provides you with a number of options to manage and control any of your installe
 <p><img alt="" src="../../img/central-client-control/user-query-script-editor.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Please view our <a href="../../appendix/script-editor">Script Editor Guide</a> for more information on the Script Editor</p>
+<p>Please view our <a href="../../appendix/script-editor/">Script Editor Guide</a> for more information on the Script Editor</p>
 </div>
 <p>Click of the <strong>Submit</strong> button to send the command.</p>
 <p>The <strong>Monitor Request</strong> screen will give you a status update on the sent message.
@@ -445,12 +446,12 @@ provides you with a number of options to manage and control any of your installe
 <p>The <strong>Client Name</strong> and <strong>Business Attribute</strong> columns are prefixed onto the existing result columns. </p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can filter and group the results however you wish. For more information on the grid control capabilities view the <a href="../../appendix/grid-control">Grid Control Guide</a>.</p>
+<p>You can filter and group the results however you wish. For more information on the grid control capabilities view the <a href="../../appendix/grid-control/">Grid Control Guide</a>.</p>
 </div>
 <p>If you right click on the grid you will get a context menu:</p>
 <ul>
 <li><strong>Add To Group</strong> - Add the selected client to a <strong>Client Group</strong></li>
-<li><strong>Open Client</strong> - Open the <a href="../../client-console/introduction">Client Console</a> for the selected client</li>
+<li><strong>Open Client</strong> - Open the <a href="../../client-console/introduction/">Client Console</a> for the selected client</li>
 </ul>
 <p>You also have two export options:
 <em> <strong>Export to File</strong> - will export the results to a Xlsx, Pdf or Html file
@@ -503,7 +504,7 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
 <h3 id="disable-client-queue">Disable Client Queue</h3>
 <p>This command disables the Client queue which is useful if you want to send messages to a client but you do not want the client to process the messages at this point in time.</p>
 <h3 id="enable-client-event-notification">Enable Client Event Notification</h3>
-<p>This command enables client DDL auditing events, then there will be a trace on any event happening at the client. - See <a href="../auditing"><strong>Auditing</strong></a> page for more information </p>
+<p>This command enables client DDL auditing events, then there will be a trace on any event happening at the client. - See <a href="../auditing/"><strong>Auditing</strong></a> page for more information </p>
 <h3 id="disable-client-event-notification">Disable Client Event Notification</h3>
 <p>This command's prime objective is to disable the client DDL events, meaning once disabled then there will
 not be any client events recorded for that client the command is send to.</p>
@@ -558,7 +559,7 @@ not be any client events recorded for that client the command is send to.</p>
 <p>If you right click on the grid you will get a context menu:</p>
 <ul>
 <li><strong>Add To Group</strong> - Add the selected client to a <strong>Client Group</strong></li>
-<li><strong>Open Client</strong> - Open the <a href="../../client-console/introduction">Client Console</a> for the selected client    </li>
+<li><strong>Open Client</strong> - Open the <a href="../../client-console/introduction/">Client Console</a> for the selected client    </li>
 </ul>
 <p>You also have three buttons at the bottom left of the window:</p>
 <ul>
@@ -693,11 +694,11 @@ not be any client events recorded for that client the command is send to.</p>
 </div>
 <p>If you right click on any row in the grid you will get a context menu with the following options:</p>
 <ul>
-<li><strong>Send a System Command</strong> - send a system command to the selected clients. See the <a href="#Send-System-Command">Send System Command</a> section for more information</li>
+<li><strong>Send a System Command</strong> - send a system command to the selected clients. See the <a href="#send-system-command">Send System Command</a> section for more information</li>
 <li><strong>Export To File</strong> - Export the results in the grid to Xlsx, Pdf or Html</li>
 <li><strong>Add To Group</strong> - Add the selected clients to a <strong>Client Group</strong></li>
 <li><strong>Remove From Group</strong> - Removed the selected clients from a <strong>Client Group</strong></li>
-<li><strong>Open Client</strong> - Open the <a href="../../client-console/introduction">Client Console</a> for the selected client</li>
+<li><strong>Open Client</strong> - Open the <a href="../../client-console/introduction/">Client Console</a> for the selected client</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -765,10 +766,9 @@ not be any client events recorded for that client the command is send to.</p>
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../js/custom.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../js/custom.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>
