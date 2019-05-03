@@ -282,6 +282,12 @@
     <a class="current" href="./">Release Notes</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#version-3715-2019-05-02-changes">Version 3.7.1.5 (2019-05-02) Changes</a></li>
+    
+
+    <li class="toctree-l2"><a href="#version-3714-2018-12-18-changes">Version 3.7.1.4 (2018-12-18) Changes</a></li>
+    
+
     <li class="toctree-l2"><a href="#version-3713-2018-09-20-changes">Version 3.7.1.3 (2018-09-20) Changes</a></li>
     
 
@@ -428,7 +434,104 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="version-3713-2018-09-20-changes">Version 3.7.1.3 (2018-09-20) Changes</h1>
+                <h1 id="version-3715-2019-05-02-changes">Version 3.7.1.5 (2019-05-02) Changes</h1>
+<ul>
+<li>CONSQL-1992 Feature: Add ability to auto re-enable queues on certain errors</li>
+<li>
+<p>CONSQL-1999 Feature: Add a "Send Test", "Send Test Email" and "Save Test File" buttons to scheduled query and change save format to CSV</p>
+</li>
+<li>
+<p>CONSQL-1964 Improvement: Optimise data sync processor logic by persisting the temp table between calls</p>
+</li>
+<li>CONSQL-1969 Improvement: Add business attribute columns to: create data sync table - Client Server dropdown menu</li>
+<li>CONSQL-1971 Improvement: When refreshing dashboard the CM_Update_Dashboard_UI_SP proc is taking forever to complete</li>
+<li>CONSQL-1974 Improvement: Upgrade DevExpress to v18.2.4 from v18.1.7</li>
+<li>CONSQL-1975 Improvement: Add central and client side SQL functions for getting ClientName, ClientID and client business attributes</li>
+<li>CONSQL-1982 Improvement: When creating sync tables add an index to optimise deletes</li>
+<li>CONSQL-1983 Improvement: Alerts Screen - Add the ability to update/change email address</li>
+<li>CONSQL-1984 Improvement: Remove Backup Summary from Conductor4SQL - Backup Monitoring</li>
+<li>CONSQL-1985 Improvement: Remove the persistent PowerBI Report tables</li>
+<li>CONSQL-1994 Improvement: Staging database in scheduled sync should be created on the same drive as the source database</li>
+<li>CONSQL-2005 Improvement: No way to see what push table get changes were skipped due to missing CDC objects</li>
+<li>
+<p>CONSQL-2010 Improvement: Add the ability to get push sync changes from UI</p>
+</li>
+<li>
+<p>CONSQL-1959 Bug Fix: Client side DDL change tracking triggers cause Alter Table statements to fail if login has limited privileges</p>
+</li>
+<li>CONSQL-1967 Bug Fix: "Read only user" no longer works correctly</li>
+<li>CONSQL-1976 Bug Fix: Conductor4SQL client installation no longer works with existing service broker endpoints</li>
+<li>CONSQL-1977 Bug Fix: Central Client Control -&gt; System Command Status screen, the details grid does not dock properly</li>
+<li>CONSQL-1978 Bug Fix: Bulk client prechecker does not show all errors if there is more than one</li>
+<li>CONSQL-1979 Bug Fix: Conductor4SQL no longer writing log files</li>
+<li>CONSQL-1980 Bug Fix: When no clients are installed most Central buttons/tabs should be disabled</li>
+<li>CONSQL-1981 Bug Fix: Cannot drag Conductor4SQL main window when window is full screen</li>
+<li>CONSQL-1987 Bug Fix: When Assigning Group Data Sync, You need to double click a group before it updates the group name</li>
+<li>CONSQL-1988 Bug Fix: Change identity on Data sync audit and default audit table to bigint instead of int</li>
+<li>CONSQL-1991 Bug Fix: DDL Changes on push sync getting meta data for wrong table</li>
+<li>CONSQL-1993 Bug Fix: When getting scheduled changes the following error is raise in certain scenarios "Could not continue scan with NOLOCK due to data movement."</li>
+<li>CONSQL-1995 Bug Fix: If Scheduled sync fails anywhere on initialisation it doesn't resume properly</li>
+<li>CONSQL-1996 Bug Fix: Checksums are not matching for the Time data type</li>
+<li>CONSQL-1997 Bug Fix: Push data sync not creating column C4SqlCentralDatabaseName</li>
+<li>CONSQL-2000 Bug Fix: Add missing non-clustered index on column SqlCommandDate on CM_Client_Data_Sync_Log</li>
+<li>CONSQL-2003 Bug Fix: Upgrade from 3.7.1.3 and up creates multiple schedules</li>
+<li>CONSQL-2004 Bug Fix: Warning for unsupported type sql_variant not showing for Push Sync</li>
+<li>CONSQL-2006 Bug Fix: Right-click-&gt;"Open client" should not show in Push Sync Error details on dashboard indicator</li>
+<li>CONSQL-2007 Bug Fix: Single client uninstall not closing when complete</li>
+<li>CONSQL-2009 Bug Fix: When assigning push sync the message says "Enabling Real-time"</li>
+<li>CONSQL-2011 Bug Fix: Testing a scheduled query "Save to file" with no result need a better error message</li>
+</ul>
+<h1 id="version-3714-2018-12-18-changes">Version 3.7.1.4 (2018-12-18) Changes</h1>
+<ul>
+<li>CONSQL-1906 Feature: Script Editor Screen redesign</li>
+<li>CONSQL-1937 Feature: Main/Central Screen redesign</li>
+<li>CONSQL-1941 Feature: Scheduled save scheduled query results to file</li>
+<li>CONSQL-1942 Feature: Add support for multiple schedules for scheduled sync</li>
+<li>
+<p>CONSQL-1949 Feature: Inject the full table name in ErrorMessage column in SB_Error where applicable</p>
+</li>
+<li>
+<p>CONSQL-1682 Improvement: Dashboard refresh speed very slow</p>
+</li>
+<li>CONSQL-1901 Improvement: Move data sync types order to make Scheduled Sync the default data sync type</li>
+<li>CONSQL-1902 Improvement: When enabling/resyncing table automatically add additional columns and widen existing columns</li>
+<li>CONSQL-1903 Improvement: Add database level trigger on Scheduled Sync tables to adjust CT and Staging table when source table change</li>
+<li>CONSQL-1904 Improvement: Upgrade Enterprise Sync to DataSync version 2</li>
+<li>CONSQL-1905 Improvement: Upgrade Once-Off Sync to DataSync version 2</li>
+<li>CONSQL-1907 Improvement: Modernize the central dashboard</li>
+<li>CONSQL-1913 Improvement: Push data sync should truncate the table instead of batch delete whenever possible</li>
+<li>CONSQL-1917 Improvement: Change magnifying glass icon to something more appropriate to open central or client console</li>
+<li>CONSQL-1924 Improvement: Added a email alert for Push Sync errors "Conductor4SQL - Push Data Sync Errors"</li>
+<li>CONSQL-1922 Improvement: Improve build speed</li>
+<li>CONSQL-1925 Improvement: Push sync needs to skip tables where either the CT table is missing or if CDC has been disabled</li>
+<li>CONSQL-1926 Improvement: Enterprise Sync client monitoring needs to be built in</li>
+<li>CONSQL-1927 Improvement: Split pulse check into "Pulse Check" and "Data Sync Pulse Check"* Cleanup dbo.CM_Central_Queue_Process_Message_SP</li>
+<li>CONSQL-1931 Improvement: When uninstalling a client with remove data should use batch deletes for data deletion</li>
+<li>CONSQL-1933 Improvement: Optimize the "Database Mappings For X" screen to load much faster</li>
+<li>CONSQL-1888 Improvement: Upgrade UI to Devexpress version v18.1.5</li>
+<li>
+<p>CONSQL-1889 Improvement: Replace Please Wait popup screen with new "Overlay Wait Form"</p>
+</li>
+<li>
+<p>CONSQL-1894 Bug Fix: When deleting the first business attribute the business attributes are not saved to the correct attribute</p>
+</li>
+<li>CONSQL-1900 Bug Fix: The product don't support data type sql_variant in any of data sync types make sure its explicitly excluded</li>
+<li>CONSQL-1919 Bug Fix: Scheduled Sync error messages never clearing at client side</li>
+<li>CONSQL-1920 Bug Fix: Scheduled sync only gets first 5 million table changes</li>
+<li>CONSQL-1932 Bug Fix: When syncing a large table using Enterprise Sync that table gets marked as missing data sync objects</li>
+<li>CONSQL-1934 Bug Fix: Ensure that central upgrades do not reset the schedules of the C4SQL Jobs</li>
+<li>CONSQL-1938 Bug Fix: Scheduled Sync sometimes returning the following error "Could not complete cursor operation because the table schema changed after the cursor was declared."</li>
+<li>CONSQL-1953 Bug Fix: SQL Diff screen text colors not working well with a dark themed skin</li>
+<li>CONSQL-1945 Bug Fix: Sql Command timeout too short when sending system commands</li>
+<li>CONSQL-1946 Bug Fix: Client Last Sync Date not updating when no data sync changes in Scheduled and Enterprise Sync</li>
+<li>CONSQL-1948 Bug Fix: Bulk Installer/Uninstaller screen buttons not sized properly</li>
+<li>CONSQL-1950 Bug Fix: Add back the check for open ports</li>
+<li>CONSQL-1952 Bug Fix: Skin Issues with the Create/Edit Email lists screen and create/edit schedule screen</li>
+<li>CONSQL-1954 Bug Fix: Date/Time fields on Central Client Overview Displaying incorrectly</li>
+<li>CONSQL-1962 CONSQL-1966 Bug Fix: General UI bug fixes</li>
+<li>CONSQL-1965 Bug Fix: File pull no longer works</li>
+</ul>
+<h1 id="version-3713-2018-09-20-changes">Version 3.7.1.3 (2018-09-20) Changes</h1>
 <ul>
 <li>CONSQL-1868 Improvement: Rework Scheduled sync to use less tempdb space, increase performance and support all data types</li>
 <li>CONSQL-1895 Improvement: Improved speed of central client control screen</li>
