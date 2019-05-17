@@ -234,11 +234,7 @@
     
         <ul>
         
-            <li><a class="toctree-l4" href="#retrieving-all-conductor4sql-report-configurations">Retrieving all Conductor4SQL report configurations</a></li>
-        
             <li><a class="toctree-l4" href="#reports-configuration-table-columns">Reports configuration table columns</a></li>
-        
-            <li><a class="toctree-l4" href="#sending-reports">Sending reports</a></li>
         
         </ul>
     
@@ -266,11 +262,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -302,6 +318,10 @@
                 <li class="">
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -362,7 +382,6 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Remember to click on the <strong>Save Changes</strong> button to save your Email Alert configuration to the database, or, click <strong>Discard Changes</strong> to discard your changes.</p>
-<p><img alt="" src="../../img/administration/alerts/admin-alerts-update-alert.png" /></p>
 </div>
 <h2 id="email-report-definitions">Email Report Definitions</h2>
 <table>
@@ -376,6 +395,10 @@
 <tr>
 <td><strong>Admin Queue Errors</strong></td>
 <td>Sent when the pulse check message has failed at a client (Usually when a database is in startup or recovery, or a sync database has been dropped)</td>
+</tr>
+<tr>
+<td><strong>Audit Errors</strong></td>
+<td>Sent if a client has an error or is missing its event auditing queue (Audit Notification Queue)</td>
 </tr>
 <tr>
 <td><strong>Backup Monitoring</strong></td>
@@ -398,6 +421,10 @@
 <td>Sent when the client queue (excluding data sync queues) are down at the client due to invalid message</td>
 </tr>
 <tr>
+<td><strong>Clients With Stale Transmission Queues</strong></td>
+<td>Sent when a client isn't behind but there are messages stuck on the transmission queue</td>
+</tr>
+<tr>
 <td><strong>Data Sync Behind</strong></td>
 <td>Sent when the most recent change for a database for client is older that the threshold defined in the C4SQL configuration</td>
 </tr>
@@ -407,27 +434,19 @@
 </tr>
 <tr>
 <td><strong>Data Sync Errors</strong></td>
-<td>Sent when there is a data sync issue at the client not related to SQL objects being missing or not function correctly (e.g. insufficient space or memory)</td>
-</tr>
-<tr>
-<td><strong>Enterprise Sync Errors</strong></td>
-<td>Sent when there is an error when processing the CDC changes</td>
+<td>Sent when there is any data sync issue at the client</td>
 </tr>
 <tr>
 <td><strong>Failed Job Monitoring</strong></td>
 <td>Sent if a the last run result for a job on a client is "Failed"</td>
 </tr>
 <tr>
-<td><strong>Missing Data Sync Objects Notification</strong></td>
-<td>Sent when a trigger or staging object has been dropped</td>
+<td><strong>Push Data Sync Errors</strong></td>
+<td>Sent when there is any push data sync issues at Central</td>
 </tr>
 <tr>
 <td><strong>Report Queue Disabled</strong></td>
 <td>Sent when the reporting queue is down on the central server when reporting has been enabled for a group of or all clients. Corresponds with the indicator on the Conductor4SQL Central Dashboard.</td>
-</tr>
-<tr>
-<td><strong>Scheduled Sync Errors</strong></td>
-<td>Sent when an error has occurred while processing the scheduled sync changes</td>
 </tr>
 <tr>
 <td><strong>Service Notification</strong></td>
@@ -448,11 +467,6 @@
 </tbody>
 </table>
 <h1 id="additional-information">Additional Information</h1>
-<h2 id="retrieving-all-conductor4sql-report-configurations">Retrieving all Conductor4SQL report configurations</h2>
-<p>You can see all the built-in reports in Conductor4SQL by running the following query on the central server</p>
-<pre><code class="tsql">SELECT * FROM [SyncWorx].[C4SqlConfig].[Email_Report_Config]
-</code></pre>
-
 <h2 id="reports-configuration-table-columns">Reports configuration table columns</h2>
 <ul>
 <li><strong>ReportID</strong> - ID used for looking up reports</li>
@@ -466,8 +480,10 @@
 <li><strong>isHourlySchedule</strong> - Determines whether report is sent every hour (<code>[SyncWorx].[dbo.CM_Reports_EMails]</code> takes a bit parameter <code>@isHourly</code>)</li>
 <li><strong>isEnabled</strong> - Determines whether this report should be sent</li>
 </ul>
-<h2 id="sending-reports">Sending reports</h2>
-<p>The reports are sent during the <strong>C4SQL Daily</strong> and <strong>C4SQL Hourly</strong> jobs. They are processed using the <strong>[SyncWorx].[dbo.CM_Reports_EMails] @isHourly</strong> stored procedure. You can define whether all reports should be run, or only the reports that are set to run hourly, by setting the parameter <strong>@isHourly</strong> to <strong>0</strong> or <strong>1</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The reports are sent during the <strong>C4SQL Daily</strong> and <strong>C4SQL Hourly</strong> jobs. They are processed using the <strong>[SyncWorx].[dbo.CM_Reports_EMails] @isHourly</strong> stored procedure. You may need to manually can manually run this stored procedure if <strong>C4SQL Daily</strong> job fails.</p>
+</div>
               
             </div>
           </div>

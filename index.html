@@ -57,7 +57,7 @@
     <a class="current" href=".">Conductor4SQL Overview</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#conductor4sql-overview">Conductor4Sql Overview</a></li>
+    <li class="toctree-l2"><a href="#conductor4sql-overview">Conductor4SQL Overview</a></li>
     
 
     <li class="toctree-l2"><a href="#technical-features">Technical Features</a></li>
@@ -249,11 +249,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -285,6 +305,10 @@
                 <li class="">
                     
     <a class="" href="appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -330,64 +354,32 @@
             <div class="section">
               
                 <p><img alt="" src="img/Introduction/welcome.png" /></p>
-<h1 id="conductor4sql-overview">Conductor4Sql Overview</h1>
+<h1 id="conductor4sql-overview">Conductor4SQL Overview</h1>
 <p>Conductor4SQL is an advanced database management solution which permits organisations to effectively manage and synchronise a large number of Microsoft SQL instances with an unlimited number of databases, especially those which are dispersed over a large geographic area. A key advantage of this solution is that it can greatly reduce a lot of the frustration when managing multiple databases over erratic networks because of its automation capabilities.</p>
 <p>You will encounter two terms that are used throughout this document and also when using Conductor4SQL. These terms are:</p>
 <ul>
-<li>
-<p><strong>Client</strong> - A Client is a remote instance of SQL server that is controlled by Conductor4SQL.</p>
-</li>
-<li>
-<p><strong>Central server</strong> - A Central server is a standalone instance of SQL Server on which Conductor4SQL is installed. Typically, a Central server would be installed at a Head Office or Data Centre location     that has the required network connectivity to all client servers. Details of the connectivity requirement is discussed in the <a href="prerequisites/client-prerequisites"><strong>Client pre-requisites</strong></a> topic.</p>
-</li>
+<li><strong>Client</strong> - A Client is a remote instance of SQL server that is controlled by Conductor4SQL.</li>
+<li><strong>Central server</strong> - A Central server is a standalone instance of SQL Server on which Conductor4SQL is installed. Typically, a Central server would be installed at a Head Office or Data Centre location     that has the required network connectivity to all client servers. Details of the connectivity requirement is discussed in the <a href="prerequisites/client-prerequisites"><strong>Client pre-requisites</strong></a> topic.</li>
 </ul>
 <h1 id="technical-features">Technical Features</h1>
 <p>Using Conductor4SQL offers considerable technical features that you can perform from a single point, including:</p>
 <ul>
-<li>
-<p><strong>Centralised Query Capabilities</strong> - You can retrieve data simultaneously from an unlimited number of dispersed SQL instances and consolidate, view or export the results.</p>
-</li>
-<li>
-<p><strong>Centralised Command Capabilities</strong> - You can conduct database version control and make simultaneous metadata changes to an unlimited number of dispersed SQL instances, such as using DDL, DML.</p>
-</li>
-<li>
-<p><strong>Centralised File Distribution Capabilities</strong> - You can send files of any type to an unlimited number of dispersed SQL instances simultaneously, such as DLL's, batch files and others. A concise record of files sent is maintained.</p>
-</li>
-<li>
-<p><strong>Centralised Data Synchronisation</strong> - You can consolidate and synchronise data simultaneously on an unlimited number of dispersed SQL instances. This can also be used for central reporting purposes.</p>
-</li>
-<li>
-<p><strong>Schema Comparison</strong> - You can obtain a concise and searchable list of differences between database structures (which includes tables, stored procedures, functions, views and constraints) — across all client servers.</p>
-</li>
-<li>
-<p><strong>Centralised Auditing</strong> - You can audit all the above features plus DDL and security events that occur on an unlimited number of dispersed SQL instances. This is key to enforcing database version control including complete visibility of all activity occurring in your SQL environment.</p>
-</li>
-<li>
-<p><strong>Data Recovery</strong> - Provides Disaster Recovery Management ensuring data is recoverable, even if no MS-SQL backups are available.</p>
-</li>
+<li><strong>Centralised Query Capabilities</strong> - You can retrieve data simultaneously from an unlimited number of dispersed SQL instances and consolidate, view or export the results.</li>
+<li><strong>Centralised Command Capabilities</strong> - You can conduct database version control and make simultaneous metadata changes to an unlimited number of dispersed SQL instances, such as using DDL, DML.</li>
+<li><strong>Centralised File Distribution Capabilities</strong> - You can send files of any type to an unlimited number of dispersed SQL instances simultaneously, such as DLL's, batch files and others. A concise record of files sent is maintained.</li>
+<li><strong>Centralised Data Synchronisation</strong> - You can consolidate and synchronise data simultaneously on an unlimited number of dispersed SQL instances. This can also be used for central reporting purposes.</li>
+<li><strong>Schema Comparison</strong> - You can obtain a concise and searchable list of differences between database structures (which includes tables, stored procedures, functions, views and constraints) — across all client servers.</li>
+<li><strong>Centralised Auditing</strong> - You can audit all the above features plus DDL and security events that occur on an unlimited number of dispersed SQL instances. This is key to enforcing database version control including complete visibility of all activity occurring in your SQL environment.</li>
+<li><strong>Data Recovery</strong> - Provides Disaster Recovery Management ensuring data is recoverable, even if no MS-SQL backups are available.</li>
 </ul>
 <h1 id="getting-started">Getting Started</h1>
-<!-- 
-You can download an offline copy of this document by right clicking the following [link](Conductor4SQL-Technical-Documentation.html) and clicking on the 'Save As' button
--->
-
 <p>The content of this manual is intended to provide the user with the following information:</p>
 <ul>
-<li>
-<p>What is required to install the Conductor4SQL system? — See the <a href="prerequisites/central-prerequisites"><strong>central server pre-requisites</strong></a> and the <a href="prerequisites/client-prerequisites"><strong>client server pre-requisites</strong></a> </p>
-</li>
-<li>
-<p>How do I install the Conductor4SQL system? - See the <a href="installation/central-server-installation"><strong>central server installation</strong></a> and <a href="installation/client-server-installation"><strong>client server installation</strong></a> guide</p>
-</li>
-<li>
-<p>How do I administer the Conductor4SQL system and edit settings? — See <a href="administration/introduction"><strong>administration overview</strong></a>.</p>
-</li>
-<li>
-<p>How do manage, control and audit my installed clients? - See <a href="central-console/introduction"><strong>central console overview</strong></a>.</p>
-</li>
-<li>
-<p>How do I sync data from all my clients? - See <a href="data-synchronisation/introduction"><strong>data sync overview</strong></a></p>
-</li>
+<li>What is required to install the Conductor4SQL system? — See the <a href="prerequisites/central-prerequisites"><strong>central server pre-requisites</strong></a> and the <a href="prerequisites/client-prerequisites"><strong>client server pre-requisites</strong></a></li>
+<li>How do I install the Conductor4SQL system? - See the <a href="installation/central-server-installation"><strong>central server installation</strong></a> and <a href="installation/client-server-installation"><strong>client server installation</strong></a> guide</li>
+<li>How do I administer the Conductor4SQL system and edit settings? — See <a href="administration/introduction"><strong>administration overview</strong></a>.</li>
+<li>How do manage, control and audit my installed clients? - See <a href="central-console/introduction"><strong>central console overview</strong></a>.</li>
+<li>How do I sync data from all my clients? - See <a href="data-synchronisation/introduction"><strong>data sync overview</strong></a></li>
 </ul>
               
             </div>
@@ -440,5 +432,5 @@ You can download an offline copy of this document by right clicking the followin
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-05-03 09:34:35
+Build Date UTC : 2019-05-17 10:21:19
 -->

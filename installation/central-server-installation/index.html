@@ -261,11 +261,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -297,6 +317,10 @@
                 <li class="">
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -346,15 +370,15 @@
             <div class="section">
               
                 <h1 id="installing-the-conductor4sql-user-interface">Installing the Conductor4SQL User Interface</h1>
-<p>You will receive a <strong>Conductor4SQL.Installer.3.6.1.0.exe</strong> file from EnterpriseWorx.</p>
+<p>You will receive a <strong>Conductor4SQL.Installer.3.7.1.5.exe</strong> file from EnterpriseWorx.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>the 3.6.1.0 is the current version of the application, your file name may differ.</p>
+<p>the 3.7.1.5 is the current version of the application, your file name may differ.</p>
 </div>
-<p>Before you start the installation, check your hardware and software against the 
+<p>Before you start the installation, check your hardware and software against the
 <a href="../../prerequisites/central-prerequisites/">Central Server Pre-Requisites</a></p>
-<p>Double click on the <strong>Conductor4SQL.Installer.3.6.1.0.exe</strong> executable to begin the installation</p>
-<p>Read and accept the license agreement and click the <strong>Next</strong> button through the remainder of the screens </p>
+<p>Double click on the <strong>Conductor4SQL.Installer.3.7.1.5.exe</strong> executable to begin the installation</p>
+<p>Read and accept the license agreement and click the <strong>Next</strong> button through the remainder of the screens</p>
 <p><img alt="" src="../../img/installation/ui-installation-license-agreement.png" /></p>
 <p>Finally you should have the a shortcut to the "Conductor4SQL" application installed on your desktop/server, right click this shortcut and select the <strong>Run as administrator</strong> option.</p>
 <p><img alt="" src="../../img/installation/ui-desktop-shortcut.png" /></p>
@@ -371,7 +395,7 @@
 <p>Ensure that you either use a fully qualified instance name for the server or an ip address.</p>
 </div>
 <ul>
-<li>Select your preferred Windows or SQL Server authentication method and enter your credentials. </li>
+<li>Select your preferred Windows or SQL Server authentication method and enter your credentials.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -379,7 +403,7 @@
 </div>
 <ul>
 <li>
-<p>Ip address should get filled in for you. </p>
+<p>Ip address should get filled in for you.</p>
 </li>
 <li>
 <p>Finally, enter your Windows credentials.</p>
@@ -407,13 +431,13 @@
 <li>An <strong>amber circle</strong> indicates a warning.</li>
 <li>A <strong>blue circle</strong> indicates that a step could not be run due to error in a previous step.</li>
 <li>A <strong>red circle</strong> indicates that the Pre-Checker discovered an issue and will not proceed.</li>
-<li>A <strong>grey circle</strong> indicates that this step hasn't run yet.</li>
+<li>A <strong>gray circle</strong> indicates that this step hasn't run yet.</li>
 <li>A <strong>orange arrow</strong> indicates that this step is currently running.</li>
 </ul>
 <h2 id="pre-checker-issues">Pre-Checker Issues</h2>
 <ul>
 <li><strong>Step 1: Ensure that we can ping the central server</strong> - If this fails run a manual ping. If this also fails contact your network administrator.</li>
-<li><strong>Step 2: Ensure that we can access MS SQL server</strong>   - If this fails run <em>SQL Server Management Studio</em> and check if you can connect to the server manually.</li>
+<li><strong>Step 2: Ensure that we can access MS SQL server</strong> - If this fails run <em>SQL Server Management Studio</em> and check if you can connect to the server manually.</li>
 <li><strong>Step 3: Ensure that mixed mode authentication is enabled</strong> - If this fails switch the server to use Mixed-Mode authentication and restart the server.</li>
 <li><strong>Step 4: Ensure that SQL version is MS SQL 2008 or higher is installed</strong> - If this fails you will need to upgrade your server to minimum requirements as per the central requirements document.</li>
 <li><strong>Step 5: Ensure that MS SQL edition is standard or higher</strong> - Central cannot be installed on an express instance.</li>

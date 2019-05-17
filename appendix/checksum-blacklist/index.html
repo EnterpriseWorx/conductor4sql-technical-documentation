@@ -237,11 +237,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -279,6 +299,10 @@
                 <li class="">
                     
     <a class="" href="../audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -328,7 +352,7 @@
             <div class="section">
               
                 <h1 id="checksum-blacklist">Checksum Blacklist</h1>
-<p>Conductor4SQL has the ability to do checksums on all syncing tables to monitor data consistency. These checksums are performed during the Conductor4SQL Daily Job, that runs at 1:00 AM by default. While the checksum is running on a specific table, that table will be locked. Therefor there might be the need to exlude specific tables from the checksum process. </p>
+<p>Conductor4SQL has the ability to do checksums on all syncing tables to monitor data consistency. These checksums are performed during the <strong>C4SQL Checksum Check Job</strong>, that runs at 9:00 PM by default. While the checksum is running on a specific table, that table will be locked. Therefor there might be the need to exclude specific tables from the checksum process.</p>
 <p>The latest version of Conductor4SQL does not have a UI control for configuring the blacklist. To add or remove a table or client from the blacklist, you would need to interact with the underlying table where the list is configured.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -362,33 +386,29 @@
 </tbody>
 </table>
 <ul>
-<li>
-<p><strong><em>ID</em></strong> - This is an auto-generated column</p>
-</li>
-<li>
-<p><strong><em>ClientID</em></strong> - This is where you specify the client for which a specific table is excluded. The <strong>ClientID</strong> can be found on <a href="../../central-console/central-client-overview/">Central Client Overview</a> tab. This can be set to <strong>-1</strong>, which will indicate this table will be excluded for all clients. </p>
-</li>
-<li>
-<p><strong><em>TableID</em></strong> - This is where you specify the table to be excluded. The <strong>TableID</strong> can be found on <a href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a> tab. This can be set to <strong>-1</strong>, which will indicate all tables will be excluded for this client. </p>
-</li>
+<li><strong>ID</strong> - This is an auto-generated column</li>
+<li><strong>ClientID</strong> - This is where you specify the client for which a specific table is excluded. The <strong>ClientID</strong> can be found on <a href="../../central-console/central-client-overview/">Central Client Overview</a> tab. This can be set to <strong>-1</strong>, which will indicate this table will be excluded for all clients.</li>
+<li><strong>TableID</strong> - This is where you specify the table to be excluded. The <strong>TableID</strong> can be found on <a href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a> tab. This can be set to <strong>-1</strong>, which will indicate all tables will be excluded for this client.</li>
 </ul>
 <p>You can confirm that the correct table is exluded in the following tabs:</p>
 <ul>
-<li><a href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a></li>
+<li>
+<p><a href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+<img alt="" src="../../img/appendix/checksum-blacklist/manage-data-sync-tables.png" /></p>
+</li>
+<li>
+<p><a href="../../data-synchronisation/manage-data-sync-tables/">Data Sync Monitoring</a>
+<img alt="" src="../../img/appendix/checksum-blacklist/data-sync-monitor.png" /></p>
+</li>
+<li>
+<p><a href="../../central-console/central-client-overview/">Central Client Overview</a>
+<img alt="" src="../../img/appendix/checksum-blacklist/central-client-overview.png" /></p>
+</li>
+<li>
+<p><a href="../../client-console/client-data-sync/">Client Overview</a>
+<img alt="" src="../../img/appendix/checksum-blacklist/client-overview.png" /></p>
+</li>
 </ul>
-<p><img alt="" src="../../img/appendix/checksum-blacklist/manage-data-sync-tables.png" /></p>
-<ul>
-<li><a href="../../data-synchronisation/manage-data-sync-tables/">Data Sync Monitoring</a></li>
-</ul>
-<p><img alt="" src="../../img/appendix/checksum-blacklist/data-sync-monitor.png" /></p>
-<ul>
-<li><a href="../../central-console/central-client-overview/">Central Client Overview</a></li>
-</ul>
-<p><img alt="" src="../../img/appendix/checksum-blacklist/central-client-overview.png" /></p>
-<ul>
-<li><a href="../../client-console/client-data-sync/">Client Overview</a></li>
-</ul>
-<p><img alt="" src="../../img/appendix/checksum-blacklist/client-overview.png" /></p>
 <p>When Conductor4SQL is installed, all tables are excluded for all clients by default. This is to ensure active decisions are made on which tables the checksum is performed. This is achieved by a record that is automatically inserted with values:</p>
 <table>
 <thead>

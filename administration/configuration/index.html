@@ -233,7 +233,12 @@
         
             <li><a class="toctree-l4" href="#data-sync-settings">Data Sync Settings</a></li>
         
+            <li><a class="toctree-l4" href="#advanced-features">Advanced Features</a></li>
+        
         </ul>
+    
+
+    <li class="toctree-l3"><a href="#default-client-service-credentials">Default Client Service Credentials</a></li>
     
 
     </ul>
@@ -255,11 +260,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -291,6 +316,10 @@
                 <li class="">
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -340,10 +369,9 @@
             <div class="section">
               
                 <h1 id="configuration-administration-overview">Configuration Administration Overview</h1>
-<p>The <strong>C4SQL Configuration</strong> Administration screen is used to tweak various Conductor4SQL Settings</p>
-<p>To adjust Conductor4SQL settings select the <strong>C4SQL Configuration</strong> tab from the <a href="../introduction/">Central Administration</a> screen.</p>
+<p>The <strong>C4SQL Configuration</strong> button under the Administration ribbon tab is used to tweak various Conductor4SQL Settings.</p>
 <p>Click on the <strong>Edit Configuration</strong> button to adjust any settings you wish to edit</p>
-<p><img alt="" src="../../img/administration/configuration/configuration-editor.png" /></p>
+<p><img alt="configuration-editor" src="../../img/administration/configuration/configuration-editor.png" /></p>
 <h2 id="client-settings">Client Settings</h2>
 <ul>
 <li><strong>Maximum Group Size</strong> - the maximum number of clients allowed in a single client group <em>(default 2000)</em>.</li>
@@ -356,23 +384,34 @@
 <ul>
 <li><strong>Number of Bulk Pre-Checker Threads</strong> - The number of clients to test at once when running the Bulk Client Pre-Checker <em>(default 5)</em>.</li>
 <li><strong>Number of Bulk Installer Threads</strong> - The number of clients to install at once when running the Bulk Client Installer <em>(default 5)</em>.</li>
-<li><strong>PreChecker Check For Existing Install</strong> - Check for if the SyncWorx Database and SyncWorxAdmin login user exists at the client <em>(default true)</em></li>
-<li><strong>PreChecker Ping Check</strong> - Run a ping check as part of the PreChecker.</li>
+<li><strong>PreChecker Check For Existing Install</strong> - Check for if the Conductor4SQL database (SyncWorx) Database and the Conductor4SQL SQL login (SyncWorxAdmin) exists at the client <em>(default true)</em></li>
+<li><strong>PreChecker Ping Check</strong> - Run a ping check as part of the install pre-checker process.</li>
 <li><strong>Number of Bulk Uninstaller Threads</strong> - The number of clients to uninstall at once when running the Bulk Client Uninstaller <em>(default 5)</em>.</li>
 <li><strong>Event Notification Enabled On Client Install</strong> - Enable event auditing when client is installed <em>(default true)</em>.</li>
 </ul>
 <h2 id="auditing-settings">Auditing Settings</h2>
 <ul>
-<li><strong>Message Audit Retention In Days</strong> - Every message that Conductor4SQL central receives is stored for the number of days defined before they are deleted. This data is kept for debugging purposes <em>(default 7)</em> </li>
-<li><strong>Message Audit Cleanup Time Limit In Minutes</strong> - Set the length of time (in minutes) that the daily job clears old message audit and data sync audit messages <em>(default 60)</em></li>
-<li><strong>Client Event Log Retention In Days</strong> - The number of days that the Client Event Audit data is kept for <em>(default 7)</em> </li>
+<li><strong>Message Audit Retention In Days</strong> - Every message that Conductor4SQL central receives is stored for the number of days defined before they are deleted. This data is kept for debugging purposes <em>(default 7)</em></li>
+<li><strong>Message Audit Cleanup Time Limit In Minutes</strong> - Set the length of time (in minutes) that the daily job is allowed to run to clear old message audit and data sync audit messages <em>(default 60)</em></li>
+<li><strong>Client Event Log Retention In Days</strong> - The number of days that the Client Event Audit data is kept for <em>(default 7)</em></li>
 </ul>
 <h2 id="data-sync-settings">Data Sync Settings</h2>
 <ul>
-<li><strong>Enterprise Sync Initial Sync Skip</strong> - Used for when you are using Enterprise Sync and restoring database backups at central rather than performing initial sync <em>(default false)</em> </li>
-<li><strong>Checksum Time-to-live (Minutes)</strong> - the length of time before a checksum message expires </li>
+<li><strong>Enterprise Sync Initial Sync Skip</strong> - Used for when you are using Enterprise Sync and restoring database backups at central rather than performing initial sync <em>(default false)</em></li>
+<li><strong>Checksum Time-to-live (Minutes)</strong> - the length of time before a checksum message expires</li>
+</ul>
+<h2 id="advanced-features">Advanced Features</h2>
+<ul>
+<li><strong>Push Data Sync</strong> - Enables the ability to push data from Central to one or more clients <em>(default false)</em></li>
+<li><strong>Client Connection Network Packet Size</strong> - Adjust the packet size of ADO.NET connections to SQL when installing new clients <em>(default 4096)</em></li>
 </ul>
 <p>Click on the <strong>Save Configuration</strong> button when you have completed tweaking the Conductor4SQL settings.</p>
+<h1 id="default-client-service-credentials">Default Client Service Credentials</h1>
+<p>For Conductor4SQL to operate, it requires a login with sysadmin privileges. The login can be configured to be either a SQL Server login or a Windows login. This is typically used in environments where Mixed mode SQL Server authentication is not an option. In this case you can run Conductor4SQL under a Windows service account.</p>
+<p>To change the default credentials (a SQL Server login called SyncWorxAdmin that is created at each client) that all client installations use click on the <strong>Edit Default Client Service Credentials</strong> button.</p>
+<p><img alt="edit-default-client-service-credentials-button" src="../../img/administration/configuration/edit-default-client-service-credentials-button.png" /></p>
+<p>Edit the credentials in the screen below and click on the <strong>Ok</strong> button when complete.</p>
+<p><img alt="edit-default-client-service-credentials-screen" src="../../img/administration/configuration/edit-default-client-service-credentials-screen.png" /></p>
               
             </div>
           </div>

@@ -237,11 +237,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -294,6 +314,10 @@
                     
     <a class="" href="../audit-events/">Audit Events</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../major-ui-changes/">Major UI Changes</a>
+                </li>
     </ul>
 	    </li>
           
@@ -345,44 +369,36 @@
 <p>The Conductor4SQL grid controls is an advanced tabular data view control with advanced grouping and filtering functionality</p>
 <p>The Data Grid Control has 5 major features:</p>
 <ul>
-<li>
-<p><strong>Column Rearranging and sizing</strong></p>
-</li>
-<li>
-<p><strong>Column Sorting</strong> - Re-ordering the data by one or more columns</p>
-</li>
-<li>
-<p><strong>Column Filtering</strong> - Limiting the number of rows displayed using a filter</p>
-</li>
-<li>
-<p><strong>Column Grouping</strong> - Grouping the data by one or more columns</p>
-</li>
-<li>
-<p><strong>Column Chooser</strong> - Adding columns and removing unwanted columns</p>
-</li>
+<li><strong>Column Rearranging and sizing</strong></li>
+<li><strong>Column Sorting</strong> - Re-ordering the data by one or more columns</li>
+<li><strong>Column Filtering</strong> - Limiting the number of rows displayed using a filter</li>
+<li><strong>Column Grouping</strong> - Grouping the data by one or more columns</li>
+<li><strong>Column Chooser</strong> - Adding columns and removing unwanted columns</li>
 </ul>
-<p>Most features can be activated/deactivated by right clicking on any column heading and activating the <em>Column Context Menu</em>
-<img alt="" src="../../img/appendix/grid-control/column-context-menu.png" /></p>
+<p>Most features can be activated/deactivated by right clicking on any column heading and activating the <em>Column Context Menu</em></p>
+<p><img alt="" src="../../img/appendix/grid-control/column-context-menu.png" /></p>
 <h2 id="column-rearranging-and-sizing">Column Rearranging and sizing</h2>
 <h3 id="reordering">Reordering</h3>
 <p>One can change the column ordering by simply dragging the column headings to a new position</p>
 <h3 id="resizing">Resizing</h3>
 <p>Columns can be resized by clicking on and dragging the line between the column headings.</p>
 <p>Alternatively columns can also be resized by using the following options in the <em>Column Context Menu</em>
- <strong>Best Fit</strong> - Adjust the selected column to that all its data is visible
- <strong>Best Fit (all columns)</strong> - Adjust all columns in such a way that the most row data is visible at once.</p>
+ <strong>Best Fit</strong> - Adjust the selected column width to show as much of that columns data as possible.
+ <strong>Best Fit (all columns)</strong> - Adjust all column widths, in such a way that the most row data is visible at once.</p>
 <h2 id="sorting">Sorting</h2>
-<p>Clicking on any column heading will sort by this column.</p>
+<p>Clicking on any column heading will sort by this column, clicking on the column again will reverse the sort order.</p>
 <p>Alternatively you can right click on the column heading and select either the <strong>Sort Ascending</strong> or <strong>Sort Descending Option</strong></p>
 <h2 id="filtering">Filtering</h2>
 <h3 id="using-the-filter-editor">Using the Filter Editor</h3>
 <p>You can filter all grids in Conductor4SQL by using the <strong>Edit Filter</strong> button on the far right bottom corner of the grid.</p>
 <p>This will open the screen below.</p>
 <p><img alt="" src="../../img/appendix/grid-control/filter-screen.png" /></p>
-<p>Add filters as you would like, then click on the <em>Ok</em> button to apply the filters. </p>
+<p>Add filters as you would like, then click on the <strong>Ok</strong> button to apply the filters.</p>
 <h3 id="using-the-auto-filter-textboxes">Using the Auto Filter Textboxes</h3>
 <p>A quicker way is to filter using the <strong>Auto Filter Textboxes</strong> at the top of each column.</p>
-<p><img alt="" src="../../img/appendix/grid-control/filter-on-grid.png" /></p>
+<p><img alt="filter-on-grid" src="../../img/appendix/grid-control/filter-on-grid.png" /></p>
+<p>The filter type can easily be changed by clicking on the small icon next to the filter textbox</p>
+<p><img alt="filter-on-grid-filter-types" src="../../img/appendix/grid-control/filter-on-grid-filter-types.png" /></p>
 <h3 id="using-the-find-panel">Using the Find panel</h3>
 <p>Select the <strong>Show Find Panel</strong> item in the <em>Column Context Menu</em></p>
 <p>Type any search criteria in the <strong>Find Panel</strong> and this filter will be applied to ALL visible columns</p>
@@ -396,8 +412,11 @@
 <p>Then drag the columns you want to group to the grouping panel (the Grouping Panel is the panel with the "Drag a column here to group by that column" text)</p>
 <p><img alt="" src="../../img/appendix/grid-control/column-grouping.png" /></p>
 <h2 id="column-chooser">Column Chooser</h2>
-<p>Unwanted columns can be removed by dragging them out of the window (or using the <strong>Hide This Column</strong> context menu item). </p>
+<p>Unwanted columns can be removed by dragging them out of the window (or using the <strong>Hide This Column</strong> context menu item).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>Accidental column removals can be re-added using the <strong>Column Chooser</strong> context menu item</p>
+</div>
               
             </div>
           </div>
@@ -408,7 +427,7 @@
         <a href="../selection-control/" class="btn btn-neutral float-right" title="Selection Control">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../data-synchronisation/manage-data-sync-tables/" class="btn btn-neutral" title="Manage Data Sync Tables"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../data-synchronisation/assign-group-data-sync/" class="btn btn-neutral" title="Assign Group Data Sync"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -436,7 +455,7 @@
           <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../data-synchronisation/manage-data-sync-tables/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../data-synchronisation/assign-group-data-sync/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../selection-control/" style="color: #fcfcfc">Next &raquo;</a></span>

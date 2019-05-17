@@ -214,6 +214,12 @@
 
     <li class="toctree-l3"><a href="#schedule-new-command-or-query">Schedule New Command or Query</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#fields-specific-to-user-query">Fields specific to User Query</a></li>
+        
+        </ul>
+    
 
     <li class="toctree-l3"><a href="#add-or-edit-schedule">Add or Edit Schedule</a></li>
     
@@ -249,11 +255,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -285,6 +311,10 @@
                 <li class="">
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -341,33 +371,44 @@
 <p>When the button <strong>Schedule New Command or Query</strong> is clicked then you will be presented with the following panel screen, on the right side:</p>
 <p><img alt="" src="../../img/administration/scheduler/admin-scheduler-screen-add-new-schedule.png" /></p>
 <ul>
-<li>
-<p><strong>Step 1: Schedule Name</strong> - The name of the scheduled, it is preferable to use a descriptive name</p>
-</li>
-<li>
-<p><strong>Step 2: Destination Type</strong> - The options are <strong>All</strong> or <strong>Group</strong></p>
-</li>
+<li><strong>Schedule Name</strong> - The name of the scheduled, it is preferable to use a descriptive name</li>
+<li><strong>Destination Type</strong> - The options are <strong>All</strong> or <strong>Group</strong></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>All</strong> - this option will send the scheduled script to ALL clients
-<strong>Group</strong> - this option will send the scheduled script to the selected Group of clients.</p>
+<ul>
+<li><strong>All</strong> - this option will send the scheduled script to ALL clients</li>
+<li><strong>Group</strong> - this option will send the scheduled script to the selected Group of clients.</li>
+</ul>
 </div>
 <ul>
-<li><strong>Step 3: Message Type</strong> - The Options are <strong>User Query</strong> or <strong>User Command</strong></li>
+<li><strong>Message Type</strong> - The Options are <strong>User Query</strong> or <strong>User Command</strong></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you choose to schedule a command you cannot email the results.</p>
+<p>If you choose to schedule a command you cannot email or save the results.</p>
 </div>
 <ul>
-<li>
-<p><strong>Step 4: User Query or User Command</strong> - Select a previously saved User Query or User Command, You can also choose to create a new query or command by clicking on the <em>New/Edit</em> button, refer to the <a href="../../appendix/script-editor/"><strong>Script Editor Guide</strong></a></p>
-</li>
-<li>
-<p><strong>Step 5: Schedule</strong> - You will need to select the schedule that is already saved or you need to create one by clicking on the button <em>New/Edit</em>, refer to section <a href="#add-or-edit-schedule">Add New Schedule</a> and then you will be presented with the screen below.</p>
-</li>
+<li><strong>User Query or User Command</strong> - Select a previously saved User Query or User Command, You can also choose to create a new query or command by clicking on the <em>New/Edit</em> button, refer to the <a href="../../appendix/script-editor/"><strong>Script Editor Guide</strong></a></li>
+<li><strong>Schedule</strong> - You will need to select the schedule that is already saved or you need to create one by clicking on the button <em>New/Edit</em>, refer to section <a href="#add-or-edit-schedule">Add New Schedule</a> and then you will be presented with the screen below.</li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the <strong>Send Test</strong> button to send your command/query immediately to test that the query and destination is working correctly.</p>
+</div>
+<h2 id="fields-specific-to-user-query">Fields specific to User Query</h2>
+<p>If <strong>User Query</strong> is selected for <strong>Destination Type</strong> there are a number of additional options:</p>
+<ul>
+<li><strong>Email Query Result</strong> - if checked the results will be emailed to the <strong>Email List</strong> provided</li>
+<li><strong>Save Query Result To File</strong> - if checked the query results will be saved to the file system on the Central Server at the location defined in <strong>Save Path</strong></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Use the <strong>Send Test Email</strong> button to send the scheduled email immediately</li>
+<li>Use the <strong>Save Test File</strong> button to immediately save the query results to the specified file</li>
+</ul>
+</div>
 <h1 id="add-or-edit-schedule">Add or Edit Schedule</h1>
 <p>The following screen will let you be able to add or edit existing schedules:</p>
 <p><img alt="" src="../../img/administration/scheduler/admin-scheduler-screen-save-edit-delete.png" /></p>
@@ -381,12 +422,14 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Schedule Types</p>
-<p><strong>Minutes</strong> - Schedule will execute every x number of minutes between the <strong>Start Hour</strong> and <strong>End Hour</strong> parameters
-<strong>Hourly</strong> - Schedule will execute every hour at the given <strong>Start Minute</strong> between the <strong>Start Hour</strong> and <strong>End Hour</strong> parameters
-<strong>Weekly</strong> - Schedule will execute on the ticked Days at the given <strong>Start Hour</strong> and <strong>Start Minute</strong> parameters
-<strong>Monthly</strong> - Schedule will execute once a month at the given <strong>Day</strong>, <strong>Hour</strong> and <strong>Minute</strong> parameters</p>
+<ul>
+<li><strong>Minutes</strong> - Schedule will execute every x number of minutes between the <strong>Start Hour</strong> and <strong>End Hour</strong> parameters</li>
+<li><strong>Hourly</strong> - Schedule will execute every hour at the given <strong>Start Minute</strong> between the <strong>Start Hour</strong> and <strong>End Hour</strong> parameters</li>
+<li><strong>Weekly</strong> - Schedule will execute on the ticked Days at the given <strong>Start Hour</strong> and <strong>Start Minute</strong> parameters</li>
+<li><strong>Monthly</strong> - Schedule will execute once a month at the given <strong>Day</strong>, <strong>Hour</strong> and <strong>Minute</strong> parameters</li>
+</ul>
 </div>
-<p>Click the <strong>Save</strong> button and save the schedule </p>
+<p>Click the <strong>Save</strong> button and save the schedule</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can also click on the <strong>Delete</strong> button to delete a schedule</p>

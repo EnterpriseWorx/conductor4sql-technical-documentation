@@ -237,14 +237,51 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../data-sync-monitoring/">Data Sync Monitoring</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../data-sync-log/">Data Sync Log</a>
                 </li>
                 <li class=" current">
                     
     <a class="current" href="./">Manage Data Sync Tables</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#manage-data-synchronisation-tables">Manage Data Synchronisation Tables</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#consolidation-sync">Consolidation Sync</a></li>
+        
+            <li><a class="toctree-l4" href="#one-to-one-sync">One-to-One sync</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#adding-table-definitions">Adding Table Definitions</a></li>
+    
+
+    <li class="toctree-l3"><a href="#editing-table-definitions">Editing Table Definitions</a></li>
+    
+
     </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -276,6 +313,10 @@
                 <li class="">
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -324,7 +365,53 @@
           <div role="main">
             <div class="section">
               
-                <p><img alt="" src="../../img/under-construction.png" /></p>
+                <h1 id="manage-data-synchronisation-tables">Manage Data Synchronisation Tables</h1>
+<p>To set up a Data Synchronisation process, select the <strong>Manage Data Synchronisation</strong> button on the <strong>Central</strong> ribbon tab on the Conductor4SQL user interface.</p>
+<p><img alt="manage-data-synchronisation-button" src="../../img/data-synchronisation/manage-data-synchronisation-button.png" /></p>
+<h2 id="consolidation-sync">Consolidation Sync</h2>
+<p>When using <strong>consolidation</strong> data synchronisation, before any Data Synchronisation can take place, the table structure of all the tables you want to synchronise must match across all the clients. You should make use of the <a href=""><strong>metadata comparison</strong></a> feature to achieve this.</p>
+<p>Before you can start synchronising, you must define the table metadata for the tables that will potentially be synchronised. There are a number of rules to be followed for <strong>consolidation</strong> data synchronisation to work correctly:</p>
+<ul>
+<li>Each database in <strong>only</strong> added once. Database mapping is required if database names are different from client to client.</li>
+<li>Table names must be identical as there is no table mapping option at this point in time</li>
+<li>Data types of all primary key columns must be identical</li>
+<li>Data types of all remaining columns (non primary key) data types must match, however, different column data sizes is supported e.g. if two clients have a column where the data type is VARCHAR(10) at the one and VARCHAR(20) at the other, the consolidated data will just use the larger of the two. However if the data type is Datetime at the one client and INT at another client, this will result in an error.</li>
+<li>Conductor4SQL does allow additional columns in tables when using <strong>consolidation</strong> sync. Additional columns will be added as needed. Columns that don't exist at other clients as simply NULL</li>
+</ul>
+<h2 id="one-to-one-sync">One-to-One sync</h2>
+<p>When using <strong>one-to-one</strong> data synchronisation, you must define the table metadata for each client, database and table that you want to sync.</p>
+<h1 id="adding-table-definitions">Adding Table Definitions</h1>
+<p>Select the <strong>Manage Data Sync Tables</strong> tab, then click on the <strong>Create Data Sync Table</strong> button</p>
+<p><img alt="manage-data-sync-tables-tab" src="../../img/data-synchronisation/manage-data-sync-tables/manage-data-sync-tables-tab.png" /></p>
+<p>Fill in all information in the screen below:</p>
+<p><img alt="" src="../../img/data-synchronisation/manage-data-sync-tables/manage-data-sync-tables-new.png" /></p>
+<ul>
+<li><strong>Data Sync Type</strong> - the options are: Scheduled, Enterprise, Once-Off and Real-Time.</li>
+<li><strong>Client Server</strong> - Select the client that you wish to capture the table definitions from.</li>
+<li><strong>Database Name</strong> - The name of the database at the client to sync</li>
+<li><strong>Database Mapping Name</strong> - Select an existing <strong>database mapping name</strong> to add the tables to. Select <strong>New Database Mapping</strong> if the desired mapping doesn't exist.</li>
+<li><strong>New Database Mapping Name</strong> - The name of new <strong>database mapping name</strong> to create</li>
+<li><strong>Queue Name</strong> - The data sync queue to use for syncing the selected tables</li>
+<li><strong>Tables to Add</strong> - All tables that are in the database that have not been added to the <strong>database mapping name</strong>. Add the tables that you would like to create definitions for.</li>
+</ul>
+<p>Click <strong>Save</strong> to confirm the selection or click <strong>Cancel</strong> to abort.</p>
+<p>During the <em>Save</em> process, various checks are performed by Conductor4SQL:</p>
+<ul>
+<li>Firstly Conductor4SQL checks that the table pre-requisites have been met (table has a primary key and warns of unsupported data types). If the checks are successful then Conductor4SQL will create the table definition.</li>
+<li><strong>Important</strong>: Two additional columns will be inserted on the Central <strong>ClientID</strong> and <strong>C4SqlClientDatabaseName</strong> to enable the specific data of each client to be uniquely identified.</li>
+</ul>
+<p>Once the table definitions have been saved, a new window will pop up where the user can fill in the database mappings for each client</p>
+<p><img alt="database-mappings" src="../../img/data-synchronisation/manage-data-sync-tables/database-mappings.png" /></p>
+<p>Make sure that you click on the <strong>Save</strong> button otherwise your mappings will be discarded</p>
+<h1 id="editing-table-definitions">Editing Table Definitions</h1>
+<p>Tables that are already defined are displayed in the panel on the left. Click on any one of the entries to view the synchronisation properties in the panel on the right.</p>
+<p><img alt="" src="../../img/data-synchronisation/manage-data-sync-tables/editing-table-definitions.png" /></p>
+<p>You can edit the <strong>Database Mappings</strong> for any table by selecting the table and then clicking on the <strong>Edit Database Mappings</strong> button.</p>
+<p>You can also delete a table definition by selecting the <strong>Delete</strong> button.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>you can only delete a definition if no clients are syncing this table definition.</p>
+</div>
               
             </div>
           </div>
@@ -332,10 +419,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../appendix/grid-control/" class="btn btn-neutral float-right" title="Grid Control">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../manage-data-sync-configs/" class="btn btn-neutral float-right" title="Manage Data Sync Configs">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../data-sync-monitoring/" class="btn btn-neutral" title="Data Sync Monitoring"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../data-sync-log/" class="btn btn-neutral" title="Data Sync Log"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -363,10 +450,10 @@
           <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../data-sync-monitoring/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../data-sync-log/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../appendix/grid-control/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../manage-data-sync-configs/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

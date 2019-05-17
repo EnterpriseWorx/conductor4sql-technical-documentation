@@ -264,11 +264,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -300,6 +320,10 @@
                 <li class="">
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -350,7 +374,7 @@
               
                 <h1 id="installing-the-client-one-at-a-time">Installing the Client (one-at-a-time)</h1>
 <p>Using this option you can install clients one-at-a-time</p>
-<p>You can add a client by selecting <strong>File</strong> &gt;&gt; <strong>Add Client</strong></p>
+<p>You can add a client by selecting <strong>Clients</strong> &gt;&gt; <strong>Add Client</strong></p>
 <p><img alt="" src="../../img/installation/client-install1.png" /></p>
 <p>Next fill in all the information for the <strong>Install Client</strong> dialog box:</p>
 <p><img alt="" src="../../img/installation/client-install2.png" /></p>
@@ -361,16 +385,10 @@
 <li>If you are using "SQL Server Authentication" fill in the <strong>User name</strong> and <strong>Password</strong> fields.</li>
 <li><strong>Port</strong> - The TCP port in which central will connect to the client.</li>
 <li><strong>Group</strong> - the client group in which to add the Client Server to (these are defined in the Administration section).</li>
-<li>
-<p><strong>Business Attributes</strong> - Custom fields for the client that are defined in the Administration Section.</p>
-</li>
-<li>
-<p>Finally select the <strong>Text Connection</strong> button </p>
-</li>
-<li>
-<p>If the test is successful the <strong>Install</strong> button will be enabled. Click the <strong>Install</strong> button to continue.</p>
-</li>
+<li><strong>Business Attributes</strong> - Custom fields for the client that are defined in the Administration Section.</li>
 </ul>
+<p>Finally select the <strong>Text Connection</strong> button</p>
+<p>If the test is successful the <strong>Install</strong> button will be enabled. Click the <strong>Install</strong> button to continue.</p>
 <h1 id="the-client-server-pre-checker">The Client Server Pre-Checker</h1>
 <p><img alt="" src="../../img/installation/client-prechecker.png" /></p>
 <ul>
@@ -378,14 +396,14 @@
 <li>An <strong>amber circle</strong> indicates a warning.</li>
 <li>A <strong>blue circle</strong> indicates that a step could not be run due to error in a previous step.</li>
 <li>A <strong>red circle</strong> indicates that the Pre-Checker discovered an issue and will not proceed.</li>
-<li>A <strong>grey circle</strong> indicates that this step hasn't run yet.</li>
+<li>A <strong>gray circle</strong> indicates that this step hasn't run yet.</li>
 <li>A <strong>orange arrow</strong> indicates that this step is currently running.</li>
 </ul>
 <h2 id="pre-checker-issues">Pre-Checker Issues</h2>
 <ul>
 <li><strong>Step 1: Ensure that client server isn't already installed</strong> - Check that client server isn't already in the list of installed clients</li>
 <li><strong>Step 2: Ensure that we can ping the client server</strong> - If this fails run a manual ping. If this also fails contact your network administrator.</li>
-<li><strong>Step 3: Ensure that we can access MS SQL server</strong>   - If this fails run <em>SQL Server Management Studio</em> and check if you can connect to the server manually.</li>
+<li><strong>Step 3: Ensure that we can access MS SQL server</strong> - If this fails run <em>SQL Server Management Studio</em> and check if you can connect to the server manually.</li>
 <li><strong>Step 4: Ensure that mixed mode authentication is enabled</strong> - If this fails switch the server to use Mixed-Mode authentication and restart the server.</li>
 <li><strong>Step 5: Ensure that SQL version is MS SQL 2005 sp3 or higher is installed</strong> - If this fails you will need to upgrade your server to minimum requirements as per the central requirements document.</li>
 <li><strong>Step 6: Ensure that the current SQL user is in the sysadmin user group</strong> - You require a user with sys-admin rights to install Conductor4SQL</li>
@@ -405,13 +423,13 @@
 <p><img alt="" src="../../img/installation/client-bulk-install1.png" /></p>
 <p>Next fill in the list of clients in the <strong>Bulk Client Installer</strong> screen</p>
 <p><img alt="" src="../../img/installation/client-bulk-installer-client-list.png" /></p>
-<p>Bulk Client Capture columns:  </p>
+<p>Bulk Client Capture columns:</p>
 <ul>
-<li><strong>Client Instance Name</strong> - this column needs to be the name of the SQL Server   </li>
-<li><strong>DNS Name or IP</strong> - this column is the DNS Name of IP address of the server   </li>
-<li><strong>Port</strong> - the port used for central to communicate with the client (default is 4321)  </li>
-<li><strong>Groups</strong> - A comma separated list of groups that you would like to assign the client to.  </li>
-<li><strong>Business Attributes</strong> - All defined business attributes are situated between the port and groups columns.  </li>
+<li><strong>Client Instance Name</strong> - this column needs to be the name of the SQL Server</li>
+<li><strong>DNS Name or IP</strong> - this column is the DNS Name of IP address of the server</li>
+<li><strong>Port</strong> - the port used for central to communicate with the client (default is 4321)</li>
+<li><strong>Groups</strong> - A comma separated list of groups that you would like to assign the client to.</li>
+<li><strong>Business Attributes</strong> - All defined business attributes are situated between the port and groups columns.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -420,7 +438,7 @@
 <p>Clients Information options:</p>
 <ul>
 <li><strong>Authentication</strong> - the SQL Server authentication method used where the options are "Windows Authentication" and "SQL Server Authentication"</li>
-<li><strong>Username</strong> and <strong>Password</strong> fields are only visible if you select "SQL Server Authentication" </li>
+<li><strong>Username</strong> and <strong>Password</strong> fields are only visible if you select "SQL Server Authentication"</li>
 <li><strong>Port</strong> - the port to use for central to communicate with the clients if no port is defined in the client grid.</li>
 <li><strong>Groups</strong> - select what groups to assign all bulk install clients to.</li>
 </ul>

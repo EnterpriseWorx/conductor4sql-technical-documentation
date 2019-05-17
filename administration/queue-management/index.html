@@ -249,11 +249,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -285,6 +305,10 @@
                 <li class="">
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -334,12 +358,12 @@
             <div class="section">
               
                 <h1 id="queue-management-overview">Queue Management Overview</h1>
-<p>The <strong>Queue Management</strong> Administration screen is used for configuring the Conductor4SQL data sync queues, you can create new queues or remove existing ones if they not being used anywhere. </p>
+<p>The <strong>Queue Management</strong> Administration screen is used for configuring the Conductor4SQL data sync queues, you can create new queues or remove existing ones if they not being used anywhere.</p>
 <h1 id="manage-queues">Manage Queues</h1>
 <p>The <strong>Manage Queue</strong> tab is used for adding or removing queues</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>For each database that you are syncing is preferable to use different <strong>Queue</strong> for each database. E.g. if you want to sync two databases called RetailPOS and BackOffice at all your clients. You would make two queues: one called RetailPOS and one called Backoffice.</p>
+<p>For each database that you are syncing is preferable to use different <strong>Queue</strong> for each database. E.g. if you want to sync two databases called RetailPOS and BackOffice at all your clients. You would make two queues: one called RetailPOS and one called Backoffice. This will allow the initial sync for these two databases to occur in parallel.</p>
 </div>
 <p>The screen below will show all the currently defined custom data sync queues. If you are starting out you will see a single Queue called <strong>Default_Datasync_Queue</strong> this queue will be used for datasync if you do not assign another queue.</p>
 <p><img alt="" src="../../img/administration/queue-management/admin-queue-management-manage-screen.png" /></p>
@@ -349,12 +373,12 @@
 <p>Select the <strong>Save</strong> button to save your new queue</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You cannot edit queues but you can delete them. </p>
+<p>You cannot edit queues but you can delete them.</p>
 <p>You cannot delete a queue that has one or more data sync tables linked to the queue.</p>
 <p>The <strong>Default_Datasync_Queue</strong> cannot be deleted</p>
 </div>
 <h1 id="queue-overview">Queue Overview</h1>
-<p>The <strong>Queue Overview</strong> tab is used to see which queues are available at each client. Once a new queue is created it may take some time for the queue to be available at all the clients. </p>
+<p>The <strong>Queue Overview</strong> tab is used to see which queues are available at each client. Once a new queue is created it may take some time for the queue to be available at all the clients.</p>
 <p>If a queue is unavailable it will appear as a Red dot under the <strong>Active</strong> column, once the queue is available it will appear as a Green dot.</p>
 <p><img alt="" src="../../img/administration/queue-management/admin-queue-management-screen.png" /></p>
               

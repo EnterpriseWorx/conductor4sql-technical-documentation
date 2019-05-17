@@ -125,11 +125,13 @@
             
     <li class="toctree-l3"><a href="#central-client-overview">Central Client Overview</a></li>
     
-
-    <li class="toctree-l3"><a href="#client-overview-grid">Client Overview Grid</a></li>
-    
-
-    <li class="toctree-l3"><a href="#client-overview-grid-context-menu">Client Overview Grid Context Menu</a></li>
+        <ul>
+        
+            <li><a class="toctree-l4" href="#client-overview-grid">Client Overview Grid</a></li>
+        
+            <li><a class="toctree-l4" href="#client-overview-grid-context-menu">Client Overview Grid Context Menu</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -249,11 +251,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -285,6 +307,10 @@
                 <li class="">
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -334,37 +360,38 @@
             <div class="section">
               
                 <h1 id="central-client-overview">Central Client Overview</h1>
-<p>The Conductor4SQL <strong>Central Client overview</strong> tab on the <strong>Central Console</strong>
-provides you a detailed overview of all installed clients, the groups they are in and the business attributes assigned to each client.</p>
+<p>The Conductor4SQL <strong>Central Client overview</strong> button on the <strong>Central</strong> ribbon tab provides you a detailed overview of all installed clients, the groups they are in and the business attributes assigned to each client.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Ensure that the list of Clients is updated by clicking the <strong>Refresh</strong> button.</p>
 </div>
-<h1 id="client-overview-grid">Client Overview Grid</h1>
+<h2 id="client-overview-grid">Client Overview Grid</h2>
 <p><img alt="" src="../../img/central-console/central-client-overview/central-client-overview.png" /></p>
-<p>The <strong>Central Client Control</strong> grid has the following columns:  </p>
+<p>The <strong>Central Client Control</strong> grid has the following columns:</p>
 <ul>
-<li><strong>Client Name</strong> - The name of the client (either the ip address or dns server name combined with instance name) </li>
-<li><strong>Route</strong> - The Tcp route that is being used for central to communicate with the client.  </li>
-<li><strong>Central Active</strong> - Indicates if all central queues are enabled for the client (<strong>green</strong> for all queues active <strong>red</strong> for one or more queues disabled).  </li>
-<li><strong>Client Active</strong> - Indicates if all client queues are enabled for the client (<strong>green</strong> for all queues active <strong>red</strong> for one or more queues disabled).  </li>
-<li><strong>Create Date</strong> - The date in which the client was installed  </li>
-<li><strong>Last Communication Date</strong> - The date in which the client last sent a message to central.  </li>
-<li><strong>Total Syncing Tables</strong> - The total number of data sync tables enabled for this client.  </li>
-<li><strong>Total Groups</strong> - the total number of <strong>Client Groups</strong> that this client can be found in.  </li>
-<li><strong>DDL Audit Enabled</strong> - Checkbox for whether <strong>DDL Client Event Auditing</strong> is enabled at the client.  </li>
-<li><strong>Group List</strong> - A semicolon separated list of all the <strong>Client Group Names</strong> in which the client belongs to.  </li>
+<li><strong>Client Name</strong> - The name of the client (either the ip address or dns server name combined with instance name)</li>
+<li><strong>Route</strong> - The Tcp route that is being used for central to communicate with the client.</li>
+<li><strong>Central Active</strong> - Indicates if all central queues are enabled for the client (<strong>green</strong> for all queues active <strong>red</strong> for one or more queues disabled).</li>
+<li><strong>Client Active</strong> - Indicates if all client queues are enabled for the client (<strong>green</strong> for all queues active <strong>red</strong> for one or more queues disabled).</li>
+<li><strong>Create Date</strong> - The date in which the client was installed</li>
+<li><strong>Last Communication Date</strong> - The date in which the client last sent a message to central.</li>
+<li><strong>Total Syncing Tables</strong> - The total number of data sync tables enabled for this client.</li>
+<li><strong>Total Groups</strong> - the total number of <strong>Client Groups</strong> that this client can be found in.</li>
+<li><strong>DDL Audit Enabled</strong> - Checkbox for whether <strong>DDL Client Event Auditing</strong> is enabled at the client.</li>
+<li><strong>Group List</strong> - A semicolon separated list of all the <strong>Client Group Names</strong> in which the client belongs to.</li>
 </ul>
-<p>The <strong>Central Client Control</strong> grid also has the following hidden columns:  </p>
+<p>The <strong>Central Client Control</strong> grid also has the following hidden columns:</p>
 <ul>
-<li><strong>Client ID</strong> - The internal client identity number.  </li>
-<li><strong>Client Version</strong> - The Conductor4SQL version that is running at the client.  </li>
-<li><strong>Current Issue</strong> - The issue that is discovered by the <strong>Service Diagnostic Tool</strong> (for clients that are behind)  </li>
-<li><strong>Business Attributes</strong> - All the business attributes that are defined are available as hidden columns.  </li>
+<li><strong>Client ID</strong> - The internal client identity number.</li>
+<li><strong>Client Version</strong> - The Conductor4SQL version that is running at the client.</li>
+<li><strong>Current Issue</strong> - The issue that is discovered by the <strong>Service Diagnostic Tool</strong> (for clients that are behind)</li>
+<li><strong>Data Sync Checksum Enabled</strong> - 'Y' if checksums are enabled for this client</li>
+<li><strong>DDL Audit Enabled</strong> - 'Y' if DDL Event Auditing is enabled for the client.</li>
+<li><strong>Business Attributes</strong> - All the business attributes that are defined are available as hidden columns.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>To show the hidden columns or hide the unwanted columns see the <a href="../../appendix/grid-control#column-chooser">Grid Control - Column Chooser Guide</a>  </p>
+<p>To show the hidden columns or hide the unwanted columns see the <a href="../../appendix/grid-control#column-chooser">Grid Control - Column Chooser Guide</a></p>
 </div>
 <p>You can filter the results to a specific group by using the <em>Group</em> drop down list in the top left hand corner of the tab
 <img alt="" src="../../img/central-console/central-client-overview/central-client-overview-filter-on-groups.png" /></p>
@@ -372,22 +399,25 @@ provides you a detailed overview of all installed clients, the groups they are i
 <p class="admonition-title">Tip</p>
 <p>For more advanced filtering view the <a href="../../appendix/grid-control#filtering">Grid Control - Filtering Guide</a></p>
 </div>
-<p><strong>Enabling and Disabling Central Client Queues:</strong>
-<em> <strong>Enable All Central Client Queues</strong> - this will enable all <strong>Central</strong> message queues for all clients that are disabled, this option is useful if one or more of the central client queues are disabled. This is usually only useful if you manually disabled all the central client queues.
-</em> <strong>Disable All Central Queues</strong> - this button will disable all <strong>Central</strong> message queues for all clients. While a queue is disabled it can still receive messages but it doesn't process them. This is a useful option when you want to run maintenance jobs on your synced central databases.  </p>
-<h1 id="client-overview-grid-context-menu">Client Overview Grid Context Menu</h1>
+<ul>
+<li><strong>Enable All Central Client Queues</strong> - this will enable all <strong>Central</strong> message queues for all clients that are disabled, this option is useful if one or more of the central client queues are disabled. This is usually only useful if you manually disabled all the central client queues.</li>
+<li><strong>Disable All Central Queues</strong> - this button will disable all <strong>Central</strong> message queues for all clients. While a queue is disabled it can still receive messages but it doesn't process them. This is a useful option when you want to run maintenance jobs on your synced central databases.</li>
+</ul>
+<h2 id="client-overview-grid-context-menu">Client Overview Grid Context Menu</h2>
 <p>Select one or more clients on the grid then right click and this will bring up the Context Menu.
-  <img alt="" src="../../img/central-console/central-client-overview/central-client-overview-context-menu.png" />
-  * <strong>Send System Command</strong> - For this option refer to the <a href="../central-client-control#send-system-command">Send System Command</a> section<br />
-  * <strong>Export to File</strong> -  will then open the screen below, where you can choose where to save the file.<br />
-<img alt="" src="../../img/central-console/central-client-overview/central-client-overview-select-export-to-file.png" /></p>
+  <img alt="" src="../../img/central-console/central-client-overview/central-client-overview-context-menu.png" /></p>
+<ul>
+<li><strong>Send System Command</strong> - For this option refer to the <a href="../central-client-control#send-system-command">Send System Command</a> section</li>
+<li><strong>Export to File</strong> -  will then open the screen below, where you can choose where to save the file.
+  <img alt="" src="../../img/central-console/central-client-overview/central-client-overview-select-export-to-file.png" /></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>only the filtered results are exported to file</p>
+<p>Only the filtered results are exported to file</p>
 </div>
 <ul>
 <li><strong>Add To Group</strong> - this will let you add the selected client(s) to a <strong>Client Group</strong></li>
-<li><strong>Remove From Group</strong> - this will let you remove selected client(s) from a <strong>Client Group</strong> </li>
+<li><strong>Remove From Group</strong> - this will let you remove selected client(s) from a <strong>Client Group</strong></li>
 <li><strong>Remove Client</strong> - this will let you remove the selected client from the Conductor4SQL. For more information please view the <a href="../../uninstallation/client-server-uninstallation/">uninstalling clients</a> section.</li>
 <li><strong>Open Client</strong> - this will open up the <a href="../../client-console/introduction/">client console</a> for this client.</li>
 </ul>

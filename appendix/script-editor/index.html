@@ -237,11 +237,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -282,6 +302,10 @@
                 <li class="">
                     
     <a class="" href="../audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -331,58 +355,51 @@
             <div class="section">
               
                 <h1 id="user-command-script-editor">User Command Script Editor</h1>
-<p>The Conductor4SQL script editor is a rich SQL script editor with syntax highlighting and allows you organize and send your SQL Scripts. </p>
-<p>The <strong>User Command Script Editor</strong> is used for creating and editing <strong>DDL SQL Scripts</strong> before sending them to clients.</p>
+<p>The Conductor4SQL script editor is a rich SQL script editor with syntax highlighting and allows you organise and send your SQL Scripts.</p>
+<p>The <strong>User Command Script Editor</strong> is used for creating and editing <strong>T-SQL DDL SQL Scripts</strong> before sending them to clients.</p>
 <p>The script editor has the following components:</p>
 <p><img alt="" src="../../img/appendix/script-editor/user-command-script-editor.png" /></p>
 <ul>
-<li><strong>Saved user commands</strong> - list of all previously saved user commands</li>
-<li><strong>Use Database</strong> - The database to execute the script against</li>
+<li><strong>Scripts List</strong> - list of all previously saved user commands</li>
+<li><strong>Target Database</strong> - The database to execute the script against</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can use SQL wildcards to execute the script on multiple databases at once.</p>
 </div>
 <ul>
-<li><strong>Command</strong> - This text area is where you fill in the SQL Script you would like to send to the client</li>
-<li><strong>Name</strong> - The name of the script you are sending (will be visible in the <strong>User Command Status</strong> tab so make it descriptive)</li>
-<li><strong>Description</strong> - A descriptive name for the script</li>
-<li><strong>Created By</strong> - The author of the script</li>
-<li><strong>Security</strong> - the security level to apply</li>
+<li><strong>Query Name</strong> - The name of the script you are sending (will be visible in the <strong>User Command Status</strong> tab so make it descriptive)</li>
+<li><strong>Query Description</strong> - A descriptive name for the script</li>
+<li><strong>Query Author</strong> - The author of the script</li>
+<li><strong>Query Security</strong> - the security level to apply</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Possible security options are:</p>
 <ul>
 <li><strong>None</strong> - No security (anyone can view and edit the script)</li>
-<li><strong>Not editable by other users</strong> - Script can be run and viewed but not edited by all user-command-script-editor</li>
+<li><strong>Not editable by other users</strong> - Script can be run and viewed but not edited by anyone other than the script author</li>
 <li><strong>Not viewable by other users</strong> - Script is only available for the owner.</li>
 </ul>
 </div>
 <ul>
-<li><strong>Category</strong> - Categorize your script to simplify finding your scripts</li>
+<li><strong>Query Category</strong> - Categorise your script to simplify finding your scripts</li>
 </ul>
-<p>The grid to the left allows for easily retrieving and finding previously saved scripts</p>
-<p>There are also the following menu options:
-<em> <strong>File &gt; New User Command</strong> - create a new script
-</em> <strong>File &gt; Import SQL File</strong> - Fill the script editor text with the text of the external SQL file
-<em> <strong>File &gt; Delete User Command</strong> - Delete the current script
-</em> <strong>File &gt; Save User Command</strong> - Save the current script for later use
-* <strong>Templates</strong> - Pre-saved scripts which are ready to use.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>It is advisable that you test all SQL statements in the SQL Server Management Studio before submitting them in Conductor4SQL.</p>
 </div>
 <h1 id="user-query-script-editor">User Query Script Editor</h1>
-<p>The <strong>User Query Script Editor</strong> is used for creating and editing <strong>Queries</strong> with an expected result set.</p>
+<p>The <strong>User Query Script Editor</strong> is used for creating and editing <strong>T-SQL Queries</strong> with an expected result set.</p>
 <p><img alt="" src="../../img/appendix/script-editor/user-query-script-editor.png" /></p>
-<p>The <strong>User Query Script Editor</strong> works in the same way as the command editor except one additional option:</p>
+<p>The <strong>User Query Script Editor</strong> works in the same way as the command editor except two additional options:</p>
 <ul>
-<li><strong>Save Results To Table</strong> - Enter a table name to save the query results to.</li>
+<li><strong>Results Table</strong> - Enter a table name to save the query results to.</li>
+<li><strong>Transactional</strong> - Choose if the script is run in a transaction or not.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The results will be saved to table [SyncWorx].[C4SQLReporting].[#ChosenTableName#]</p>
+<p>The results will be saved to table <strong>[SyncWorx].[C4SqlSavedQuery].[#ChosenTableName#]</strong></p>
 <p>If you execute the query a second time the results will be appended to the previous results.</p>
 </div>
               

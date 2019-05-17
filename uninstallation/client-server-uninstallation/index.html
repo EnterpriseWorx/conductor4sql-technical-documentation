@@ -252,11 +252,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -288,6 +308,10 @@
                 <li class="">
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -338,11 +362,13 @@
               
                 <h1 id="client-uninstallation-overview">Client Uninstallation Overview</h1>
 <p>At times you will need to uninstall clients.</p>
-<p>Some reasons to uninstall clients are:<br />
-<em> The client instance is no longer needed. e.g. you using Conductor4SQL to sync Pos data some stores close and hence need to be uninstalled to clean up the Conductor4SQL dashboard.
-</em> A natural disaster has occurred and the client server is destroyed</p>
+<p>Some reasons to uninstall clients are:</p>
+<ul>
+<li>The client instance is no longer needed. e.g. you using Conductor4SQL to sync Pos data some stores close and hence need to be uninstalled to clean up the Conductor4SQL dashboard.</li>
+<li>A natural disaster has occurred and the client server is destroyed</li>
+</ul>
 <h1 id="client-uninstallation-one-at-a-time">Client Uninstallation (one-at-a-time)</h1>
-<p>You can add a client by selecting <strong>File</strong> &gt;&gt; <strong>Remove Client</strong></p>
+<p>You can remove a client by selecting <strong>Clients</strong> &gt;&gt; <strong>Remove Client</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This option is only visible if one or more clients are installed</p>
@@ -351,38 +377,32 @@
 <p><img alt="" src="../../img/uninstallation/client-uninstall-screen.png" /></p>
 <p>There are 3 options for <strong>Uninstall Type</strong>:</p>
 <ul>
+<li><strong>1. Standard uninstall</strong> - It is always advisable to go with this option, which then requires that the client is accessible both on central and at the client. This option will ensure that the  Conductor4SQL application is uninstalled both on client side and central</li>
+<li><strong>2. Uninstall Client at client side only</strong> - This option allows you clean up the installation from the client side only, this is useful if the client was removed using the <strong>Uninstall client at central side only</strong> in the past and the server is now online again and you wish to re-install.</li>
+<li><strong>3. Uninstall client at central side only</strong> - This option one will only remove the client on the central side if the client is no longer accessible on the client side. This option is useful if <strong>Standard uninstall</strong> is not possible as when a disaster happens, such as the physical server having hardware damage or stolen.</li>
+<li><strong>4. Uninstall Reason</strong> - You will need to put in a reason for removing the client. For instance if the store is closed, you can put reason as "Store closed"</li>
 <li>
-<p><strong>1. Standard uninstall</strong> - It is always advisable to go with this option, which then requires that the client is accessible both on central and at the client. This option will ensure that the  Conductor4SQL application is uninstalled both on client side and central</p>
-</li>
-<li>
-<p><strong>2. Uninstall Client at client side only</strong> - This option allows you clean up the installation from the client side only, this is useful if the client was removed using the <strong>Uninstall client at central side only</strong> in the past and the server is now online again and you wish to re-install.</p>
-</li>
-<li>
-<p><strong>3. Uninstall client at central side only</strong> - This option one will only remove the client on the central side if the client is no longer accessible on the client side. This option is useful if <strong>Standard uninstall</strong> is not possible as when a disaster happens, such as the physical server having hardware damage or stolen.</p>
-</li>
-</ul>
-<p><strong>Uninstall Reason</strong> - You will need to put in a reason for removing the client. For instance if the store is closed, you can put reason as "Store closed"</p>
-<p><strong>Is this client going to be re-installed:</strong></p>
+<p><strong>5. Is this client going to be re-installed:</strong></p>
 <ul>
 <li><strong>Yes:</strong> if you say yes then all the data synced data will be removed from central for that specific client, however, all client settings will also be stored so that on re-install you can have the previous settings you need be.</li>
+<li><strong>No</strong> if you select no, then the data will be kept on central, for future references.</li>
+</ul>
+</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>An example of the settings that are stored would be the business attributes, the data sync mappings and the list of tables that the client was syncing. To simplify the client's re-install in the future.</p>
 </div>
-<ul>
-<li><strong>No</strong> if you select no, then the data will be kept on central, for future references.</li>
-</ul>
-<p>When all fields are filled, you can then click on <strong>Test Connection</strong> button and </p>
+<p>When all fields are filled, you can then click on <strong>Test Connection</strong> button and</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This <strong>Test Connection</strong> button is not visible when the <strong>Uninstall client at central side only</strong> option is selected.</p>
 </div>
 <p>If the connectivity test passes then you will be able to click on the <strong>Uninstall</strong> button.</p>
 <h1 id="client-uninstallation-using-bulk-uninstaller">Client Uninstallation (using bulk uninstaller)</h1>
-<p>You can add a client by selecting <strong>File</strong> &gt;&gt; <strong>Bulk Remove Clients</strong></p>
+<p>You can remove clients in bulk by selecting <strong>Clients</strong> &gt;&gt; <strong>Bulk Remove Client</strong></p>
 <p><img alt="" src="../../img/uninstallation/bulk-client-uninstall-screen.png" /></p>
-<p>On the bulk client uninstall screen, you are presented with a grid, which then has a list of all clients installed. You are then able to select those clients you want to remove or uninstall, by checking the check-box on the selected column. </p>
+<p>On the bulk client uninstall screen, you are presented with a grid, which then has a list of all clients installed. You are then able to select those clients you want to remove or uninstall, by checking the check-box on the selected column.</p>
 <p>You will then be required to fill in remainder of the form on the right.</p>
 <p>To initiate the uninstall click on the <strong>Uninstaller</strong> button.</p>
 <div class="admonition note">
@@ -396,13 +416,13 @@
 <p>If you change your mind you can always click on the <strong>Back</strong> button and return to the previous screen.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can adjust the number of clients that can be uninstalled at once by adjusting the <strong>Number of Bulk Uninstaller Threads</strong> in the <a href="../../administration/configuration/">Administration - UI and System Configuration</a> screen </p>
+<p>You can adjust the number of clients that can be uninstalled at once by adjusting the <strong>Number of Bulk Uninstaller Threads</strong> in the <a href="../../administration/configuration/">Administration - UI and System Configuration</a> screen</p>
 </div>
 <p>Once the uninstallation of clients has started. you judge the progress as follows:</p>
 <ul>
 <li>A <strong>green circle</strong> indicates a favorable result and the client is uninstalled.</li>
 <li>A <strong>red circle</strong> indicates that the uninstall failed and the <strong>Issue</strong> column will be filled in to attempt to diagnose the issue.</li>
-<li>A <strong>grey circle</strong> indicates that uninstallation has not yet started.</li>
+<li>A <strong>gray circle</strong> indicates that uninstallation has not yet started.</li>
 <li>A <strong>orange arrow</strong> indicates that this client is currently being uninstalled.</li>
 </ul>
               

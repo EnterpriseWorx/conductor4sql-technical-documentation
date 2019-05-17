@@ -125,7 +125,13 @@
         
             <li><a class="toctree-l4" href="#dashboard-indicators">Dashboard Indicators</a></li>
         
-            <li><a class="toctree-l4" href="#dashboard-metrics">Dashboard Metrics</a></li>
+            <li><a class="toctree-l4" href="#central-health">Central Health</a></li>
+        
+            <li><a class="toctree-l4" href="#clients-behind">Clients Behind</a></li>
+        
+            <li><a class="toctree-l4" href="#queues">Queues</a></li>
+        
+            <li><a class="toctree-l4" href="#error-messages">Error Messages</a></li>
         
         </ul>
     
@@ -251,11 +257,31 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
                 </li>
                 <li class="">
                     
+    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -287,6 +313,10 @@
                 <li class="">
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -336,15 +366,16 @@
             <div class="section">
               
                 <h1 id="central-client-dashboard-overview">Central Client Dashboard Overview</h1>
-<p>The Conductor4SQL Dashboard is an easy to read, single page of information representing real-time statistics on the user interface. It has been designed to monitor the status of message queues of all related Client Servers by tracking of all communication and messaging processes. Graphically, you will see the high-level metrics as color icons. When any anomalies are indicated, you can drill down into the detailed lower level data.</p>
+<p>The Conductor4SQL Dashboard is an easy to read, single page of information representing real-time statistics on the user interface. It has been designed to monitor the status of message queues of all related Client Servers by tracking of all communication and messaging processes.</p>
+<p>Graphically, you will see the high-level metrics as colour icons. When any anomalies are indicated, you can drill down into the detailed lower level data.</p>
 <p>The example below shows a Conductor4SQL environment where are no issues:
 <img alt="" src="../../img/central-console/central-client-dashboard/dashboard-perfect-environment.png" /></p>
 <p>We also have an example of a typical large environment with some errors:
 <img alt="" src="../../img/central-console/central-client-dashboard/dashboard-normal-environment.png" /></p>
-<p>A pre-defined <strong>Client Pulse Check</strong> is broadcast every 15 minutes to check if all clients are alive and communicating. The results of these checks are used to update the dashboard metrics.                                           <br />
-The overall state of your environment should preferably indicate 100% (all green lights). However, if there are problem indicators, scrutinize the metrics below to identify any issues.</p>
-<p>You click on any of the <strong>Red Icons</strong> and click on the <strong>View Details</strong> option to open a Detailed Report on that metrics errors. 
-<img alt="" src="../../img/central-console/central-client-dashboard/client-behind-details.png" />  </p>
+<p>A pre-defined <strong>Client Pulse Check</strong> is broadcast every 15 minutes to check if all clients are alive and communicating. The results of these checks are used to update the dashboard metrics.
+The overall state of your environment should preferably indicate 100% (all green lights). However, if there are problem indicators, scrutinise the metrics below to identify any issues.</p>
+<p>You click on any of the <strong>Red Icons</strong> and click on the <strong>View Details</strong> option to open a Detailed Report on that metrics errors.
+<img alt="" src="../../img/central-console/central-client-dashboard/client-behind-details.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>if you want only want the metrics for a specific client group use the <strong>Filter With Group</strong> drop down list in the top left corner of the tab.</p>
@@ -356,56 +387,56 @@ The overall state of your environment should preferably indicate 100% (all green
 <p><strong>Green</strong> <img alt="" src="../../img/central-console/central-client-dashboard/icon-green.png" />  indicates that the metric is stable and in the <strong>Good</strong> status. If there is a number in the icon, this number will always be zero.</p>
 </li>
 <li>
-<p><strong>Red</strong> <img alt="" src="../../img/central-console/central-client-dashboard/icon-red.png" /> indicates that the metric is unstable and conditions are under a <strong>Problem</strong> status and should be attended to as soon as possible. The number in the icon indicates the number of clients or message queues affected.                                     </p>
+<p><strong>Red</strong> <img alt="" src="../../img/central-console/central-client-dashboard/icon-red.png" /> indicates that the metric is unstable and conditions are under a <strong>Problem</strong> status and should be attended to as soon as possible. The number in the icon indicates the number of clients or message queues affected.</p>
 </li>
 </ul>
-<h2 id="dashboard-metrics">Dashboard Metrics</h2>
-<p>The Conductor4SQL Dashboard metric indicators consist of colour icons showing numbers of client message queues affected.                                                                                                                               </p>
-<h3 id="general-overview-clients-communication">General Overview - Clients Communication</h3>
+<h2 id="central-health">Central Health</h2>
+<h3 id="clients-communication-overview">Clients Communication Overview</h3>
 <p><strong>Metric</strong></p>
 <p><img alt="" src="../../img/central-console/central-client-dashboard/metric-general-overview-client-communication.png" /></p>
 <p><strong>Description</strong></p>
 <p>This indicator tells you the number of clients installed compared to the number of clients that are currently communicating. You want to try and keep this number to as close to 100% as possible.</p>
-<h3 id="central-health-service-running">Central Health - Service Running</h3>
+<h3 id="service-running">Service Running</h3>
 <p><strong>Metric</strong></p>
 <p><img alt="" src="../../img/central-console/central-client-dashboard/metric-service-running.png" /></p>
 <p><strong>Description</strong></p>
 <p>This metric is important because it tells us if the <strong>Conductor4SQL Service</strong> is running. Its important that this service is always running as it is responsible for sending out scheduled User Commands and Queries as well as running the <em>diagnostic tool</em> for determining why clients are behind.</p>
-<h3 id="central-health-report-queue-enabled">Central Health - Report Queue Enabled</h3>
+<h3 id="report-queue-enabled">Report Queue Enabled</h3>
 <p><strong>Metric</strong></p>
 <p><img alt="" src="../../img/central-console/central-client-dashboard/metric-report-queue-enabled-running.png" /></p>
 <p><strong>Description</strong></p>
 <p>It is important that the report queue is enabled at all times otherwise no report data will be populated for any of the clients.</p>
-<h3 id="central-health-report-email-configured">Central Health - Report Email Configured</h3>
-<p><strong>Metric</strong></p>
-<p><img alt="" src="../../img/central-console/central-client-dashboard/metric-report-email-configured.png" /></p>
-<p><strong>Description</strong></p>
-<p>The report emails go out daily and hourly will not be sent out unless the report email has been configured. </p>
-<h3 id="clients-behind">Clients Behind</h3>
+<h2 id="clients-behind">Clients Behind</h2>
 <p><strong>Metric</strong></p>
 <p><img alt="" src="../../img/central-console/central-client-dashboard/metric-clients-behind.png" /></p>
 <p><strong>Description</strong></p>
-<p>These metrics display the number of client message queues that have been unavailable for the time shown.  </p>
-<h3 id="central-queues">Central Queues</h3>
+<p>These metrics display the number of client message queues that have been unavailable for the time shown.</p>
+<h2 id="queues">Queues</h2>
+<h3 id="client-central-queues-down">Client Central Queues Down</h3>
 <p><strong>Metric</strong></p>
 <p><img alt="" src="../../img/central-console/central-client-dashboard/metric-messages-at-central.png" /></p>
 <p><strong>Description</strong></p>
 <p>This metric indicates the number of clients with queues that are down at central. This metric should always be <strong>Green</strong>. If it is <strong>Red</strong> then one or more clients have queues that are down at central. Please contact EnterpriseWorx support at support@ewx.co.za if this problem persists</p>
-<h3 id="messages-at-client">Messages at Client</h3>
+<h3 id="client-queues-down">Client Queues Down</h3>
 <p><strong>Metric</strong></p>
 <p><img alt="" src="../../img/central-console/central-client-dashboard/metric-messages-at-client.png" /></p>
 <p><strong>Description</strong></p>
-<p>This metric indicates the number of clients with queues that are down at the client. This metric should usually be <strong>Green</strong> but will be <strong>Red</strong> if one or more client queues are disabled.                                </p>
+<p>This metric indicates the number of clients with queues that are down at the client. This metric should usually be <strong>Green</strong> but will be <strong>Red</strong> if one or more client queues are disabled.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Message queues are disabled if bad SQL statements are submitted. You always ensure that you test and correct SQL statements in the SQL Server Management Studio before re-submitting in Conductor4SQL.</p>
+<p>Message queues are disabled if bad SQL statements are submitted. You always ensure that you test and correct SQL statements in the SQL Server Management Studio before sending them through Conductor4SQL.</p>
 </div>
-<h3 id="error-metrics">Error Metrics</h3>
-<p>All error messages for clients are divided metric icons<br />
+<h3 id="internal-queues-down">Internal Queues Down</h3>
+<p><strong>Metric</strong></p>
+<p><img alt="" src="../../img/central-console/central-client-dashboard/metric-internal-queues-down.png" /></p>
+<p><strong>Description</strong></p>
+<p>This metric indicates the number of internal queues running at central that are down. These queues consist of <strong>Push Sync Queues</strong> and the <strong>Reporting Queue</strong>. This metric should usually be <strong>Green</strong> but will be <strong>Red</strong> if one or more client queues are disabled.</p>
+<h2 id="error-messages">Error Messages</h2>
+<p>All error messages for clients are divided metric icons
 <img alt="" src="../../img/central-console/central-client-dashboard/metric-error-messages.png" /></p>
 <ul>
-<li><strong>User Command Errors</strong> - The number of User Commands that are in error status. </li>
-<li><strong>User Query Errors</strong> - The number of User Queries that are in error status. </li>
+<li><strong>User Command Errors</strong> - The number of User Commands that are in error status.</li>
+<li><strong>User Query Errors</strong> - The number of User Queries that are in error status.</li>
 <li><strong>System Query Errors</strong> - the number of System Queries in error status</li>
 </ul>
 <div class="admonition tip">
@@ -417,10 +448,10 @@ The overall state of your environment should preferably indicate 100% (all green
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can clear up these messages by clicking on the <strong>System Command Errors</strong> Icon and then selecting the <strong>Mark All As Fixed</strong> button. </p>
+<p>You can clear up these messages by clicking on the <strong>System Command Errors</strong> Icon and then selecting the <strong>Mark All As Fixed</strong> button.</p>
 </div>
 <ul>
-<li><strong>Missing Data Sync Objects</strong> - This indicator indicates the number of clients that have missing data sync objects which affects data synchronization (this usually occurs when tables have been dropped and recreated).</li>
+<li><strong>Missing Data Sync Objects</strong> - This indicator indicates the number of clients that have missing data sync objects which affects data synchronisation (this usually occurs when tables have been dropped and recreated).</li>
 <li><strong>Incorrect Version</strong> - This indicator tells us the number of clients that have not been upgraded yet after a Conductor4SQL central upgraded</li>
 </ul>
 <div class="admonition tip">
@@ -428,8 +459,11 @@ The overall state of your environment should preferably indicate 100% (all green
 <p>If you view the details for this error you are taken to a screen for upgrading the clients that have not yet been upgraded.</p>
 </div>
 <ul>
-<li><strong>Report Data Missing</strong> - the number of clients in which the <strong>Client Report Data</strong> command has not run.</li>
-<li><strong>Enterprise Sync Errors</strong> - Provides us with incite on the number of clients with Enterprise data sync errors.                                                                                                                                                                                                                  </li>
+<li><strong>Report Data Missing</strong> - the number of clients in which the <strong>Client Report Data</strong> command has not run.  </li>
+<li><strong>Data Sync Errors</strong> - The number of clients with data sync errors</li>
+<li><strong>Audit Errors</strong> - The number of clients with disabled or missing Audit queues</li>
+<li><strong>Push Sync Job Errors</strong> - The number of SQL Server push sync jobs that have failed</li>
+<li><strong>Push Sync Missing Objects</strong> - This indicator indicates the number of tables that have missing push data sync objects which affects data synchronisation  (this usually occurs when tables have been dropped and recreated).</li>
 </ul>
               
             </div>

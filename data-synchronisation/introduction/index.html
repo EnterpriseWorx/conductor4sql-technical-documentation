@@ -236,7 +236,35 @@
     <a class="current" href="./">Data Synchronisation Overview</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#data-synchronisation-overview">Data Synchronisation Overview</a></li>
+    
+
+    <li class="toctree-l3"><a href="#pre-requisites-for-data-synchronisation">Pre-requisites for Data Synchronisation</a></li>
+    
+
+    <li class="toctree-l3"><a href="#data-sync-types">Data Sync Types</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#scheduled-sync">Scheduled Sync</a></li>
+        
+            <li><a class="toctree-l4" href="#enterprise-sync">Enterprise Sync</a></li>
+        
+            <li><a class="toctree-l4" href="#once-off-sync">Once-Off Sync</a></li>
+        
+            <li><a class="toctree-l4" href="#real-time-sync">Real-Time Sync</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#getting-started">Getting Started</a></li>
+    
+
     </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../data-sync-summary/">Data Sync Summary</a>
                 </li>
                 <li class="">
                     
@@ -244,7 +272,23 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../data-sync-log/">Data Sync Log</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../manage-data-sync-tables/">Manage Data Sync Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../manage-data-sync-configs/">Manage Data Sync Configs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../assign-client-data-sync/">Assign Client Data Sync</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../assign-group-data-sync/">Assign Group Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -276,6 +320,10 @@
                 <li class="">
                     
     <a class="" href="../../appendix/audit-events/">Audit Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -324,7 +372,49 @@
           <div role="main">
             <div class="section">
               
-                <p><img alt="" src="../../img/under-construction.png" /></p>
+                <h1 id="data-synchronisation-overview">Data Synchronisation Overview</h1>
+<p>A major feature in Conductor4SQL is its data synchronisation capabilities which has many business benefits, such as centralised reporting.</p>
+<p>Conductor4SQL supports multiple synchronisation configurations:</p>
+<ul>
+<li><strong>Consolidation</strong> Multiple databases at multiple clients are <strong>synchronised and consolidated</strong> at central to a single central database.</li>
+<li><strong>One-to-one</strong> database(s) for a single client are <strong>synchronised</strong> at central each in its own database.</li>
+</ul>
+<p>Data synchronisation normally requires that the SQL servers storing the databases are always connected. However, when taking Conductor4SQL's guaranteed messaging queuing architecture is into account then this requirement is not necessary.</p>
+<div class="admonition note">
+<p class="admonition-title">Note<p>If some distributed SQL servers are disconnected at the time of Data Synchronisation, Conductor4SQL will automatically initiate the synchronisation when the connection is re-established without any human intervention.</p>
+<p>If there are no network/infrastructure issues then the data will always synchronised and up to date.</p>
+</p>
+</div>
+<p><img alt="" src="../../img/data-synchronisation/aggregation-diagram.png" /></p>
+<p>The Data Synchronisation feature applies significant data compression to reduce bandwidth usage by up to 20 times, which improve the speed of Data Synchronisation and thus make it resilient across erratic and slow networks. As a result, this makes it a solution where other traditional data replication technologies fail or have significant challenges.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>this is dependent on the data types being synchronised</p>
+</div>
+<h1 id="pre-requisites-for-data-synchronisation">Pre-requisites for Data Synchronisation</h1>
+<p>For any table to be synchronised and consolidated with another there are a few pre-requisite requirements:</p>
+<ul>
+<li>The database structure must be the same.</li>
+<li>The table names must be the same.</li>
+<li>The table must contain a primary key.</li>
+<li>If the table contains any of the following column types these columns will not be synced: sql_variant</li>
+</ul>
+<h1 id="data-sync-types">Data Sync Types</h1>
+<h2 id="scheduled-sync">Scheduled Sync</h2>
+<p>Scheduled sync is the default and most popular data sync type. It works by creating a complete duplicate of each synced table, from the duplicate table it can calculate the deltas of the changes, which gets sent to the central server. This sync type also works well even if the source database is restored from a backup for example. The source database is not structurally altered in any way, however, this sync type uses a largest amount of disk space when compared with the other data sync types. This data sync type is available for all versions of SQL Server (2005 to 2019 and Express to Enterprise edition)</p>
+<h2 id="enterprise-sync">Enterprise Sync</h2>
+<p>Enterprise sync uses an underlying SQL Server technology called Change Data Capture or CDC for short. It uses the SQL Log Reader to mine changes from the SQL Log file and captures all synced table DML changes into change tracking tables. Conductor4SQL calculates the deltas from these change tracking tables and sends them to the central server. This data sync type is only available for SQL Server Enterprise Edition or SQL Server 2016 SP1 Standard Edition or greater.  </p>
+<h2 id="once-off-sync">Once-Off Sync</h2>
+<p>Once-Off sync is unique in that it isn't really a data sync type but rather a data sync initial snapshot. The content of synced table is sent to central but thereafter no deltas are captured, hence the name Once-Off sync. This sync type is very useful for syncing data that never changes.</p>
+<h2 id="real-time-sync">Real-Time Sync</h2>
+<p>Real-Time sync as its name implies works in a near real-time fashion. This is achieved through the use of DML triggers. As a DML change occurs the trigger calculates the delta and sends it to the central server. This sync type is only suitable for very small to medium sized tables (tables less than 1 million rows). Additionally each SQL login that interacts with the synced table also requires additional permissions as the trigger interacts with stored procedures and queues stored in another database.</p>
+<h1 id="getting-started">Getting Started</h1>
+<p>Click on the <strong>Manage Data Synchronisation</strong> button on the <strong>Central</strong> ribbon tab:</p>
+<ul>
+<li>Add tables that need to be synced via the <a href="../manage-data-sync-tables/"><strong>Manage Data Sync Tables</strong></a></li>
+<li>Enable the tables to be synced for a client in <a href="../assign-client-data-sync/"><strong>Assign Client Data Sync</strong></a></li>
+<li>Monitor sync via <a href="../data-sync-monitoring/"><strong>Data Sync Monitoring</strong></a></li>
+</ul>
               
             </div>
           </div>
@@ -332,7 +422,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../data-sync-monitoring/" class="btn btn-neutral float-right" title="Data Sync Monitoring">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../data-sync-summary/" class="btn btn-neutral float-right" title="Data Sync Summary">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../../administration/queue-management/" class="btn btn-neutral" title="Queue Management"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -366,7 +456,7 @@
         <span><a href="../../administration/queue-management/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../data-sync-monitoring/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../data-sync-summary/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
