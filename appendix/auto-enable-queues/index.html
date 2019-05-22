@@ -359,9 +359,9 @@
 <p>You can now auto re-enable specific queues that have defined error messages by editing the <strong>dbo.CM_Queue_Auto_Enable</strong> table in the <strong>SyncWorx</strong> database at central. The step <strong>Auto Re-enable Client Queues</strong> step in the <strong>C4SQL Hourly</strong> job is responsible for auto re-enabling the queues.</p>
 <p>In the example script below:</p>
 <ul>
-<li>The <strong>Client Queue</strong> queue will always get re-enabled regardless of what error brought down the queue.</li>
-<li>The <strong>Default_Datasync_Queue</strong> will get re-enabled by any error that matches the pattern 'Database % cannot be opened due%'</li>
-<li>The any queue that matches the pattern <strong>%</strong> (which is every queue) will get auto re-enabled when an error that matches the pattern 'Database % is being recovered%' occurs</li>
+<li>The <strong>Client Queue</strong> queue will always get re-enabled regardless of what error brought down the queue (due to the pattern <strong>%</strong>).</li>
+<li>The <strong>Default_Datasync_Queue</strong> will get re-enabled by any error that matches the pattern <strong>'Database % cannot be opened due%'</strong></li>
+<li>The any queue that matches the pattern <strong>%</strong> (which is every queue) will get auto re-enabled when an error that matches the pattern <strong>'Database % is being recovered%'</strong> occurs</li>
 </ul>
 <pre><code class="SQL">INSERT INTO dbo.CM_Queue_Auto_Enable (QueueNameLike, ErrorMessageLike)
 VALUES
