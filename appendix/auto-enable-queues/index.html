@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-<title>Conductor4SQL Technical Documentation - Client Auditing</title>
+<title>Conductor4SQL Technical Documentation - Auto Re-enable Queues</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Client Auditing";
-    var mkdocs_page_input_path = "client-console\\client-auditing.md";
+    var mkdocs_page_name = "Auto Re-enable Queues";
+    var mkdocs_page_input_path = "appendix\\auto-enable-queues.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -143,41 +143,35 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../introduction/">Client Console Overview</a>
+    <a class="" href="../../client-console/introduction/">Client Console Overview</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../client-dashboard/">Client Dashboard</a>
+    <a class="" href="../../client-console/client-dashboard/">Client Dashboard</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../client-control/">Client Control</a>
+    <a class="" href="../../client-console/client-control/">Client Control</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../client-settings/">Client Settings</a>
+    <a class="" href="../../client-console/client-settings/">Client Settings</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../client-business-attributes/">Client Business Attributes</a>
+    <a class="" href="../../client-console/client-business-attributes/">Client Business Attributes</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../client-comments/">Client Comments</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Client Auditing</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#client-auditing">Client Auditing</a></li>
-    
-
-    </ul>
+    <a class="" href="../../client-console/client-comments/">Client Comments</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../client-data-sync/">Client Data Sync</a>
+    <a class="" href="../../client-console/client-auditing/">Client Auditing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../client-console/client-data-sync/">Client Data Sync</a>
                 </li>
     </ul>
 	    </li>
@@ -278,35 +272,41 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../appendix/grid-control/">Grid Control</a>
+    <a class="" href="../grid-control/">Grid Control</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../appendix/selection-control/">Selection Control</a>
+    <a class="" href="../selection-control/">Selection Control</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../appendix/script-editor/">Script Editor</a>
+    <a class="" href="../script-editor/">Script Editor</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../appendix/queues-explained/">Queues Explained</a>
+    <a class="" href="../queues-explained/">Queues Explained</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../appendix/checksum-blacklist/">Checksum Blacklist</a>
+    <a class="" href="../checksum-blacklist/">Checksum Blacklist</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../appendix/audit-events/">Audit Events</a>
+    <a class="" href="../audit-events/">Audit Events</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Auto Re-enable Queues</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#auto-re-enabling-queues">Auto Re-Enabling Queues</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../appendix/auto-enable-queues/">Auto Re-enable Queues</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
+    <a class="" href="../major-ui-changes/">Major UI Changes</a>
                 </li>
     </ul>
 	    </li>
@@ -338,14 +338,14 @@
     
       
         
-          <li>Client Console &raquo;</li>
+          <li>Apendix &raquo;</li>
         
       
     
-    <li>Client Auditing</li>
+    <li>Auto Re-enable Queues</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/client-console/client-auditing.md"
+        <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/appendix/auto-enable-queues.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -355,13 +355,24 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="client-auditing">Client Auditing</h1>
-<p>The <strong>Client Auditing</strong> screen main purpose is to show all the DDL Events that are happening on the selected client, and you are able to filter down based on the provided columns and on what you want to see. See below screen.</p>
-<p><img alt="" src="../../img/client-console/client-auditing.png" /></p>
-<p>For more information concerning Auditing - See the <a href="../../central-console/auditing/"><strong>Auditing</strong></a> section.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>List of audit events can be found in the <a href="../../appendix/audit-events/"><em>Audit Events</em></a> section</p>
+                <h1 id="auto-re-enabling-queues">Auto Re-Enabling Queues</h1>
+<p>You can now auto re-enable specific queues that have defined error messages by editing the <strong>dbo.CM_Queue_Auto_Enable</strong> table in the <strong>SyncWorx</strong> database at central. The step <strong>Auto Re-enable Client Queues</strong> step in the <strong>C4SQL Hourly</strong> job is responsible for auto re-enabling the queues.</p>
+<p>In the example script below:</p>
+<ul>
+<li>The <strong>Client Queue</strong> queue will always get re-enabled regardless of what error brought down the queue.</li>
+<li>The <strong>Default_Datasync_Queue</strong> will get re-enabled by any error that matches the pattern 'Database % cannot be opened due%'</li>
+<li>The any queue that matches the pattern <strong>%</strong> (which is every queue) will get auto re-enabled when an error that matches the pattern 'Database % is being recovered%' occurs</li>
+</ul>
+<pre><code class="SQL">INSERT INTO dbo.CM_Queue_Auto_Enable (QueueNameLike, ErrorMessageLike)
+VALUES
+('Client Queue', '%'),
+('Default_Datasync_Queue', 'Database % cannot be opened due%'),
+('%', 'Database % is being recovered%')
+</code></pre>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <strong>QueueNameLike</strong> and <strong>ErrorMessageLike</strong> columns are case sensitive</p>
 </div>
               
             </div>
@@ -370,10 +381,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../client-data-sync/" class="btn btn-neutral float-right" title="Client Data Sync">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../major-ui-changes/" class="btn btn-neutral float-right" title="Major UI Changes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../client-comments/" class="btn btn-neutral" title="Client Comments"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../audit-events/" class="btn btn-neutral" title="Audit Events"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -401,10 +412,10 @@
           <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../client-comments/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../audit-events/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../client-data-sync/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../major-ui-changes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
