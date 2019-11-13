@@ -242,6 +242,9 @@
     <li class="toctree-l3"><a href="#pre-requisites-for-data-synchronisation">Pre-requisites for Data Synchronisation</a></li>
     
 
+    <li class="toctree-l3"><a href="#limitations-of-data-synchronisation">Limitations of Data Synchronisation</a></li>
+    
+
     <li class="toctree-l3"><a href="#data-sync-types">Data Sync Types</a></li>
     
         <ul>
@@ -402,6 +405,15 @@
 <li>The table names must be the same.</li>
 <li>The table must contain a primary key.</li>
 <li>If the table contains any of the following column types these columns will not be synced: sql_variant</li>
+</ul>
+<h1 id="limitations-of-data-synchronisation">Limitations of Data Synchronisation</h1>
+<ul>
+<li>Sync tables cannot be truncated (with the exception of Scheduled Sync)</li>
+<li>Sync tables at central cannot be altered or dropped at central</li>
+<li>Sync should be removed if source tables are to be dropped</li>
+<li>Primary keys cannot be changed (re-sync is required if changed)</li>
+<li>Triggers, Staging objects and Change Data Capture objects may not be removed</li>
+<li>Sync type cannot be changed while syncing re-sync is required to change)</li>
 </ul>
 <h1 id="data-sync-types">Data Sync Types</h1>
 <h2 id="scheduled-sync">Scheduled Sync</h2>

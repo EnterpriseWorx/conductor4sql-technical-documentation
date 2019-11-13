@@ -233,6 +233,8 @@
         
             <li><a class="toctree-l4" href="#data-sync-settings">Data Sync Settings</a></li>
         
+            <li><a class="toctree-l4" href="#clients-behind-settings">Clients Behind Settings</a></li>
+        
             <li><a class="toctree-l4" href="#advanced-features">Advanced Features</a></li>
         
         </ul>
@@ -388,26 +390,38 @@
 <ul>
 <li><strong>Number of Bulk Pre-Checker Threads</strong> - The number of clients to test at once when running the Bulk Client Pre-Checker <em>(default 5)</em>.</li>
 <li><strong>Number of Bulk Installer Threads</strong> - The number of clients to install at once when running the Bulk Client Installer <em>(default 5)</em>.</li>
+<li><strong>Number of Bulk Uninstaller Threads</strong> - The number of clients to uninstall at once when running the Bulk Client Uninstaller <em>(default 5)</em>.</li>
 <li><strong>PreChecker Check For Existing Install</strong> - Check for if the Conductor4SQL database (SyncWorx) Database and the Conductor4SQL SQL login (SyncWorxAdmin) exists at the client <em>(default true)</em></li>
 <li><strong>PreChecker Ping Check</strong> - Run a ping check as part of the install pre-checker process.</li>
-<li><strong>Number of Bulk Uninstaller Threads</strong> - The number of clients to uninstall at once when running the Bulk Client Uninstaller <em>(default 5)</em>.</li>
+<li><strong>PreChecker Open Port Check</strong> - Ensure that the port (default 4321) is open before attempting to install Conductor4SQL.</li>
 <li><strong>Event Notification Enabled On Client Install</strong> - Enable event auditing when client is installed <em>(default true)</em>.</li>
 </ul>
 <h2 id="auditing-settings">Auditing Settings</h2>
 <ul>
+<li><strong>Message Audit Enabled</strong> - Enable/Disable auditing of all messages (excluding data sync messages) received by Conductor4SQL from clients (for debugging/troubleshooting purposes).</li>
 <li><strong>Message Audit Retention In Days</strong> - Every message that Conductor4SQL central receives is stored for the number of days defined before they are deleted. This data is kept for debugging purposes <em>(default 7)</em></li>
 <li><strong>Message Audit Cleanup Time Limit In Minutes</strong> - Set the length of time (in minutes) that the daily job is allowed to run to clear old message audit and data sync audit messages <em>(default 60)</em></li>
 <li><strong>Client Event Log Retention In Days</strong> - The number of days that the Client Event Audit data is kept for <em>(default 7)</em></li>
 </ul>
 <h2 id="data-sync-settings">Data Sync Settings</h2>
 <ul>
+<li><strong>Data Sync Message Audit Enabled</strong> - Enable/Disable auditing of data sync messages received by Conductor4SQL clients (for debugging/troubleshooting purposes).</li>
 <li><strong>Enterprise Sync Initial Sync Skip</strong> - Used for when you are using Enterprise Sync and restoring database backups at central rather than performing initial sync <em>(default false)</em></li>
 <li><strong>Checksum Time-to-live (Minutes)</strong> - the length of time before a checksum message expires</li>
 </ul>
+<h2 id="clients-behind-settings">Clients Behind Settings</h2>
+<p>Here you can define the number of hours behind a client is before they appear as an issue on the <strong>Central Dashboard</strong> under <strong>Clients Behind</strong></p>
+<p><img alt="central-dashboard-buckets" src="../../img/administration/configuration/central-dashboard-buckets.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Clients Behind Hours Bucket 4</strong> - affects the <strong>Conductor4SQL - Clients Over x Hours Behind</strong> alert email.</p>
+</div>
 <h2 id="advanced-features">Advanced Features</h2>
 <ul>
 <li><strong>Push Data Sync</strong> - Enables the ability to push data from Central to one or more clients <em>(default false)</em></li>
 <li><strong>Client Connection Network Packet Size</strong> - Adjust the packet size of ADO.NET connections to SQL when installing new clients <em>(default 4096)</em></li>
+<li><strong>Data Sync Queue Limit</strong> - The maximum number of data sync queues allowed to process at once</li>
+<li><strong>Data Sync Session Message Limit</strong> - The maximum number of data sync queue messages that are processed before a queue gives up its execution time to another queue</li>
 </ul>
 <p>Click on the <strong>Save Configuration</strong> button when you have completed tweaking the Conductor4SQL settings.</p>
 <h1 id="default-client-service-credentials">Default Client Service Credentials</h1>
