@@ -12,4 +12,8 @@ $(document).ready(function () {
     
     $(".fancybox").fancybox();
   });
+
+  // scroll to active selection in window
+  var selected = document.getElementsByClassName("current")[0];
+  selected.scrollIntoView();
 });

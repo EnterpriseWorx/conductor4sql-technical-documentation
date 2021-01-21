@@ -7,14 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../../img/favicon.ico">
 <title>Conductor4SQL Technical Documentation - Central Client Control</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="../../css/custom.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../css/custom.css" rel="stylesheet" />
   
   <script>
     // Current page data
@@ -25,7 +26,7 @@
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
 <link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" defer />
 <script src="../../js/jquery.fancybox.js" defer></script>
@@ -39,6 +40,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
         <div role="search">
@@ -49,322 +51,192 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Conductor4SQL Overview</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Pre-Requisites</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../prerequisites/central-prerequisites/">Central Server Pre-Requisites</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../prerequisites/client-prerequisites/">Client Server Pre-Requisites</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Installation</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../installation/central-server-installation/">Central Server Installation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../installation/client-server-installation/">Client Server Installation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../installation/licensing/">Licensing</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Uninstallation</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../uninstallation/client-server-uninstallation/">Client Server Uninstallation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../uninstallation/central-server-uninstallation/">Central Server Uninstallation</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Central Console</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../introduction/">Central Console Overview</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../central-client-dashboard/">Central Client Dashboard</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../central-client-overview/">Central Client Overview</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Central Client Control</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#central-client-control-overview">Central Client Control Overview</a></li>
-    
-
-    <li class="toctree-l3"><a href="#send-user-commands-and-queries">Send user Commands and Queries</a></li>
-    
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Conductor4SQL Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Pre-Requisites</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/central-prerequisites/">Central Server Pre-Requisites</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/client-prerequisites/">Client Server Pre-Requisites</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../installation/central-server-installation/">Central Server Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../installation/client-server-installation/">Client Server Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../installation/licensing/">Licensing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../installation/upgrades/">Upgrades</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Uninstallation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../uninstallation/client-server-uninstallation/">Client Server Uninstallation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../uninstallation/central-server-uninstallation/">Central Server Uninstallation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Central Console</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../introduction/">Central Console Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../central-client-dashboard/">Central Client Dashboard</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../central-client-overview/">Central Client Overview</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Central Client Control</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#send-user-commands-and-queries">Send user Commands and Queries</a>
         <ul>
-        
-            <li><a class="toctree-l4" href="#send-user-command">Send User Command</a></li>
-        
-            <li><a class="toctree-l4" href="#send-user-query">Send User Query</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#send-system-commands-and-queries">Send system Commands and Queries</a></li>
-    
+    <li class="toctree-l3"><a class="reference internal" href="#send-user-command">Send User Command</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#send-user-query">Send User Query</a>
         <ul>
-        
-            <li><a class="toctree-l4" href="#send-system-command">Send System Command</a></li>
-        
-            <li><a class="toctree-l4" href="#send-system-query">Send System Query</a></li>
-        
+    <li class="toctree-l4"><a class="reference internal" href="#user-query-results">User Query Results</a>
+    </li>
         </ul>
-    
-
-    <li class="toctree-l3"><a href="#file-management">File Management</a></li>
-    
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#send-system-commands-and-queries">Send system Commands and Queries</a>
         <ul>
-        
-            <li><a class="toctree-l4" href="#send-file">Send File</a></li>
-        
-            <li><a class="toctree-l4" href="#pull-file">Pull File</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#central-client-control-history">Central Client Control History</a></li>
-    
+    <li class="toctree-l3"><a class="reference internal" href="#send-system-command">Send System Command</a>
         <ul>
-        
-            <li><a class="toctree-l4" href="#history-type-tabs">History Type Tabs</a></li>
-        
-            <li><a class="toctree-l4" href="#the-status-grid">The Status Grid</a></li>
-        
-            <li><a class="toctree-l4" href="#the-details-grid">The Details Grid</a></li>
-        
+    <li class="toctree-l4"><a class="reference internal" href="#client-pulse-check">Client Pulse Check</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#remove-top-n-messages-from-client-queue">Remove Top (n) messages from Client Queue</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#enable-client-queue">Enable Client Queue</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#disable-client-queue">Disable Client Queue</a>
+    </li>
         </ul>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../manage-scripts/">Manage Scripts</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../auditing/">Auditing</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Client Console</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../client-console/introduction/">Client Console Overview</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-dashboard/">Client Dashboard</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-control/">Client Control</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-settings/">Client Settings</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-business-attributes/">Client Business Attributes</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-comments/">Client Comments</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-auditing/">Client Auditing</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-data-sync/">Client Data Sync</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Administration</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../administration/introduction/">Central Administration Overview</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/client-groups/">Client Groups</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/email/">Email</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/events/">Events</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/business-attributes/">Business Attributes</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/users/">Users</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/scheduler/">Scheduler</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/reports/">Reports</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/alerts/">Alerts</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/configuration/">UI And System Configuration</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/queue-management/">Queue Management</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Data Synchronisation</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../data-synchronisation/introduction/">Data Synchronisation Overview</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Apendix</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../appendix/grid-control/">Grid Control</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/selection-control/">Selection Control</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/script-editor/">Script Editor</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/queues-explained/">Queues Explained</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/checksum-blacklist/">Checksum Blacklist</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/audit-events/">Audit Events</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/auto-enable-queues/">Auto Re-enable Queues</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../release-notes/">Release Notes</a>
-	    </li>
-          
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#send-system-query">Send System Query</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#system-query-results">System Query Results</a>
+    </li>
         </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#file-management">File Management</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#send-file">Send File</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pull-file">Pull File</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#central-client-control-history">Central Client Control History</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#history-type-tabs">History Type Tabs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-status-grid">The Status Grid</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-details-grid">The Details Grid</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../manage-scripts/">Manage Scripts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../auditing/">Auditing</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Client Console</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/introduction/">Client Console Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-dashboard/">Client Dashboard</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-control/">Client Control</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-settings/">Client Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-business-attributes/">Client Business Attributes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-comments/">Client Comments</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-auditing/">Client Auditing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-data-sync/">Client Data Sync</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Administration</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/introduction/">Central Administration Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/client-groups/">Client Groups</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/email/">Email</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/events/">Events</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/business-attributes/">Business Attributes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/users/">Users</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/scheduler/">Scheduler</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/reports/">Reports</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/alerts/">Alerts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/configuration/">UI And System Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/queue-management/">Queue Management</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data Synchronisation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/introduction/">Data Synchronisation Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Apendix</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/grid-control/">Grid Control</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/selection-control/">Selection Control</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/script-editor/">Script Editor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/queues-explained/">Queues Explained</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/checksum-blacklist/">Checksum Blacklist</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/audit-events/">Audit Events</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/auto-enable-queues/">Auto Re-enable Queues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/major-ui-changes/">Major UI Changes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -380,7 +252,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="">Documentation</a> &raquo;</li>
+    <li><a href="../..">Docs</a> &raquo;</li>
     
       
         
@@ -396,6 +268,7 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -417,12 +290,12 @@
 <p class="admonition-title">Tip</p>
 <p>Ensure that the list of status results on display are updated by clicking the <strong>Refresh</strong> button.</p>
 </div>
-<h1 id="send-user-commands-and-queries">Send user Commands and Queries</h1>
+<h2 id="send-user-commands-and-queries">Send user Commands and Queries</h2>
 <ul>
 <li><strong>User Commands</strong> are used for DDL (data definition language) which is used for manipulating data structures within the databases at the clients.</li>
 <li><strong>User Queries</strong> are used for querying information from the clients.</li>
 </ul>
-<h2 id="send-user-command">Send User Command</h2>
+<h3 id="send-user-command">Send User Command</h3>
 <p>To send a <strong>User Command</strong> click on the <strong>Send Command</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some)</p>
 <p><img alt="" src="../../img/central-client-control/send-command-button.png" /></p>
 <p>Enter your script in the <strong>Script Editor</strong> form</p>
@@ -443,7 +316,7 @@
 <p>You can close this window at any time by clicking on the close button and your message will still be sent to the client and processed in the background.</p>
 <p>The Status and colours work the same way as <a href="#the-status-grid">The Status Grid</a> below.</p>
 </div>
-<h2 id="send-user-query">Send User Query</h2>
+<h3 id="send-user-query">Send User Query</h3>
 <p>To send a <strong>User Query</strong> click on the <strong>Send Query</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some)</p>
 <p><img alt="" src="../../img/central-client-control/send-query-button.png" /></p>
 <p>Enter your script in the <strong>Script Editor</strong> form</p>
@@ -460,7 +333,7 @@
 <p>You can close this window at any time by clicking on the close button and your message will still be sent to the client and processed in the background.</p>
 <p>The Status and colours work the same way as <a href="#the-status-grid">The Status Grid</a> above.</p>
 </div>
-<h3 id="user-query-results">User Query Results</h3>
+<h4 id="user-query-results">User Query Results</h4>
 <p>The <strong>User Query Results</strong> view is simply all the results from each client's query combined into a single view.</p>
 <p>To get the <strong>Query Results</strong> you need to either:</p>
 <ul>
@@ -487,12 +360,12 @@
 <li><strong>Export to File</strong> - will export the results to a Xlsx, Pdf or Html file</li>
 <li><strong>Export to Table</strong> - export the results to a physical sql table (useful for advanced queries).</li>
 </ul>
-<h1 id="send-system-commands-and-queries">Send system Commands and Queries</h1>
+<h2 id="send-system-commands-and-queries">Send system Commands and Queries</h2>
 <ul>
 <li><strong>System Commands</strong> - are pre-configured commands for controlling and checking Conductor4SQL clients. E.g. <strong>Client Pulse Check</strong> and <strong>Remove top (N) messages from Client Queue</strong></li>
 <li><strong>System Queries</strong> - pre-defined queries mostly used for metadata compare. E.g. <strong>Client Differences - Procedures</strong></li>
 </ul>
-<h2 id="send-system-command">Send System Command</h2>
+<h3 id="send-system-command">Send System Command</h3>
 <p>To send a <strong>System Command</strong> select the command from the <strong>System Commands</strong> drop down list,</p>
 <p><img alt="" src="../../img/central-client-control/system-command-dropdownlist.png" /></p>
 <p>Click on the <strong>Execute Command</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some).</p>
@@ -509,11 +382,11 @@
 <li><strong>Enable Client Event Notifications</strong> - Enable client event auditing for the selected clients</li>
 <li><strong>Disable Client Event Notifications</strong> - Disable client event auditing for the selected clients</li>
 </ul>
-<h3 id="client-pulse-check">Client Pulse Check</h3>
+<h4 id="client-pulse-check">Client Pulse Check</h4>
 <p>This command's prime objective is to check if a client is active and
 return a status condition. This condition will display the operational
 status of the Client on the Dashboard.</p>
-<h3 id="remove-top-n-messages-from-client-queue">Remove Top (n) messages from Client Queue</h3>
+<h4 id="remove-top-n-messages-from-client-queue">Remove Top (n) messages from Client Queue</h4>
 <p>This command is used to clean up a Client Queue if there are problematic
 messages that still exist. You may choose the number of messages you
 want to remove from the top end of the list.</p>
@@ -532,12 +405,12 @@ removal such as the:</p>
 <ul>
 <li><strong>Queue Name</strong> - the queue to remove the messages from</li>
 </ul>
-<h3 id="enable-client-queue">Enable Client Queue</h3>
+<h4 id="enable-client-queue">Enable Client Queue</h4>
 <p>This command enables any Client which may be in a disabled condition.
 Clients are normally disabled when a bad SQL command is submitted.</p>
-<h3 id="disable-client-queue">Disable Client Queue</h3>
+<h4 id="disable-client-queue">Disable Client Queue</h4>
 <p>This command disables the Client queue which is useful if you want to send messages to a client but you do not want the client to process the messages at this point in time.</p>
-<h2 id="send-system-query">Send System Query</h2>
+<h3 id="send-system-query">Send System Query</h3>
 <p>To send a <strong>System Query</strong> select the query from the <strong>System Queries</strong> drop down list,</p>
 <p><img alt="" src="../../img/central-client-control/system-query-dropdownlist.png" /></p>
 <p>Click on the <strong>Execute Command</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some).</p>
@@ -550,7 +423,7 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
 <li><strong>Client differences - Procedures</strong></li>
 <li><strong>Client differences - Functions</strong></li>
 </ul>
-<h3 id="system-query-results">System Query Results</h3>
+<h4 id="system-query-results">System Query Results</h4>
 <p>The <strong>System Query Results</strong> view is used for viewing differences between a local database on central's SQL Server Objects and the clients' SQL Server Objects.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -600,9 +473,9 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
 <p class="admonition-title">Note</p>
 <p>This feature is only available when comparing <em>Stored Procedures</em>, <em>Functions</em> or <em>Views</em>.</p>
 </div>
-<h1 id="file-management">File Management</h1>
+<h2 id="file-management">File Management</h2>
 <p>Conductor4SQL has the ability to <strong>Send Files</strong> from central and to <strong>Pull Files</strong> from the client servers onto the central server.</p>
-<h2 id="send-file">Send File</h2>
+<h3 id="send-file">Send File</h3>
 <p>To send a <strong>File</strong> click on the <strong>Send File</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some)</p>
 <p><img alt="" src="../../img/central-client-control/send-file-button.png" /></p>
 <p>Select the file(s) that you would like to send to the client followed by the <strong>Open</strong> button</p>
@@ -624,7 +497,7 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
 <li><strong>Enter File Description</strong> - Use a descriptive name</li>
 </ul>
 <p>Click the <strong>Send File</strong> button to send the files.</p>
-<h2 id="pull-file">Pull File</h2>
+<h3 id="pull-file">Pull File</h3>
 <p>To <strong>Pull Files</strong> from your clients select the <strong>Pull Files</strong> button and choose which clients you would like to send the command to from the context menu (All, Group or Some)
 <img alt="" src="../../img/central-client-control/pull-file-button.png" /></p>
 <p>You will be presented with the <strong>Pull Files</strong> form:</p>
@@ -636,7 +509,7 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
 <li><strong>Description</strong> - Use a descriptive description for filtering results</li>
 </ul>
 <p>As soon as you click on <strong>OK</strong> button the <em>Monitor Request screen</em> for <strong>Pull File</strong> will show</p>
-<h1 id="central-client-control-history">Central Client Control History</h1>
+<h2 id="central-client-control-history">Central Client Control History</h2>
 <p>Every User Command &amp; Query, System Command &amp; Query or Data File Push &amp; Pull is logged in Conductor4SQL and placed in easily filterable grids</p>
 <p><img alt="" src="../../img/central-client-control/central-client-control.png" /></p>
 <ul>
@@ -644,7 +517,7 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
 <li><strong>2. Status Grid</strong> - This displays a summary for each message that you sent to the clients.</li>
 <li><strong>3. Details Grid</strong> - This displays detail for the selected message .</li>
 </ul>
-<h2 id="history-type-tabs">History Type Tabs</h2>
+<h3 id="history-type-tabs">History Type Tabs</h3>
 <p>The available history tabs are:</p>
 <ul>
 <li>User Command Status</li>
@@ -654,7 +527,7 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
 <li>Data File Status</li>
 <li>Data File Pull Status</li>
 </ul>
-<h2 id="the-status-grid">The Status Grid</h2>
+<h3 id="the-status-grid">The Status Grid</h3>
 <p>Each line item on the <strong>Status Grid</strong> represents a summary for each message that you sent to the clients for the selected history tab.</p>
 <p>The <strong>Status Grid</strong> has the following columns:</p>
 <p><img alt="" src="../../img/central-client-control/status-grid.png" /></p>
@@ -703,7 +576,7 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
 <ul>
 <li><strong>Reset Filters</strong> - clear all the grid filters for this grid.</li>
 </ul>
-<h2 id="the-details-grid">The Details Grid</h2>
+<h3 id="the-details-grid">The Details Grid</h3>
 <p>To view the <strong>Details Grid</strong> left click on any row in the <strong>Status Grid</strong>.</p>
 <p>Every line on the <strong>Details Grid</strong> shows the message sent to every client for the currently selected item in the <strong>Status Grid</strong></p>
 <p>The <strong>Details Grid</strong> has the following columns:
@@ -726,6 +599,10 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <em>SQL Result Size KB</em> column is only applicable for User Queries and System Queries</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can add any of your <strong>Business Attributes</strong> to the list of columns shown by selecting any existing column and selecting the <strong>Column Chooser</strong> and then simply dragging in the additional <strong>Business Attributes</strong> column you wish to add.</p>
 </div>
 <p>If you right click on any row in the grid you will get a context menu with the following options:</p>
 <ul>
@@ -775,9 +652,11 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright © 2017 EnterpriseWorx, maintained by the Conductor4SQL team.</p>
+      <p>Copyright © 2021 EnterpriseWorx, maintained by the Conductor4SQL team.</p>
     
   </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -787,7 +666,7 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
           <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
@@ -804,6 +683,11 @@ Clients are normally disabled when a bad SQL command is submitted.</p>
     <script src="../../js/theme.js" defer></script>
       <script src="../../js/custom.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

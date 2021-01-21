@@ -7,14 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../../img/favicon.ico">
 <title>Conductor4SQL Technical Documentation - Manage Data Sync Tables</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="../../css/custom.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../css/custom.css" rel="stylesheet" />
   
   <script>
     // Current page data
@@ -25,7 +26,7 @@
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
 <link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" defer />
 <script src="../../js/jquery.fancybox.js" defer></script>
@@ -39,6 +40,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
         <div role="search">
@@ -49,290 +51,152 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Conductor4SQL Overview</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Pre-Requisites</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../prerequisites/central-prerequisites/">Central Server Pre-Requisites</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../prerequisites/client-prerequisites/">Client Server Pre-Requisites</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Installation</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../installation/central-server-installation/">Central Server Installation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../installation/client-server-installation/">Client Server Installation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../installation/licensing/">Licensing</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Uninstallation</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../uninstallation/client-server-uninstallation/">Client Server Uninstallation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../uninstallation/central-server-uninstallation/">Central Server Uninstallation</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Central Console</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../central-console/introduction/">Central Console Overview</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../central-console/central-client-dashboard/">Central Client Dashboard</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../central-console/central-client-overview/">Central Client Overview</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../central-console/central-client-control/">Central Client Control</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../central-console/manage-scripts/">Manage Scripts</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../central-console/auditing/">Auditing</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Client Console</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../client-console/introduction/">Client Console Overview</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-dashboard/">Client Dashboard</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-control/">Client Control</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-settings/">Client Settings</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-business-attributes/">Client Business Attributes</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-comments/">Client Comments</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-auditing/">Client Auditing</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../client-console/client-data-sync/">Client Data Sync</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Administration</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../administration/introduction/">Central Administration Overview</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/client-groups/">Client Groups</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/email/">Email</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/events/">Events</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/business-attributes/">Business Attributes</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/users/">Users</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/scheduler/">Scheduler</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/reports/">Reports</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/alerts/">Alerts</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/configuration/">UI And System Configuration</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../administration/queue-management/">Queue Management</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Data Synchronisation</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../introduction/">Data Synchronisation Overview</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../data-sync-summary/">Data Sync Summary</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../data-sync-monitoring/">Data Sync Monitoring</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../data-sync-log/">Data Sync Log</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Manage Data Sync Tables</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#manage-data-synchronisation-tables">Manage Data Synchronisation Tables</a></li>
-    
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Conductor4SQL Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Pre-Requisites</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/central-prerequisites/">Central Server Pre-Requisites</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/client-prerequisites/">Client Server Pre-Requisites</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Installation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../installation/central-server-installation/">Central Server Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../installation/client-server-installation/">Client Server Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../installation/licensing/">Licensing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../installation/upgrades/">Upgrades</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Uninstallation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../uninstallation/client-server-uninstallation/">Client Server Uninstallation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../uninstallation/central-server-uninstallation/">Central Server Uninstallation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Central Console</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/introduction/">Central Console Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/central-client-dashboard/">Central Client Dashboard</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/central-client-overview/">Central Client Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/central-client-control/">Central Client Control</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/manage-scripts/">Manage Scripts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/auditing/">Auditing</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Client Console</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/introduction/">Client Console Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-dashboard/">Client Dashboard</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-control/">Client Control</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-settings/">Client Settings</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-business-attributes/">Client Business Attributes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-comments/">Client Comments</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-auditing/">Client Auditing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-data-sync/">Client Data Sync</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Administration</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/introduction/">Central Administration Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/client-groups/">Client Groups</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/email/">Email</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/events/">Events</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/business-attributes/">Business Attributes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/users/">Users</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/scheduler/">Scheduler</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/reports/">Reports</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/alerts/">Alerts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/configuration/">UI And System Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../administration/queue-management/">Queue Management</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data Synchronisation</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../introduction/">Data Synchronisation Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../data-sync-summary/">Data Sync Summary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../data-sync-monitoring/">Data Sync Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../data-sync-log/">Data Sync Log</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Manage Data Sync Tables</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#manage-data-synchronisation-tables">Manage Data Synchronisation Tables</a>
         <ul>
-        
-            <li><a class="toctree-l4" href="#consolidation-sync">Consolidation Sync</a></li>
-        
-            <li><a class="toctree-l4" href="#one-to-one-sync">One-to-One sync</a></li>
-        
+    <li class="toctree-l3"><a class="reference internal" href="#consolidation-sync">Consolidation Sync</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#one-to-one-sync">One-to-One sync</a>
+    </li>
         </ul>
-    
-
-    <li class="toctree-l3"><a href="#adding-table-definitions">Adding Table Definitions</a></li>
-    
-
-    <li class="toctree-l3"><a href="#editing-table-definitions">Editing Table Definitions</a></li>
-    
-
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adding-table-definitions">Adding Table Definitions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#editing-table-definitions">Editing Table Definitions</a>
+    </li>
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../manage-data-sync-configs/">Manage Data Sync Configs</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../assign-client-data-sync/">Assign Client Data Sync</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../assign-group-data-sync/">Assign Group Data Sync</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Apendix</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../appendix/grid-control/">Grid Control</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/selection-control/">Selection Control</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/script-editor/">Script Editor</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/queues-explained/">Queues Explained</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/checksum-blacklist/">Checksum Blacklist</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/audit-events/">Audit Events</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/auto-enable-queues/">Auto Re-enable Queues</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendix/major-ui-changes/">Major UI Changes</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../release-notes/">Release Notes</a>
-	    </li>
-          
-        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../manage-data-sync-configs/">Manage Data Sync Configs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../assign-client-data-sync/">Assign Client Data Sync</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../assign-group-data-sync/">Assign Group Data Sync</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Apendix</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/grid-control/">Grid Control</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/selection-control/">Selection Control</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/script-editor/">Script Editor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/queues-explained/">Queues Explained</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/checksum-blacklist/">Checksum Blacklist</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/audit-events/">Audit Events</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/auto-enable-queues/">Auto Re-enable Queues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/major-ui-changes/">Major UI Changes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -348,7 +212,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="">Documentation</a> &raquo;</li>
+    <li><a href="../..">Docs</a> &raquo;</li>
     
       
         
@@ -364,15 +228,17 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
             <div class="section">
               
-                <h1 id="manage-data-synchronisation-tables">Manage Data Synchronisation Tables</h1>
+                <h1 id="manage-data-sync-tables-overview">Manage Data Sync Tables Overview</h1>
+<h2 id="manage-data-synchronisation-tables">Manage Data Synchronisation Tables</h2>
 <p>To set up a Data Synchronisation process, select the <strong>Manage Data Synchronisation</strong> button on the <strong>Central</strong> ribbon tab on the Conductor4SQL user interface.</p>
 <p><img alt="manage-data-synchronisation-button" src="../../img/data-synchronisation/manage-data-synchronisation-button.png" /></p>
-<h2 id="consolidation-sync">Consolidation Sync</h2>
+<h3 id="consolidation-sync">Consolidation Sync</h3>
 <p>When using <strong>consolidation</strong> data synchronisation, before any Data Synchronisation can take place, the table structure of all the tables you want to synchronise must match across all the clients. You should make use of the <a href=""><strong>metadata comparison</strong></a> feature to achieve this.</p>
 <p>Before you can start synchronising, you must define the table metadata for the tables that will potentially be synchronised. There are a number of rules to be followed for <strong>consolidation</strong> data synchronisation to work correctly:</p>
 <ul>
@@ -382,9 +248,9 @@
 <li>Data types of all remaining columns (non primary key) data types must match, however, different column data sizes is supported e.g. if two clients have a column where the data type is VARCHAR(10) at the one and VARCHAR(20) at the other, the consolidated data will just use the larger of the two. However if the data type is Datetime at the one client and INT at another client, this will result in an error.</li>
 <li>Conductor4SQL does allow additional columns in tables when using <strong>consolidation</strong> sync. Additional columns will be added as needed. Columns that don't exist at other clients as simply NULL</li>
 </ul>
-<h2 id="one-to-one-sync">One-to-One sync</h2>
+<h3 id="one-to-one-sync">One-to-One sync</h3>
 <p>When using <strong>one-to-one</strong> data synchronisation, you must define the table metadata for each client, database and table that you want to sync.</p>
-<h1 id="adding-table-definitions">Adding Table Definitions</h1>
+<h2 id="adding-table-definitions">Adding Table Definitions</h2>
 <p>Select the <strong>Manage Data Sync Tables</strong> tab, then click on the <strong>Create Data Sync Table</strong> button</p>
 <p><img alt="manage-data-sync-tables-tab" src="../../img/data-synchronisation/manage-data-sync-tables/manage-data-sync-tables-tab.png" /></p>
 <p>Fill in all information in the screen below:</p>
@@ -407,7 +273,7 @@
 <p>Once the table definitions have been saved, a new window will pop up where the user can fill in the database mappings for each client</p>
 <p><img alt="database-mappings" src="../../img/data-synchronisation/manage-data-sync-tables/database-mappings.png" /></p>
 <p>Make sure that you click on the <strong>Save</strong> button otherwise your mappings will be discarded</p>
-<h1 id="editing-table-definitions">Editing Table Definitions</h1>
+<h2 id="editing-table-definitions">Editing Table Definitions</h2>
 <p>Tables that are already defined are displayed in the panel on the left. Click on any one of the entries to view the synchronisation properties in the panel on the right.</p>
 <p><img alt="" src="../../img/data-synchronisation/manage-data-sync-tables/editing-table-definitions.png" /></p>
 <p>You can edit the <strong>Database Mappings</strong> for any table by selecting the table and then clicking on the <strong>Edit Database Mappings</strong> button.</p>
@@ -436,9 +302,11 @@
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright © 2017 EnterpriseWorx, maintained by the Conductor4SQL team.</p>
+      <p>Copyright © 2021 EnterpriseWorx, maintained by the Conductor4SQL team.</p>
     
   </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -448,7 +316,7 @@
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
           <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
@@ -465,6 +333,11 @@
     <script src="../../js/theme.js" defer></script>
       <script src="../../js/custom.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>
