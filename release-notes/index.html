@@ -180,9 +180,9 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Release Notes</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#2020-release-notes">2020 Release Notes</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2021-release-notes">2021 Release Notes</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2019-release-notes">2019 Release Notes</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2020-release-notes">2020 Release Notes</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#older-release-notes">Older Release Notes</a>
     </li>
@@ -225,6 +225,37 @@
             <div class="section">
               
                 <h1 id="conductor4sql-release-notes">Conductor4SQL Release Notes</h1>
+<h2 id="2021-release-notes">2021 Release Notes</h2>
+<p><strong>Version 3.7.4.0 (2021-09-17) Changes</strong></p>
+<ul>
+<li>CONSQL-2143 Fixed: Need to manually reapply existing Conductor4SQL license after upgrading to version 3.7.3.0</li>
+<li>CONSQL-2166 Fixed: Scheduled fails on prepare step when two tables with same name and different schema exist</li>
+<li>CONSQL-2167 Fixed: Sync database checker does not take table schema into consideration</li>
+<li>CONSQL-2168 Fixed: Client side procedure dbo.CL_Conversation_Resend_SP fails when the instance is a named instance</li>
+<li>CONSQL-2171 Fixed: Push sync consolidation wizard not working</li>
+<li>CONSQL-2172 Fixed: Scheduled commands and queries sometimes break when upgrading to version 3.7.3.0 of Conductor4SQL</li>
+<li>CONSQL-2173 Fixed: Outstanding get changes for a table when disabling a table results in the central queue going down</li>
+<li>CONSQL-2174 Fixed: Optimise email C4SQL - Data Sync Errors</li>
+<li>CONSQL-2175 Fixed: Synced databases are detected as removed when database name is in different case</li>
+<li>CONSQL-2182 Fixed: Changing primary key datatype size not getting detected as a primary key change</li>
+<li>CONSQL-2184 Fixed: Cater for blank PrimaryKeyOrdinal='' entries in the table TableMetaData column in dbo.CL_Client_Data_Sync_Tables_Detail</li>
+<li>CONSQL-2186 Fixed: Install on SQL Server 2008 and 2005 fails on reinstall with existing certificate files</li>
+<li>CONSQL-2187 Fixed: Push sync does not cater for changing primary keys when using a one-to-one mapping</li>
+<li>CONSQL-2189 Fixed: Once off sync fails if columns contains SQL Server keywords</li>
+<li>CONSQL-2191 Fixed: Resending System queries is failing on the Client Queue on the client side</li>
+<li>CONSQL-2193 Fixed: Instances not getting installed with "Event notifications" even when option "Event Notification Enabled On Client Install" is enabled</li>
+<li>CONSQL-2194 Fixed: Central report processing failing to process database file information when DatabaseFileName is very long</li>
+<li>CONSQL-2200 Fixed: Remove Hummdb jobs from Conductor4SQL install and upgrades</li>
+<li>CONSQL-2201 Fixed: Realtime sync update issue when column_id does not match ordinal_position</li>
+<li>CONSQL-2202 Fixed: Cannot uninstalled Conductor4SQL central when installed on a named instance</li>
+<li>CONSQL-2203 Fixed: Central message check no longer showing reason for opening message failure on client install</li>
+<li>CONSQL-2204 Fixed: Client installs failing when using Latin1_General_BIN (binary) server level collation</li>
+<li>CONSQL-2145 Improvement: ClientID data sync column needs to be renamed to C4SQL_ClientID in central synced tables</li>
+<li>CONSQL-2164 Improvement: Create new standard report called Conductor4SQL - Data Sync Summary</li>
+<li>CONSQL-2181 Improvement: Change primary key on table dbo.CL_Client_Data_Sync_Tables_Detail to reduce blocking</li>
+<li>CONSQL-2188 Improvement: Make client install SQL timeout configurable</li>
+<li>CONSQL-2199 Improvement: Allow Conductor4SQL to launch the SQLPro web application</li>
+</ul>
 <h2 id="2020-release-notes">2020 Release Notes</h2>
 <p><strong>Version 3.7.3.0 (2020-11-11) Changes</strong></p>
 <ul>
@@ -279,7 +310,7 @@
 </li>
 <li>CONSQL-2099 Improvement: Add flag AllowCircularSync</li>
 </ul>
-<h2 id="2019-release-notes">2019 Release Notes</h2>
+<h2 id="older-release-notes">Older Release Notes</h2>
 <p><strong>Version 3.7.2.0 (2019-12-17) Changes</strong></p>
 <ul>
 <li>CONSQL-2048 Cancel user query/command has collation issues</li>
@@ -407,7 +438,6 @@
 <li>CONSQL-2009 Bug Fix: When assigning push sync the message says "Enabling Real-time"</li>
 <li>CONSQL-2011 Bug Fix: Testing a scheduled query "Save to file" with no result need a better error message</li>
 </ul>
-<h2 id="older-release-notes">Older Release Notes</h2>
 <p><strong>Version 3.7.1.4 (2018-12-18) Changes</strong></p>
 <ul>
 <li>CONSQL-1906 Feature: Script Editor Screen redesign</li>

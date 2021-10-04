@@ -136,6 +136,8 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">UI And System Configuration</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general-settings">General Settings</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#client-settings">Client Settings</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#installation-settings">Installation Settings</a>
@@ -238,6 +240,10 @@
 <p>The <strong>C4SQL Configuration</strong> button under the Administration ribbon tab is used to tweak various Conductor4SQL Settings.</p>
 <p>Click on the <strong>Edit Configuration</strong> button to adjust any settings you wish to edit</p>
 <p><img alt="configuration-editor" src="../../img/administration/configuration/configuration-editor.png" /></p>
+<h2 id="general-settings">General Settings</h2>
+<ul>
+<li><strong>SQLPro URL</strong> - http url for the web component of Conductor4SQL</li>
+</ul>
 <h2 id="client-settings">Client Settings</h2>
 <ul>
 <li><strong>Maximum Group Size</strong> - the maximum number of clients allowed in a single client group <em>(default 2000)</em>.</li>
@@ -255,6 +261,10 @@
 <li><strong>PreChecker Ping Check</strong> - Run a ping check as part of the install pre-checker process.</li>
 <li><strong>PreChecker Open Port Check</strong> - Ensure that the port (default 4321) is open before attempting to install Conductor4SQL.</li>
 <li><strong>Event Notification Enabled On Client Install</strong> - Enable event auditing when client is installed <em>(default true)</em>.</li>
+<li><strong>PreChecker Timeout (Seconds)</strong> - The number of seconds to to attempt to make a connection for each Client Pre Checker test <em>(Default 60 seconds)</em></li>
+<li><strong>Client Install Timeout (Seconds)</strong> - Number of seconds to attempt install install step before failing. Excludes the <strong>Check For Opening Message</strong> step - <em>(Default 360 seconds - 5 minutes)</em></li>
+<li><strong>Client Uninstall Timeout (Seconds)</strong> - Number of seconds to attempt uninstall step before failing. <em>(Default 360 seconds - 5 minutes)</em></li>
+<li><strong>Client Opening Message Timeout (Seconds)</strong> - Number of seconds to wait for <strong>Check For Opening Message</strong> step in the client installer process. <em>(Default 120 seconds - 2 minutes)</em></li>
 </ul>
 <h2 id="auditing-settings">Auditing Settings</h2>
 <ul>
@@ -282,6 +292,7 @@
 <li><strong>Client Connection Network Packet Size</strong> - Adjust the packet size of ADO.NET connections to SQL when installing new clients <em>(default 4096)</em></li>
 <li><strong>Data Sync Queue Limit</strong> - The maximum number of data sync queues allowed to process at once</li>
 <li><strong>Data Sync Session Message Limit</strong> - The maximum number of data sync queue messages that are processed before a queue gives up its execution time to another queue</li>
+<li><strong>Max Service Broker Queue Limit</strong> - The maximum number of service broker queues to allow to process at once.</li>
 </ul>
 <p>Click on the <strong>Save Configuration</strong> button when you have completed tweaking the Conductor4SQL settings.</p>
 <h1 id="default-client-service-credentials">Default Client Service Credentials</h1>
