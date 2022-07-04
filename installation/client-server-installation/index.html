@@ -1,72 +1,65 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
 <title>Conductor4SQL Technical Documentation - Client Server Installation</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
-
-  <link rel="stylesheet" href="../../css/theme.css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  <link href="../../css/custom.css" rel="stylesheet" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Client Server Installation";
-    var mkdocs_page_input_path = "installation\\client-server-installation.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Client Server Installation";
+        var mkdocs_page_input_path = "installation\\client-server-installation.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 <link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" defer />
 <script src="../../js/jquery.fancybox.js" defer></script>
 <script src="../../js/jquery.fancybox.pack.js" defer></script>
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation</a>
-        <div role="search">
+          <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../..">Conductor4SQL Overview</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Pre-Requisites</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/central-prerequisites/">Central Server Pre-Requisites</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/client-prerequisites/">Client Server Pre-Requisites</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Installation</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../central-server-installation/">Central Server Installation</a>
-                    </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Client Server Installation</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Conductor4SQL Overview</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pre-Requisites</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/central-prerequisites/">Central Server Pre-Requisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/client-prerequisites/">Client Server Pre-Requisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../central-server-installation/">Central Server Installation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Client Server Installation</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#initial-setup">Initial Setup</a>
     </li>
@@ -86,167 +79,172 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#bulk-client-installer">Bulk Client Installer</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting-test-connections">Troubleshooting Test Connections</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting-prechecker-issues">Troubleshooting Prechecker Issues</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-enable-service-broker">How to enable Service Broker</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#uninstall-from-client-side-only">Uninstall from client side only</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting-installer-issues">Troubleshooting Installer Issues</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#semiphore-timeout">Semiphore Timeout</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installation-failed-on-check-for-opening-message">Installation failed on "Check For Opening Message"</a>
+    </li>
+        </ul>
+    </li>
     </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../licensing/">Licensing</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../upgrades/">Upgrades</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Uninstallation</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../uninstallation/client-server-uninstallation/">Client Server Uninstallation</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../uninstallation/central-server-uninstallation/">Central Server Uninstallation</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Central Console</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/introduction/">Central Console Overview</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/central-client-dashboard/">Central Client Dashboard</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/central-client-overview/">Central Client Overview</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/central-client-control/">Central Client Control</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/manage-scripts/">Manage Scripts</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../central-console/auditing/">Auditing</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Client Console</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/introduction/">Client Console Overview</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-dashboard/">Client Dashboard</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-control/">Client Control</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-settings/">Client Settings</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-business-attributes/">Client Business Attributes</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-comments/">Client Comments</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-auditing/">Client Auditing</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-data-sync/">Client Data Sync</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Administration</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../administration/introduction/">Central Administration Overview</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../administration/client-groups/">Client Groups</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../administration/email/">Email</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../administration/events/">Events</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../administration/business-attributes/">Business Attributes</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../administration/users/">Users</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../administration/scheduler/">Scheduler</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../administration/reports/">Reports</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../administration/alerts/">Alerts</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../administration/configuration/">UI And System Configuration</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../administration/queue-management/">Queue Management</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Data Synchronisation</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/introduction/">Data Synchronisation Overview</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Apendix</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/grid-control/">Grid Control</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/selection-control/">Selection Control</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/script-editor/">Script Editor</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/queues-explained/">Queues Explained</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/checksum-blacklist/">Checksum Blacklist</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/audit-events/">Audit Events</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/auto-enable-queues/">Auto Re-enable Queues</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/major-ui-changes/">Major UI Changes</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
-                    </li>
-                </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../licensing/">Licensing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upgrades/">Upgrades</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Uninstallation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../uninstallation/client-server-uninstallation/">Client Server Uninstallation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../uninstallation/central-server-uninstallation/">Central Server Uninstallation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Central Console</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../central-console/introduction/">Central Console Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../central-console/central-client-dashboard/">Central Client Dashboard</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../central-console/central-client-overview/">Central Client Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../central-console/central-client-control/">Central Client Control</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../central-console/manage-scripts/">Manage Scripts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../central-console/auditing/">Auditing</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Client Console</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../client-console/introduction/">Client Console Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-dashboard/">Client Dashboard</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-control/">Client Control</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-settings/">Client Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-business-attributes/">Client Business Attributes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-comments/">Client Comments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-auditing/">Client Auditing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../client-console/client-data-sync/">Client Data Sync</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Administration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/introduction/">Central Administration Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/client-groups/">Client Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/business-attributes/">Business Attributes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/users/">Users</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/scheduler/">Scheduler</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/reports/">Reports</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/alerts/">Alerts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/configuration/">UI And System Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/queue-management/">Queue Management</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data Synchronisation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/introduction/">Data Synchronisation Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/data-sync-summary/">Data Sync Summary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/data-sync-monitoring/">Data Sync Monitoring</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/data-sync-log/">Data Sync Log</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/manage-data-sync-tables/">Manage Data Sync Tables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/manage-data-sync-configs/">Manage Data Sync Configs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/assign-client-data-sync/">Assign Client Data Sync</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data-synchronisation/assign-group-data-sync/">Assign Group Data Sync</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Apendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../appendix/grid-control/">Grid Control</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../appendix/selection-control/">Selection Control</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../appendix/script-editor/">Script Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../appendix/queues-explained/">Queues Explained</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../appendix/checksum-blacklist/">Checksum Blacklist</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../appendix/audit-events/">Audit Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../appendix/auto-enable-queues/">Auto Re-enable Queues</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../appendix/major-ui-changes/">Major UI Changes</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
+                </li>
+              </ul>
       </div>
     </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Conductor4SQL Technical Documentation</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Conductor4SQL Technical Documentation</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
-    
-      
-        
-          <li>Installation &raquo;</li>
-        
-      
-    
-    <li>Client Server Installation</li>
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Installation &raquo;</li><li>Client Server Installation</li>
     <li class="wy-breadcrumbs-aside">
-      
         <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/installation/client-server-installation.md"
           class="icon icon-github"> Edit on GitHub</a>
-      
     </li>
   </ul>
-  
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="client-server-installation">Client Server Installation</h1>
-<p>Before you can use Conductor4SQL on a client instance, you need to install that client inside onto Conductor4SQL.</p>
+<p>Before you can use Conductor4SQL on a client instance, you need to install that client inside of Conductor4SQL.</p>
 <h2 id="initial-setup">Initial Setup</h2>
 <p>Before you start installing clients on Conductor4SQL, one needs to decide whether Conductor4SQL needs to use a SQL Server login or a Windows login to communicate with clients.</p>
 <p>To adjust these settings, select <strong>Administration &gt;&gt; C4SQL Configuration &gt;&gt; Edit Default Client Service Credentials</strong>.</p>
 <p><img alt="" src="../../img/installation/client-install-edit-default-client-service-credentials.png" /></p>
-<p>Edit the credentials in the screen below and click on the <strong>Ok</strong> button when complete.</p>
+<p>Edit the credentials on the screen below and click on the <strong>Ok</strong> button when complete.</p>
 <p><img alt="edit-default-client-service-credentials-screen" src="../../img/administration/configuration/edit-default-client-service-credentials-screen.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -254,7 +252,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>By default the login created at the client has a sysadmin role but these privileges can be lowered if needed.</p>
+<p>By default, the login created at the client has a sysadmin role but these privileges can be lowered if needed.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -264,18 +262,18 @@
 <p>Using this option you can install clients one-at-a-time</p>
 <p>You can add a client by selecting <strong>Clients</strong> &gt;&gt; <strong>Add Client</strong></p>
 <p><img alt="" src="../../img/installation/client-install1.png" /></p>
-<p>Next fill in all the information for the <strong>Install Client</strong> dialog box:</p>
+<p>Next fill in all the information for the <strong>Install Client</strong> dialogue box:</p>
 <p><img alt="" src="../../img/installation/client-install2.png" /></p>
 <ul>
-<li><strong>Server Name/IP</strong> - The DNS name or ip address for the client Server</li>
+<li><strong>Server Name/IP</strong> - The DNS name or IP address for the Client Server</li>
 <li><strong>This is a re-install?</strong> - If the client was previously installed you will get a drop-down list showing the previous installation(s) for this client</li>
 <li><strong>Authentication</strong> - is SQL Server authentication where your options are "Windows Authentication" or "SQL Server Authentication"</li>
 <li>If you are using "SQL Server Authentication" fill in the <strong>User name</strong> and <strong>Password</strong> fields.</li>
 <li><strong>Port</strong> - The TCP port in which central will connect to the client.</li>
-<li><strong>Group</strong> - the client group in which to add the Client Server to (these are defined in the Administration section).</li>
+<li><strong>Group</strong> - the client group to which to add the Client Server (these are defined in the Administration section).</li>
 <li><strong>Business Attributes</strong> - Custom fields for the client that are defined in the Administration Section.</li>
 </ul>
-<p>Finally select the <strong>Text Connection</strong> button</p>
+<p>Finally, select the <strong>Text Connection</strong> button</p>
 <p>If the test is successful the <strong>Install</strong> button will be enabled. Click the <strong>Install</strong> button to continue.</p>
 <h2 id="the-client-server-pre-checker">The Client Server Pre-Checker</h2>
 <p><img alt="" src="../../img/installation/client-prechecker.png" /></p>
@@ -289,19 +287,19 @@
 </ul>
 <h3 id="pre-checker-issues">Pre-Checker Issues</h3>
 <ul>
-<li><strong>Step 1: Ensure that client server isn't already installed</strong> - Check that client server isn't already in the list of installed clients</li>
-<li><strong>Step 2: Ensure that we can ping the client server</strong> - If this fails run a manual ping. If this also fails contact your network administrator.</li>
-<li><strong>Step 3: Ensure that we can access MS SQL server</strong> - If this fails run <em>SQL Server Management Studio</em> and check if you can connect to the server manually.</li>
-<li><strong>Step 4: Ensure that mixed mode authentication is enabled</strong> - If this fails switch the server to use Mixed-Mode authentication and restart the server.</li>
+<li><strong>Step 1: Ensure that client server isn't already installed</strong> - Check that client server isn't already in the list of installed clients.</li>
+<li><strong>Step 2: Ensure that we can ping the client server</strong> - If this fails run a manual ping. If this also fails contact your network administrator. Note if ping is disabled for your servers you'll need to disable this check. You can do this by disabling the <strong>Prechecker Ping Check</strong> under <a href="../../administration/configuration/">C4SQL Configuration</a></li>
+<li><strong>Step 3: Ensure that we can access MS SQL server</strong> - If this fails run <em>SQL Server Management Studio</em> and check if you can connect to the server manually. If you cannot connect via SSMS check SQL Server TCP settings and firewall settings</li>
+<li><strong>Step 4: Ensure that mixed mode authentication is enabled</strong> - If this fails switch the server to use Mixed-Mode authentication and restart the server. This is only relevant if <strong>SQL Server Authentication</strong> (the default) has been configured for Conductor4SQL.</li>
 <li><strong>Step 5: Ensure that SQL version is MS SQL 2005 sp3 or higher is installed</strong> - If this fails you will need to upgrade your server to minimum requirements as per the central requirements document.</li>
 <li><strong>Step 6: Ensure that the current SQL user is in the sysadmin user group</strong> - You require a user with sys-admin rights to install Conductor4SQL</li>
-<li><strong>Step 7: Ensure that service broker is enabled</strong> - Service broker must be enabled on the SQL Server.</li>
-<li><strong>Step 8: Ensure that Conductor4SQL database does not exist</strong> - We run this step to ensure that Conductor4SQL isn't already installed on this server.</li>
+<li><strong>Step 7: Ensure that service broker is enabled</strong> - Service broker must be enabled on the msdb database in SQL Server in order for Conductor4SQL to operate. See <a href="#how-to-enable-service-broker">How to enable Service Broker</a> in the troubleshooting section below.</li>
+<li><strong>Step 8: Ensure that Conductor4SQL database does not exist</strong> - We run this step to ensure that Conductor4SQL isn't already installed on this server. If this was a past uninstall (e.g. uninstalled instance from central only because the instance was offline). Then you will need to <a href="#uninstall-from-client-side-only">uninstall from client side only</a></li>
 <li><strong>Step 9: Ensure that Conductor4SQL login does not exist</strong> - Same as above.</li>
 </ul>
 <h2 id="client-installation-progress">Client Installation Progress</h2>
 <p>After all steps in the pre-checker are successful we are ready to install Conductor4SQL onto the client server.</p>
-<p>To start the install process click on the <strong>Start</strong> button.</p>
+<p>To start the installation process click on the <strong>Start</strong> button.</p>
 <p><img alt="" src="../../img/installation/client-install-progress.png" /></p>
 <p>If the install is successful you should get a <strong>Client successfully installed</strong> notification.</p>
 <p><img alt="" src="../../img/installation/client-install-success.png" /></p>
@@ -314,7 +312,7 @@
 <p>Bulk Client Capture columns:</p>
 <ul>
 <li><strong>Client Instance Name</strong> - this column needs to be the name of the SQL Server</li>
-<li><strong>DNS Name or IP</strong> - this column is the DNS Name of IP address of the server</li>
+<li><strong>DNS Name or IP</strong> - this column is the DNS Name or IP address of the server</li>
 <li><strong>Port</strong> - the port used for central to communicate with the client (default is 4321)</li>
 <li><strong>Groups</strong> - A comma separated list of groups that you would like to assign the client to.</li>
 <li><strong>Business Attributes</strong> - All defined business attributes are situated between the port and groups columns.</li>
@@ -323,7 +321,7 @@
 <p class="admonition-title">Note</p>
 <p>this grid acts like a spreadsheet grid and it is in fact recommended that you copy/paste the client information from a spreadsheet.</p>
 </div>
-<p>Clients Information options:</p>
+<p>Clients' Information options:</p>
 <ul>
 <li><strong>Authentication</strong> - the SQL Server authentication method used where the options are "Windows Authentication" and "SQL Server Authentication"</li>
 <li><strong>Username</strong> and <strong>Password</strong> fields are only visible if you select "SQL Server Authentication"</li>
@@ -339,7 +337,7 @@
 <p class="admonition-title">Note</p>
 <p>If you have any errors you can use the same <a href="#pre-checker-issues">Pre-Checker Issues Diagnostics</a> as the one-at-a-time client installation</p>
 </div>
-<p>Once the pre-checker has completed. The clients that were successful (green circles) are ready for installation.</p>
+<p>Once the pre-checker has been completed. The clients that were successful (green circles) are ready for installation.</p>
 <p>To install clients first click on the <strong>Back</strong> button.</p>
 <h2 id="bulk-client-installer">Bulk Client Installer</h2>
 <p>Now the <strong>Installer</strong> button will be enabled. Click on the <strong>Installer</strong> button.</p>
@@ -351,33 +349,61 @@
 <p><img alt="" src="../../img/installation/client-bulk-installer-progress.png" /></p>
 <p>When the installer is complete, click on the <strong>Back</strong> button and here you can repeat the bulk installation process.</p>
 <p><img alt="" src="../../img/installation/client-bulk-installer-complete.png" /></p>
+<h2 id="troubleshooting-test-connections">Troubleshooting Test Connections</h2>
+<p>When trying to install an instance, you must first test the SQL connection. If you receive the error "Test Connection Failed" then try and connect to the instance from SQL Server Management Server from the same server from which the Conductor4SQL central server is running. Typically you'll find that either there is no connectivity from the central server to the client server (firewall issue) or the password was typed in incorrectly.</p>
+<h2 id="troubleshooting-prechecker-issues">Troubleshooting Prechecker Issues</h2>
+<h3 id="how-to-enable-service-broker">How to enable Service Broker</h3>
+<p>If the <strong>Ensure that service broker is enabled</strong> for the pre-checker fails, service broker can be enabled in the msdb database using the following SQL script</p>
+<pre><code class="language-sql">USE master;
+ALTER DATABASE msdb SET ENABLE_BROKER WITH ROLLBACK IMMEDIATE;
+</code></pre>
+<h3 id="uninstall-from-client-side-only">Uninstall from client side only</h3>
+<p>We check if the SyncWorx database and SyncWorxAdmin user is present to prevent trying to install a single instance multiple times via  multiple DNS names, e.g. Server1 and Server1.local have two different names but they point to the same server. However, sometimes this is not the case and you've an existing failed client uninstall, e.g. if you've uninstalled an instance from Conductor4SQL taking the "Uninstall client at central side only" because it was offline at the time. </p>
+<p>Now that you wish to re-install the instance, you'll need to first take the "Uninstall client at client side only" and select the client instance that you wish to completely uninstall. Once this is complete you should be able to install the instance normally. See more information on <a href="../../uninstallation/client-server-uninstallation/">Uninstalling Client Instances</a> if needed.</p>
+<h2 id="troubleshooting-installer-issues">Troubleshooting Installer Issues</h2>
+<h3 id="semiphore-timeout">Semiphore Timeout</h3>
+<p>If you see this error "provider: TCP Provider, error: 0 - The semaphore timeout period has expired." the error seems to be related to the connection being established with the remote server but it fails to login remotely within the given time period.</p>
+<p>One simple fix that is worth trying is increasing the timeout for remote connection logins on the Client Server to a value that is larger than the default of 10 seconds.</p>
+<pre><code class="language-sql">-- Change the remote login timeout to 60 seconds (default is 10)
+EXEC sp_configure 'remote login timeout (s)', 60;
+RECONFIGURE;
+</code></pre>
+<p>A second less common issue I've seen is that packets aren't getting split up correctly on the network and that network packets that are larger than say 1500 bytes are not able to travel over the network due to the default maximum MTU (maximum transmission unit) for Ethernet or WAN. If that is the case then sometimes changing the "network packet size (B)" in SQL Server can do the trick with getting rid of the semaphore issue. However, it would make the most sense to have a network specialist have a look at the network to see why network packets are not getting split correctly.</p>
+<pre><code class="language-sql">-- Change the network packet size to 512 bytes (default is 4096)
+EXEC sp_configure 'network packet size (B)', 512;
+RECONFIGURE;
+</code></pre>
+<h3 id="installation-failed-on-check-for-opening-message">Installation failed on "Check For Opening Message"</h3>
+<p>There are a couple of things that can cause this. Here are the known issues that we are aware of.</p>
+<p>Typically you have a network or firewall issue where the central (port 4321) is not open between client instance and central instance. If you get either of these two errors this is usually the reason:</p>
+<ul>
+<li>
+<p>The central server did not respond in time. The following error(s) were reported by SQL Server: Connection attempt failed with error: '10060(A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.)'.</p>
+</li>
+<li>
+<p>The central server did not respond in time. The following error(s) were reported by SQL Server: Connection attempt failed with error: '10060(failed to retrieve text for this error. Reason: 15105)'.</p>
+</li>
+</ul>
+<p>Next, a less common issue is the Machine Keys folder, which is a system folder on windows, that is responsible for storing certificate pair keys that Conductor4SQL uses to communicate between client and central instance. We are not 100% sure what changes and breaks this configuration security setting.</p>
+<p>If you have a machine keys issue you'll get the following error when Conductor4SQL is checking for the opening message "Machine keys folder either missing or incorrect security settings". The machine keys folder is either in %SystemDrive%\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys or C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys on older windows machines. Please this <a href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/windows-security/default-permissions-machinekeys-folders">link</a> for the correct settings for the Machine Keys folder permissions.</p>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../central-server-installation/" class="btn btn-neutral float-left" title="Central Server Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../licensing/" class="btn btn-neutral float-right" title="Licensing">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../central-server-installation/" class="btn btn-neutral" title="Central Server Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
       <p>Copyright © 2021 EnterpriseWorx, maintained by the Conductor4SQL team.</p>
-    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -385,20 +411,23 @@
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../central-server-installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../licensing/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../central-server-installation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../licensing/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../js/custom.js" defer></script>
       <script src="../../search/main.js" defer></script>
