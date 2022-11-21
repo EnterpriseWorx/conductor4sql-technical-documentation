@@ -14,7 +14,7 @@
       <script>
         // Current page data
         var mkdocs_page_name = "Client Server Pre-Requisites";
-        var mkdocs_page_input_path = "prerequisites\\client-prerequisites.md";
+        var mkdocs_page_input_path = "prerequisites/client-prerequisites.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -194,15 +194,14 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Pre-Requisites &raquo;</li><li>Client Server Pre-Requisites</li>
+          <li>Pre-Requisites &raquo;</li>
+      <li>Client Server Pre-Requisites</li>
     <li class="wy-breadcrumbs-aside">
-        <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/prerequisites/client-prerequisites.md"
-          class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/prerequisites/client-prerequisites.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
 </div>
-
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
@@ -223,6 +222,12 @@
 <li>SQL Browser – UDP port 1434 (for named instances)</li>
 <li>SQL Server Administration – TCP port 1433</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you are using named instances, SQL Server assigns each instance a random port between 49152 and 65535. </p>
+<p>Either a firewall rule will needed for this whole range or the instance of SQL Server needs 
+to be configured to use a static port.</p>
+</div>
 <h1 id="authentication">Authentication</h1>
 <ul>
 <li>Mixed-Mode authentication must be enabled in Microsoft SQL Server (if you have configured Conductor4SQL to use SQL Authentication)</li>
