@@ -8,7 +8,7 @@
 <title>Conductor4SQL Technical Documentation - Central Client Dashboard</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../../css/custom.css" rel="stylesheet" />
     
       <script>
@@ -18,12 +18,11 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="../../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 <link rel="stylesheet" href="../../css/jquery.fancybox.css" type="text/css" defer />
 <script src="../../js/jquery.fancybox.js" defer></script>
 <script src="../../js/jquery.fancybox.pack.js" defer></script>
@@ -38,7 +37,7 @@
           <a href="../.." class="icon icon-home"> Conductor4SQL Technical Documentation
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -215,9 +214,9 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Central Console &raquo;</li>
-      <li>Central Client Dashboard</li>
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Central Console</li>
+      <li class="breadcrumb-item active">Central Client Dashboard</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/EnterpriseWorx/conductor4sql-technical-documentation/edit/master/docs/central-console/central-client-dashboard.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
@@ -272,7 +271,12 @@ The overall state of your environment should preferably indicate 100% (all green
 <p><strong>Metric</strong></p>
 <p><img alt="" src="../../img/central-console/central-client-dashboard/metric-clients-behind.png" /></p>
 <p><strong>Description</strong></p>
-<p>These metrics display the number of client message queues that have been unavailable for the time shown.</p>
+<ul>
+<li><strong>Network</strong> - A very common issue where the client is behind because there is no network connectivity between the central server and the client instance</li>
+<li><strong>UTC Time</strong> - The UTC date and time between the central instance and the client instance need to match, if they don't then the instance will be shown in this bucket</li>
+<li><strong>Login</strong> - the user that Conductor4SQL uses has been dropped or is not accessible</li>
+<li><strong>Other</strong> - any client instance issue that does not fall in the other categories falls in this category.</li>
+</ul>
 <h2 id="queues">Queues</h2>
 <h3 id="client-central-queues-down">Client Central Queues Down</h3>
 <p><strong>Metric</strong></p>
@@ -367,15 +371,16 @@ The overall state of your environment should preferably indicate 100% (all green
     
   </span>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme_extra.js" defer></script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="../../js/custom.js" defer></script>
-      <script src="../../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/custom.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>
