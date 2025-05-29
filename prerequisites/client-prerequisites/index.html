@@ -51,11 +51,11 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../central-prerequisites/">Central Server Pre-Requisites</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Client Server Pre-Requisites</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Client Server Pre-Requisites</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#system-requirements">System Requirements</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mandatory-tcp-ports">Mandatory TCP Ports</a>
+    <li class="toctree-l2"><a class="reference internal" href="#networking">Networking</a>
     </li>
     </ul>
                   </li>
@@ -214,19 +214,10 @@
 <li>The server that will be used for the Conductor4SQL Client server must have network connectivity, to communicate with the Central Server.</li>
 <li>The user performing the installation must be in the sys-admin user role in SQL Server.</li>
 </ul>
-<h2 id="mandatory-tcp-ports">Mandatory TCP Ports</h2>
-<p>The following ports are mandatory for the successful installation and operation of Conductor4SQL. Use the <em>Windows Firewall Advanced Security tool</em> and activate the inbound rules for the following ports:</p>
-<ul>
-<li>Conductor4SQL port 4321</li>
-<li>SQL Browser – UDP port 1434 (for named instances)</li>
-<li>SQL Server Administration – TCP port 1433</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If you are using named instances, SQL Server assigns each instance a random port between 49152 and 65535. </p>
-<p>Either a firewall rule will needed for this whole range or the instance of SQL Server needs 
-to be configured to use a static port.</p>
-</div>
+<h2 id="networking">Networking</h2>
+<p>For example, if your central server is 10.0.0.100 and the client server is 10.0.0.101, then configure your firewall to allow the client server to connect to tcp://10.0.0.100:4321 and the central server to connect to tcp://10.0.0.101:4321.</p>
+<p>SQL Server access from the Central server to the client server is also required. If you're using a default SQL instance, you'll need to open port 1433 (tcp://10.0.0.101:1433 in our example) and allow traffic from the central server.</p>
+<p>If you're using a named SQL instance, you'll need to open the SQL Browser port (UDP port 1434 to udp://10.0.0.101:1434) and either explicitly configure the SQL Server to use a single port or open the entire dynamic port range (49152 - 65535) in your firewall configuration.</p>
 <h1 id="authentication">Authentication</h1>
 <ul>
 <li>Mixed-Mode authentication must be enabled in Microsoft SQL Server (if you have configured Conductor4SQL to use SQL Authentication)</li>
