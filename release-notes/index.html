@@ -172,9 +172,9 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Release Notes</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#2021-release-notes">2021 Release Notes</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2025-release-notes">2025 Release Notes</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2020-release-notes">2020 Release Notes</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2024-release-notes">2024 Release Notes</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#older-release-notes">Older Release Notes</a>
     </li>
@@ -206,7 +206,128 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="conductor4sql-release-notes">Conductor4SQL Release Notes</h1>
-<h2 id="2021-release-notes">2021 Release Notes</h2>
+<h2 id="2025-release-notes">2025 Release Notes</h2>
+<p><strong>Version 3.7.7.0 (2025-06-27) Changes</strong></p>
+<ul>
+<li>SQLCLASSIC-2316 Feature: Add option to Enable/Disable Conductor4SQL endpoint</li>
+<li>SQLCLASSIC-2349 Improvement: Remove NCIX_C4SqlRowNumber once initial table sync is complete</li>
+<li>SQLCLASSIC-2356 Improvement: Show if user/system query/command was sent to uninstalled client</li>
+<li>SQLCLASSIC-2344 Improvement: Add report to report on Syncworx database config issues</li>
+<li>SQLCLASSIC-2341 Improvement: Detect if SyncWorx log file limit is set to unlimited</li>
+<li>SQLCLASSIC-2340 Improvement: Detect if SyncWorx database is in simple recovery mode</li>
+<li>SQLCLASSIC-2320 Improvement: Return transmission queue errors as part of the clients behind</li>
+<li>SQLCLASSIC-2339 Improvement: Overview screen tweaks</li>
+<li>SQLCLASSIC-2331 Improvement: Add a email check for Tables that are pending initial sync or pending disablement</li>
+<li>SQLCLASSIC-2329 Improvement: Create primary key after initial copy in scheduled sync to prevent index fragmentation</li>
+<li>SQLCLASSIC-2323 Improvement: Add better error message if we try and resync a database and C4SQL_Staging_ database is suspect</li>
+<li>SQLCLASSIC-2321 Improvement: Mark previous pulse checks as fixed when pulse check lost</li>
+<li>SQLCLASSIC-2319 Improvement: Add business attributes to Data Sync &gt;&gt; Data sync summary</li>
+<li>SQLCLASSIC-2317 Improvement: Add check for disabled service broker endpoint</li>
+<li>SQLCLASSIC-2318 Improvement: Check if Syncworx client database doesn't not have Trustworthy=ON</li>
+<li>SQLCLASSIC-2314 Improvement: On client Conductor4SQL update update the version in SB_Store_Monitoring table as part of the update</li>
+<li>SQLCLASSIC-2337 Improvement: Upgrade SQLEncryptor to .net 4.8</li>
+<li>SQLCLASSIC-2336 Improvement: Remove MSBuild.Community.Tasks.Git.Gitversion</li>
+<li>SQLCLASSIC-2334 Improvement: Fix missing dependency for ScintillaNET</li>
+<li>SQLCLASSIC-2335 Improvement: DevExpress dependencies using local packages rather than online devexpress dependencies</li>
+<li>SQLCLASSIC-2333 Improvement: Upgrade C4SQL .net clr to use 4.8</li>
+<li>SQLCLASSIC-2327 Improvement: Add Vw_Get_Client_Overview_Details historical view</li>
+<li>SQLCLASSIC-2322 Improvement: Log data sync table creations and alters</li>
+<li>SQLCLASSIC-2315 Improvement: Cater for change tracking enabled on central tables</li>
+<li>SQLCLASSIC-2309 Improvement: Refactor central proc C4SqlDataSync.CM_Update_DataSync_Table_Using_MetaData</li>
+<li>SQLCLASSIC-2362 Fixed: Push data sync errors should only get sent out if push sync is enabled and in use</li>
+<li>SQLCLASSIC-2359 Fixed: Sync not working with json_value computed columns</li>
+<li>SQLCLASSIC-2353 Fixed: Enabling once off sync on an empty table gets stuck in Pending</li>
+<li>SQLCLASSIC-2351 Fixed: Bulk installer business attributes not filling in correctly if business attributes deleted</li>
+<li>SQLCLASSIC-2345 Fixed: Central Database rename and primary key change at source issue</li>
+<li>SQLCLASSIC-2332 Fixed: Bulk uninstaller when uninstalling from central only doesn't appear to be removing the client fully</li>
+<li>SQLCLASSIC-2313 Fixed: Client behind checker giving incorrect error message when SyncWorx database is dropped</li>
+<li>SQLCLASSIC-2311 Fixed: Archive job not archiving messages that have timed out</li>
+<li>SQLCLASSIC-2330 Fixed: Daily Job update statistics fails if table has more rows than max INT value</li>
+</ul>
+<h2 id="2024-release-notes">2024 Release Notes</h2>
+<p><strong>Version 3.7.6.0 (2024-08-19) Changes</strong></p>
+<ul>
+<li>SQLCLASSIC-2253 Feature: Add option to repair Conductor4SQL client instance</li>
+<li>SQLCLASSIC-2230 Feature: Allow filtering the rows that we sync for scheduled sync with a where clause</li>
+<li>SQLCLASSIC-2228 Feature: Create archive table, archive proc and archive job</li>
+<li>SQLCLASSIC-2265 Feature: Add ability to make a once-off scheduled query</li>
+<li>SQLCLASSIC-2305 Fixed: Grid text with background colors not visible in Dark themes</li>
+<li>SQLCLASSIC-2300 Fixed: Table resync doesn't mark pending dbo.CM_Client_Data_Sync_Tracker messages as fixed</li>
+<li>SQLCLASSIC-2299 Fixed: On Client Repair all dbo.dbo.CM_Client_Data_Sync_Tracker outstanding entries for client need to be marked as fixed</li>
+<li>SQLCLASSIC-2298 Fixed: Client Dashboard incorrect syntax near ')'</li>
+<li>SQLCLASSIC-2297 Fixed: Client uninstall fails if any user database is in SINGLE_USER mode</li>
+<li>SQLCLASSIC-2296 Fixed: Client Cleanup script does not remove SyncWorx database if the database is not online</li>
+<li>SQLCLASSIC-2295 Fixed: Send Test Email fails when sending CSV attachment</li>
+<li>SQLCLASSIC-2291 Fixed: Client Event Alerts email does not include client business attributes</li>
+<li>SQLCLASSIC-2292 Fixed: If on Central Client Dashboard tab, selecting Central Client Overview menu option doesn't work</li>
+<li>SQLCLASSIC-2271 Fixed: Null reference exception when filtering Database mappings screen</li>
+<li>SQLCLASSIC-2258 Fixed: Bulk installer not saving all columns</li>
+<li>SQLCLASSIC-2221 Fixed: When enabling sync the metadata message arrives before the delete message</li>
+<li>SQLCLASSIC-2219 Fixed: Drive space report getting duplicated rows if drive is listed as uppercase and lowercase for databases on the same drive</li>
+<li>SQLCLASSIC-2241 Fixed: Check that a schedule is not in use before deleting it</li>
+<li>SQLCLASSIC-2236 Fixed: Add script to add C4SQL_LastUpdated date</li>
+<li>SQLCLASSIC-2234 Fixed: About screen showing incorrect license expire date</li>
+<li>SQLCLASSIC-2308 Improvement: Add Client Checker check for if SyncWorx is in single user mode</li>
+<li>SQLCLASSIC-2307 Improvement: Add check if SyncWorx database is not in online state in checker</li>
+<li>SQLCLASSIC-2290 Improvement: Cannot edit event alert email subject in Admin &gt;&gt; Alerts</li>
+<li>SQLCLASSIC-2288 Improvement: Add email validation to Administration &gt;&gt; Email</li>
+<li>SQLCLASSIC-2286 Improvement: Add email address validation to Admin &gt;&gt; Alerts</li>
+<li>SQLCLASSIC-2285 Improvement: Allow editing email CC address list for email alerts</li>
+<li>SQLCLASSIC-2281 Improvement: Client behind thresholds need to reflect in the Clients behind email</li>
+<li>SQLCLASSIC-2232 Improvement: Add ability to configure different threshold for different client behind error types</li>
+<li>SQLCLASSIC-2280 Improvement: Change clients behind buckets to error category groupings</li>
+<li>SQLCLASSIC-2242 Improvement: Show the instances where the scheduled query failed</li>
+<li>SQLCLASSIC-2278 Improvement: Need to add order by information on report emails</li>
+<li>SQLCLASSIC-2277 Improvement: Optimise Get table meta data query</li>
+<li>SQLCLASSIC-2275 Improvement: Show Client Behind error in Central Client Control Detail grid</li>
+<li>SQLCLASSIC-2274 Improvement: Business Attributes on Central Client Control Details grid should be displayed by default</li>
+<li>SQLCLASSIC-2250 Improvement: Adjust reports to use new Report procedures and add business attributes</li>
+<li>SQLCLASSIC-2249 Improvement: Create stored procedure that generates report html and includes business attributes in the report</li>
+<li>SQLCLASSIC-2272 Improvement: Make Data Sync Overview Screen faster</li>
+<li>SQLCLASSIC-2263 Improvement: Add log table for client repairs</li>
+<li>SQLCLASSIC-2262 Improvement: Add option to re-enable sync when repairing client instance</li>
+<li>SQLCLASSIC-2261 Improvement: Add progress screen for repair client option</li>
+<li>SQLCLASSIC-2257 Improvement: Encrypt credentials stored in bulk installer</li>
+<li>SQLCLASSIC-2254 Improvement: Add credentials to the bulk installer table</li>
+<li>SQLCLASSIC-2256 Improvement: Improve logging in the CLI Bulk installer</li>
+<li>SQLCLASSIC-2255 Improvement: Improve logging in C4SQL CLI Prechecker</li>
+<li>SQLCLASSIC-2252 Improvement: Move Conductor4SQL Cli to seperate cli executable</li>
+<li>SQLCLASSIC-2251 Improvement: Move script details tab to main screen in Script Editor</li>
+<li>SQLCLASSIC-2235 Improvement: Upgrade Conductor4SQL UI and Service to .net 4.8</li>
+<li>SQLCLASSIC-2238 Improvement: Allow setting email subject in Scheduled query edit screen</li>
+<li>SQLCLASSIC-2239 Improvement: Upgrade to DevExpress 21.1.12</li>
+<li>SQLCLASSIC-2229 Improvement: Allow current date to be added to email report subject</li>
+<li>SQLCLASSIC-2227 Improvement: Create script to reduce SyncWorxAdmin login permission for Conductor4SQL on central</li>
+<li>SQLCLASSIC-2226 Improvement: Create script to reduce SyncWorxAdmin user permissions for Conductor4SQL client</li>
+</ul>
+<h2 id="older-release-notes">Older Release Notes</h2>
+<p><strong>Version 3.7.5.3 (2022-09-13) Changes</strong></p>
+<ul>
+<li>SQLCLASSIC-2224 Fixed: Conductor4SQL Classic failing to build on local build lab</li>
+<li>SQLCLASSIC-2215 Fixed: Conductor4SQL not building in visual studio 2022</li>
+</ul>
+<p><strong>Version 3.7.5.2 (2022-07-05) Changes</strong></p>
+<ul>
+<li>SQLCLASSIC-2212 Fixed: SQL Server 2012 "Invalid Column Name 'is_primary_replica'" when Reports are enabled</li>
+<li>SQLCLASSIC-2211 Fixed: Client certificate is owned by sa instead of Conductor4SQL Login</li>
+</ul>
+<p><strong>Version 3.7.5.1 (2022-06-10) Changes</strong></p>
+<ul>
+<li>SQLCLASSIC-2205 Feature: Allow recreating queue conversations from Client dashboard screen</li>
+<li>SQLCLASSIC-2208 Improvement: Simplify logic and workflow for recreating client queue conversations</li>
+<li>SQLCLASSIC-2207 Improvement: Simplify logic and workflow for recreating data sync queue conversations</li>
+</ul>
+<p><strong>Version 3.7.5.0 (2022-05-31) Changes</strong></p>
+<ul>
+<li>SQLCLASSIC-2204 Fixed: UTC Date time issues are getting reported as "Manual intervention"</li>
+<li>SQLCLASSIC-2108 Fixed: If using 1-1 sync and tables column changes from nullable column to part of the primary key at source meta data message breaks at central</li>
+<li>SQLCLASSIC-2068 Fixed: dbo.CL_Report_Get_Jobs_Details_SP client proc very slow on clients with lots of job history</li>
+<li>SQLCLASSIC-2203 Fixed: Ignore Collation differences in central queue processor</li>
+<li>SQLCLASSIC-2202 Fixed: Scheduled sync detection of additional columns not working correctly</li>
+<li>SQLCLASSIC-2200 Fixed: Should not be able to select "Client Server" when adding more tables to push sync</li>
+<li>SQLCLASSIC-2199 Improvement: Allow push sync table to be skipped when processing queue</li>
+<li>CONSQL-2195 Improvement: Database information report gathering fails when there is a always on readonly database</li>
+</ul>
 <p><strong>Version 3.7.4.0 (2021-09-17) Changes</strong></p>
 <ul>
 <li>CONSQL-2143 Fixed: Need to manually reapply existing Conductor4SQL license after upgrading to version 3.7.3.0</li>
@@ -237,7 +358,6 @@
 <li>CONSQL-2188 Improvement: Make client install SQL timeout configurable</li>
 <li>CONSQL-2199 Improvement: Allow Conductor4SQL to launch the SQLPro web application</li>
 </ul>
-<h2 id="2020-release-notes">2020 Release Notes</h2>
 <p><strong>Version 3.7.3.0 (2020-11-11) Changes</strong></p>
 <ul>
 <li>CONSQL-2152 Fixed: Client bulk prechecker never timing out</li>
@@ -291,7 +411,6 @@
 </li>
 <li>CONSQL-2099 Improvement: Add flag AllowCircularSync</li>
 </ul>
-<h2 id="older-release-notes">Older Release Notes</h2>
 <p><strong>Version 3.7.2.0 (2019-12-17) Changes</strong></p>
 <ul>
 <li>CONSQL-2048 Cancel user query/command has collation issues</li>
