@@ -56,6 +56,12 @@
     <li class="toctree-l2"><a class="reference internal" href="#system-requirements">System Requirements</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#networking">Networking</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#required-ports">Required Ports</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configuration-example">Configuration Example</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -209,15 +215,42 @@
 <h2 id="system-requirements">System Requirements</h2>
 <ul>
 <li>The minimum operating systems supported is: Windows server 2008 R2 64 bit.</li>
-<li>SQL Server 2008 (any edition).</li>
-<li>Microsoft .NET framework 3.5 is a necessary requirement and must be installed. This is required even if you have .NET framework 4 and above installed already.</li>
+<li>SQL Server 2012 (any edition) or higher.</li>
+<li>Microsoft .NET framework 4.8 or higher must be installed.</li>
 <li>The server that will be used for the Conductor4SQL Client server must have network connectivity, to communicate with the Central Server.</li>
 <li>The user performing the installation must be in the sys-admin user role in SQL Server.</li>
 </ul>
 <h2 id="networking">Networking</h2>
-<p>For example, if your central server is 10.0.0.100 and the client server is 10.0.0.101, then configure your firewall to allow the client server to connect to tcp://10.0.0.100:4321 and the central server to connect to tcp://10.0.0.101:4321.</p>
-<p>SQL Server access from the Central server to the client server is also required. If you're using a default SQL instance, you'll need to open port 1433 (tcp://10.0.0.101:1433 in our example) and allow traffic from the central server.</p>
-<p>If you're using a named SQL instance, you'll need to open the SQL Browser port (UDP port 1434 to udp://10.0.0.101:1434) and either explicitly configure the SQL Server to use a single port or open the entire dynamic port range (49152 - 65535) in your firewall configuration.</p>
+<p>The following ports must be open for proper communication between the Central Server and Client Server:</p>
+<h3 id="required-ports">Required Ports</h3>
+<p><strong>Port 4321 (TCP)</strong> - This port must be open on both the Central Server and Client Server to allow bidirectional communication between them.</p>
+<p><strong>SQL Server Ports</strong> - The Central Server needs access to the SQL Server instance on the <strong>Client Server</strong>. The specific ports required depend on your SQL Server configuration:</p>
+<ul>
+<li><strong>Default SQL Server Instance</strong>: Port 1433 (TCP) must be open</li>
+<li><strong>Named SQL Server Instance</strong>:<ul>
+<li>UDP port 1434 (SQL Browser service) must be open</li>
+<li>The dynamic port assigned to the SQL Server instance must be open</li>
+<li>If no specific port is configured for the named instance, the entire dynamic port range (49152 - 65535) must be open on the client side</li>
+</ul>
+</li>
+</ul>
+<h3 id="configuration-example">Configuration Example</h3>
+<p>For example, if your Central Server is 10.0.0.100 and the Client Server is 10.0.0.101, then configure your firewall as follows:</p>
+<p><strong>Conductor4SQL Communication:</strong></p>
+<ul>
+<li>Allow the Client Server to connect to tcp://10.0.0.100:4321</li>
+<li>Allow the Central Server to connect to tcp://10.0.0.101:4321</li>
+</ul>
+<p><strong>SQL Server Access:</strong></p>
+<ul>
+<li><strong>Default Instance</strong>: Open port 1433 (tcp://10.0.0.101:1433) and allow traffic from the Central Server</li>
+<li><strong>Named Instance</strong>: Open UDP port 1434 (udp://10.0.0.101:1434) and either:<ul>
+<li>Configure the SQL Server to use a specific port and open that port, OR</li>
+<li>Open the entire dynamic port range (49152 - 65535) in your firewall configuration</li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> While DNS names can be used instead of IP addresses for either the Central Server and/or Client Server configuration, if the DNS name does not resolve to an IP address, communication will fail between the two servers in question.</p>
 <h1 id="authentication">Authentication</h1>
 <ul>
 <li>Mixed-Mode authentication must be enabled in Microsoft SQL Server (if you have configured Conductor4SQL to use SQL Authentication)</li>
