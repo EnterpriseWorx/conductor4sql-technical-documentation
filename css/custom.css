@@ -1,3 +1,14 @@
+/* Font definitions */
+body, p, li, td, th, span, div {
+    font-family: 'Segoe UI Light', 'Segoe UI', sans-serif;
+    font-size: 12pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI Black', 'Segoe UI', sans-serif;
+    font-size: 14pt;
+}
+
 .wy-nav-content {
     max-width: 1050px;
 }
@@ -19,4 +30,20 @@ h1 {
   width: 300px;
   overflow-y: auto;
   height: 98.9%;
+}
+
+.wy-menu-vertical header,.wy-menu-vertical p.caption {
+    color: #4287C2FF;
+}
+
+.wy-nav-side {
+  background: #403F3DFF;
+}
+
+.wy-side-nav-search {
+  background-color: #8EB7DAFF;
+}
+
+.wy-menu-vertical li.current > a, .wy-menu-vertical li.on a {
+  background: #B7B7B6FF;
 }

@@ -172,9 +172,9 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Release Notes</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#2025-release-notes">2025 Release Notes</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2026-release-notes">2026 Release Notes</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2024-release-notes">2024 Release Notes</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2025-release-notes">2025 Release Notes</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#older-release-notes">Older Release Notes</a>
     </li>
@@ -206,7 +206,33 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="conductor4sql-release-notes">Conductor4SQL Release Notes</h1>
+<h2 id="2026-release-notes">2026 Release Notes</h2>
+<p><strong>Version 3.8.8.0 (2026-01-13) Changes</strong></p>
+<ul>
+<li>SQLCLASSIC-2400 Fixed: Checksums going down incorrect queue</li>
+<li>SQLCLASSIC-2397 Fixed: CDC running on multiple queues at the same time block each other</li>
+<li>SQLCLASSIC-2399 Fixed: Fix "skip initial sync" in Enterprise Sync getting changes</li>
+<li>SQLCLASSIC-2398 Fixed: Enterprise Sync Skip initial sync logic skipping incorrect tables</li>
+<li>SQLCLASSIC-2396 Fixed: C4SQL_LastUpdated column not updating when there are row updates in Enterprise Sync</li>
+<li>SQLCLASSIC-2401 Improvement: Speed up Enterprise sync checksum calculations</li>
+<li>SQLCLASSIC-2395 Improvement: Disable CL_Convert_Scheduled_To_Enterprise_Sync_SP from removing scheduled sync tables</li>
+</ul>
 <h2 id="2025-release-notes">2025 Release Notes</h2>
+<p><strong>Version 3.7.9.0 (2025-10-07) Changes</strong></p>
+<ul>
+<li>SQLCLASSIC-2374 Fixed: Enable CDC on SQL Server 2017 or older gets "msdb.dbo.cdc_jobs does not exist" error</li>
+<li>SQLCLASSIC-2312 Fixed: Updating a script looses the current filter</li>
+<li>SQLCLASSIC-2348 Fixed: Central space errors needs to be moved out of Push Data Sync Errors email</li>
+</ul>
+<p><strong>Version 3.7.8.0 (2025-10-07) Changes</strong></p>
+<ul>
+<li>SQLCLASSIC-2365 Fixed: Calculate checksums logic does not work on tables syncing with "Include Source Meta Data Columns" disabled</li>
+<li>SQLCLASSIC-2362 Fixed: Push data sync errors should only get sent out if push sync is enabled and in use</li>
+<li>SQLCLASSIC-2359 Fixed: Sync not working with json_value computed columns</li>
+<li>SQLCLASSIC-2370 Improvement: Change Enterprise Sync to use one message per table</li>
+<li>SQLCLASSIC-2369 Improvement: Convert Scheduled Sync to Enterprise Sync without re-initialisation</li>
+<li>SQLCLASSIC-2349 Improvement: Remove NCIX_C4SqlRowNumber once initial table sync is complete</li>
+</ul>
 <p><strong>Version 3.7.7.0 (2025-06-27) Changes</strong></p>
 <ul>
 <li>SQLCLASSIC-2316 Feature: Add option to Enable/Disable Conductor4SQL endpoint</li>
@@ -244,7 +270,7 @@
 <li>SQLCLASSIC-2311 Fixed: Archive job not archiving messages that have timed out</li>
 <li>SQLCLASSIC-2330 Fixed: Daily Job update statistics fails if table has more rows than max INT value</li>
 </ul>
-<h2 id="2024-release-notes">2024 Release Notes</h2>
+<h2 id="older-release-notes">Older Release Notes</h2>
 <p><strong>Version 3.7.6.0 (2024-08-19) Changes</strong></p>
 <ul>
 <li>SQLCLASSIC-2253 Feature: Add option to repair Conductor4SQL client instance</li>
@@ -300,7 +326,6 @@
 <li>SQLCLASSIC-2227 Improvement: Create script to reduce SyncWorxAdmin login permission for Conductor4SQL on central</li>
 <li>SQLCLASSIC-2226 Improvement: Create script to reduce SyncWorxAdmin user permissions for Conductor4SQL client</li>
 </ul>
-<h2 id="older-release-notes">Older Release Notes</h2>
 <p><strong>Version 3.7.5.3 (2022-09-13) Changes</strong></p>
 <ul>
 <li>SQLCLASSIC-2224 Fixed: Conductor4SQL Classic failing to build on local build lab</li>
